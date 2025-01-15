@@ -1,0 +1,7 @@
+[*.{jsx,tsx,astro}]
+indent_style = tab
+indent_size = 2
+
+[*.{js,ts}]
+indent_style = tab
+indent_size = 4

@@ -1,0 +1,102 @@
+---
+import Header from "../components/home/Header.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+const articles = [
+	{
+		title: "Exploring the Universe",
+		description:
+			"An in-depth look at the latest discoveries in space exploration and astronomy.",
+	},
+	{
+		title: "The Future of Technology",
+		description:
+			"A comprehensive overview of emerging technologies that will shape our future.",
+	},
+	{
+		title: "Healthy Living Tips",
+		description:
+			"Practical advice on maintaining a balanced diet and a healthy lifestyle.",
+	},
+	{
+		title: "Travel Destinations for 2025",
+		description:
+			"A guide to the top travel destinations to visit this year, featuring hidden gems and popular spots.",
+	},
+	{
+		title: "The Impact of Climate Change",
+		description:
+			"An analysis of the effects of climate change on our planet and what can be done to mitigate it.",
+	},
+	{
+		title: "Understanding Mental Health",
+		description:
+			"An informative piece discussing the importance of mental health awareness and resources available.",
+	},
+];
+---
+
+<HomeLayout>
+	<Header />
+	<div class="latest-section">
+		<div class="latest-grid">
+			{
+				articles.map((article) => (
+					<div class="article">
+						<h3>{article.title}</h3>
+						<p>{article.description}</p>
+						<a href="place">Read more.</a>
+					</div>
+				))
+			}
+		</div>
+	</div>
+	<div class="featured">
+		<h2>Featured</h2>
+		<div class="gradient">gradient</div>
+	</div>
+</HomeLayout>
+
+<style>
+	.latest-section {
+		padding: 40px, 40px, 0, 40px;
+		background-color: var(--gray);
+	}
+
+	.latest-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: 9px;
+	}
+
+	.article {
+		color: var(--primary-1000);
+		padding: 20px;
+		border-bottom: 1px solid var(--black);
+	}
+
+	.gradient {
+		margin: 40px;
+		padding: 40px;
+			border-radius: 16px;
+		background: hsla(272, 93%, 29%, 1);
+		background: linear-gradient(
+			45deg,
+			hsla(272, 93%, 29%, 1) 0%,
+			hsla(346, 67%, 65%, 1) 65%,
+			hsla(1, 68%, 88%, 1) 90%
+		);
+		background: -moz-linear-gradient(
+			45deg,
+			hsla(272, 93%, 29%, 1) 0%,
+			hsla(346, 67%, 65%, 1) 65%,
+			hsla(1, 68%, 88%, 1) 90%
+		);
+		background: -webkit-linear-gradient(
+			45deg,
+			hsla(272, 93%, 29%, 1) 0%,
+			hsla(346, 67%, 65%, 1) 65%,
+			hsla(1, 68%, 88%, 1) 90%
+		);
+		filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4F0591", endColorstr="#E16984", GradientType=1 );
+	}
+</style>

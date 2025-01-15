@@ -1,0 +1,75 @@
+---
+const links = [
+	{
+		label: "Home",
+		href: "/",
+	},
+	{
+		label: "Projects",
+		href: "/projects",
+	},
+	{
+		label: "Blog",
+		href: "/blog",
+	},
+	{
+		label: "Contact",
+		href: "/contact",
+	},
+	{
+		label: "Experience",
+		href: "/experience",
+	},
+];
+---
+
+<nav>
+	<h2 class="logo">callumKloos</h2>
+	<ul class="links">
+		{
+			links.map((link) => (
+				<li class="button">
+					<a href={link.href}>{link.label}</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+	nav {
+		display: flex;
+		place-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: 40px;
+		background-color: var(--background-blue);
+	}
+
+	.logo {
+		font-weight: 900;
+		color: var(--scale-100);
+	}
+
+	ul {
+		display: flex;
+		gap: 16px;
+
+		li {
+			list-style-type: none;
+		}
+	}
+
+	a {
+		background-color: rgba(var(--scale-100-rgb), 0.1);
+		color: var(--scale-100);
+		padding: 6px;
+	}
+
+	h1 {
+		color: var(--scale-100);
+	}
+</style>
