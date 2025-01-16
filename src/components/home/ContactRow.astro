@@ -1,0 +1,30 @@
+---
+import Bluesky from "../../components/icons/bluesky.svg";
+import LinkedIn from "../../components/icons/linkedin.svg";
+import Email from "../../components/icons/email.svg";
+import Github from "../../components/icons/github.svg";
+import ContactButton from "./ContactButton.astro";
+---
+
+<div class="flex-row">
+	<ContactButton label="Bluesky">
+		<Bluesky />
+	</ContactButton>
+	<ContactButton label="LinkedIn">
+		<LinkedIn />
+	</ContactButton>
+	<ContactButton label="Github">
+		<Github />
+	</ContactButton>
+	<ContactButton label="Email">
+		<Email />
+	</ContactButton>
+</div>
+
+<style>
+	.flex-row {
+		display: flex;
+		width: 100%;
+		justify-items: stretch;
+	}
+</style>
