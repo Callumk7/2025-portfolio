@@ -12,13 +12,15 @@
         "@astrojs/mdx": "^4.0.6",
         "@astrojs/rss": "^4.0.11",
         "@astrojs/sitemap": "^3.2.1",
-        "astro": "^5.1.7"
+        "@astrojs/solid-js": "^5.0.3",
+        "astro": "^5.1.7",
+        "solid-js": "^1.9.4"
     },
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
+        "lightningcss": "^1.29.1",
         "prettier": "^3.4.2",
         "prettier-plugin-astro": "^0.14.1",
-        "lightningcss": "^1.29.1",
         "typescript": "^5.7.3"
     }
 }
