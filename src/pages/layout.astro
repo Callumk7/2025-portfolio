@@ -2,6 +2,7 @@
 import About from "../components/home/About.astro";
 import ContactRow from "../components/home/ContactRow.astro";
 import Header from "../components/home/Header.astro";
+import { ProjectPicker } from "../components/home/interactive/project-picker";
 import Latest from "../components/home/Latest.astro";
 import Projects from "../components/home/Projects.astro";
 import SplitSection from "../components/home/SplitSection.astro";
@@ -60,7 +61,11 @@ const articles = [
 		</Section>
 		<Section shrink>
 			<div class="bar">
-				<p class="no-margin">I have experience with modern tech</p>
+				<ProjectPicker
+					projects={[
+						{ id: 1, title: "My First Project", description: "This project was awesome" },
+					]}
+				/>
 			</div>
 		</Section>
 		<Section>
