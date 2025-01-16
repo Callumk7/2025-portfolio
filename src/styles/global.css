@@ -3,25 +3,24 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0
 		16px 32px rgba(var(--gray), 33%);
 
-	--primary: #d2296c;
-	--text: #270814;
+	--primary: #ed8964;
+	--light-text: hsl(16, 79.1%, 93.1%);
 
 	--black: #000;
 	--white: #fff;
-	--gray: #b7b3b6;
 
-	--scale-900: #340075;
-	--scale-900-rgb: 52, 0, 117;
-	--scale-800: #6d0392;
-	--scale-700: #ab0ca6;
-	--scale-600: #c0198b;
-	--scale-500: #d2296c;
-	--scale-400: #db5a4e;
-	--scale-300: #e3b372;
-	--scale-200: #e5eb98;
-	--scale-100: #d5f2bd;
-	--scale-100-rgb: 213, 242, 189;
-	--scale-50: #e3fae4;
+	--scale-900: #252f29;
+	--scale-900-rgb: 37, 47, 41;
+	--scale-800: #3c4d58;
+	--scale-700: #614e85;
+	--scale-600: #b75b9b;
+	--scale-500: #ed8964;
+	--scale-400: #ec819e;
+	--scale-300: #ec9dde;
+	--scale-200: #dab7ee;
+	--scale-100: #d3cff2;
+	--scale-100-rgb: 211, 207, 242;
+	--scale-50: #e6eef7;
 
 	--background-black: var(--black);
 	--background-blue: var(--scale-900);
@@ -30,8 +29,10 @@
 	--background-purple: var(--scale-800);
 	--background-pale: var(--scale-50);
 
-	--accent: var(--scale-700);
-	--accent-dark: var(--scale-800);
+	--accent: var(--scale-200);
+	--accent-dark: var(--scale-300);
+
+    --border: var(--scale-900);
 }
 
 @font-face {
@@ -95,10 +96,10 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: var(--scale-50);
+	background: var(--scale-800);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: var(--text);
+	color: var(--light-text);
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.7;
@@ -120,6 +121,7 @@ h6 {
 	margin: 0 0 0.5rem 0;
 	line-height: 1.2;
 	font-family: "Satoshi", sans-serif;
+    color: var(--scale-100);
 }
 
 h1 {
@@ -161,6 +163,7 @@ p {
 
 .prose p {
 	margin-bottom: 2em;
+    font-size: 1.1rem;
 }
 
 textarea {
@@ -184,7 +187,7 @@ img {
 
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: var(--scale-900);
 	border-radius: 2px;
 }
 

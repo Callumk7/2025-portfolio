@@ -1,4 +1,6 @@
 ---
+import ArticlePreview from "./ArticlePreview.astro";
+
 interface Props {
 	articles: {
 		title: string;
@@ -9,17 +11,7 @@ const { articles } = Astro.props;
 ---
 
 <div class="latest-grid">
-	{
-		articles.map((article) => (
-			<div class="article">
-				<div>
-					<h3>{article.title}</h3>
-					<a href="place">Read more.</a>
-				</div>
-				<p>{article.description}</p>
-			</div>
-		))
-	}
+	{articles.map((article) => <ArticlePreview article={article} />)}
 </div>
 
 <style>
@@ -27,18 +19,5 @@ const { articles } = Astro.props;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		row-gap: 9px;
-	}
-
-	.article {
-		display: flex;
-		flex-direction: column;
-		gap: 24px;
-		padding: 20px;
-
-		h3 {
-			font-size: 1.6em;
-			text-decoration: underline;
-			text-decoration-color: var(--scale-800);
-		}
 	}
 </style>

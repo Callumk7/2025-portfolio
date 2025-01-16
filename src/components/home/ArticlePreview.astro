@@ -1,0 +1,30 @@
+---
+interface Props {
+	article: { title: string; description: string };
+}
+
+const { article } = Astro.props;
+---
+
+<div class="article">
+	<div>
+		<h3>{article.title}</h3>
+		<a href="place">Read more.</a>
+	</div>
+	<p>{article.description}</p>
+</div>
+
+<style>
+	.article {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		padding: 20px;
+
+		h3 {
+			font-size: 1.6em;
+			text-decoration: underline;
+			text-decoration-color: var(--scale-600);
+		}
+	}
+</style>

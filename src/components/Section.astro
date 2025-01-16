@@ -16,7 +16,7 @@ const { grow, shrink, colour } = Astro.props;
 
 <style>
 	.outer {
-		border-top: 1px solid var(--primary);
+		border-top: 1px solid var(--border);
 		width: 100%;
 	}
 	.grow {
@@ -27,8 +27,8 @@ const { grow, shrink, colour } = Astro.props;
 	}
 	.inner {
 		margin: 0px calc(10vw + 16px);
-		border-left: 1px solid var(--primary);
-		border-right: 1px solid var(--primary);
+		border-left: 1px solid var(--border);
+		border-right: 1px solid var(--border);
 		height: 100%;
 	}
 	.blue {

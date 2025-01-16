@@ -1,9 +1,9 @@
 ---
-import ContactButton from "../components/home/ContactButton.astro";
+import About from "../components/home/About.astro";
 import ContactRow from "../components/home/ContactRow.astro";
-import Featured from "../components/home/Featured.astro";
 import Header from "../components/home/Header.astro";
 import Latest from "../components/home/Latest.astro";
+import Projects from "../components/home/Projects.astro";
 import SplitSection from "../components/home/SplitSection.astro";
 import Section from "../components/Section.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
@@ -44,14 +44,29 @@ const articles = [
 <HomeLayout>
 	<Header />
 	<div class="stretch">
-		<Section shrink colour="white">
-			<Latest articles={articles} />
+		<Section grow>
+			<About />
 		</Section>
-		<Section grow colour="yellow">
+		<Section shrink>
 			<ContactRow />
 		</Section>
-		<Section shrink colour="white">
+		<Section grow>
 			<Latest articles={articles} />
+		</Section>
+		<Section shrink>
+			<div class="bar">
+				<p class="no-margin">I have experience with modern tech</p>
+			</div>
+		</Section>
+		<Section shrink>
+			<div class="bar">
+				<p class="no-margin">I have experience with modern tech</p>
+			</div>
+		</Section>
+		<Section>
+			<SplitSection>
+				<Projects featured={articles.slice(0, 3)} />
+			</SplitSection>
 		</Section>
 	</div>
 </HomeLayout>
@@ -62,5 +77,14 @@ const articles = [
 		flex-direction: column;
 		justify-items: stretch;
 		height: 100%;
+	}
+
+	.bar {
+		text-align: center;
+		width: 100%;
+	}
+	.no-margin {
+		margin: 0;
+		padding: 16px 0;
 	}
 </style>
