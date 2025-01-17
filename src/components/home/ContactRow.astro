@@ -6,25 +6,17 @@ import Github from "../../components/icons/github.svg";
 import ContactButton from "./ContactButton.astro";
 ---
 
-<div class="flex-row">
-	<ContactButton label="Bluesky">
+<div class="flex-row w-100">
+	<ContactButton label="Bluesky" className="swipe-primary">
 		<Bluesky />
 	</ContactButton>
-	<ContactButton label="LinkedIn">
+	<ContactButton label="LinkedIn" className="swipe-secondary">
 		<LinkedIn />
 	</ContactButton>
-	<ContactButton label="Github">
+	<ContactButton label="Github" className="swipe-tertiary">
 		<Github />
 	</ContactButton>
-	<ContactButton label="Email">
+	<ContactButton label="Email" className="swipe-primary">
 		<Email />
 	</ContactButton>
 </div>
-
-<style>
-	.flex-row {
-		display: flex;
-		width: 100%;
-		justify-items: stretch;
-	}
-</style>

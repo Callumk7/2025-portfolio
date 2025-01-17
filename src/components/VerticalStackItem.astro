@@ -1,0 +1,13 @@
+<div class="stack-item">
+	<slot />
+</div>
+
+<style>
+	.stack-item {
+		width: 100%;
+		padding: 20px, 0;
+	}
+	.stack-item:not(:last-child) {
+		border-bottom: 1px solid var(--border);
+	}
+</style>

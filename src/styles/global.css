@@ -29,66 +29,12 @@
 	--background-purple: var(--scale-800);
 	--background-pale: var(--scale-50);
 
+    --background: var(--background-purple);
+
 	--accent: var(--scale-200);
 	--accent-dark: var(--scale-300);
 
     --border: var(--scale-900);
-}
-
-@font-face {
-	font-family: "SpaceMono";
-	src: url("/fonts/SpaceMono-Regular.ttf") format("truetype");
-	font-weight: 400;
-	font-display: swap;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Medium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Black.woff") format("woff");
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Italic.woff") format("woff");
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-MediumItalic.woff") format("woff");
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
 }
 
 body {
@@ -96,7 +42,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: var(--scale-800);
+	background: var(--background);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--light-text);
@@ -208,8 +154,9 @@ blockquote {
 }
 
 hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+    border: none;
+	border-top: 1px solid var(--border);
+    margin: 0;
 }
 
 @media (max-width: 720px) {
