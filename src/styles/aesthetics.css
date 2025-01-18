@@ -32,6 +32,10 @@
     border-bottom: 1px solid var(--border);
 }
 
+.divide-x>*:not(:last-child) {
+    border-right: 1px solid var(--border);
+}
+
 .hover-swipe {
     position: relative;
     padding: 20px 40px;

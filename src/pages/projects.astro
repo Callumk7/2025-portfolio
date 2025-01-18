@@ -1,0 +1,103 @@
+---
+import Section from "../components/Section.astro";
+import FlexLayout from "../layouts/FlexLayout.astro";
+import { HorizontalPicker } from "../components/home/interactive/horizontal-picker";
+const articles = [
+	{
+		id: 1,
+		title: "Exploring the Universe",
+		description:
+			"An in-depth look at the latest discoveries in space exploration and astronomy.",
+		subProjects: [
+			{
+				id: 1,
+				title: "Exploring the Universe",
+				description:
+					"An in-depth look at the latest discoveries in space exploration and astronomy.",
+			},
+			{
+				id: 2,
+				title: "The Future of Technology",
+				description:
+					"A comprehensive overview of emerging technologies that will shape our future.",
+			},
+			{
+				id: 3,
+				title: "Healthy Living Tips",
+				description:
+					"Practical advice on maintaining a balanced diet and a healthy lifestyle.",
+			},
+			{
+				id: 4,
+				title: "Travel Destinations for 2025",
+				description:
+					"A guide to the top travel destinations to visit this year, featuring hidden gems and popular spots.",
+			},
+			{
+				id: 5,
+				title: "The Impact of Climate Change",
+				description:
+					"An analysis of the effects of climate change on our planet and what can be done to mitigate it.",
+			},
+			{
+				id: 6,
+				title: "Understanding Mental Health",
+				description:
+					"An informative piece discussing the importance of mental health awareness and resources available.",
+			},
+		],
+	},
+	{
+		id: 2,
+		title: "The Future of Technology",
+		description:
+			"A comprehensive overview of emerging technologies that will shape our future.",
+	},
+	{
+		id: 3,
+		title: "Healthy Living Tips",
+		description:
+			"Practical advice on maintaining a balanced diet and a healthy lifestyle.",
+	},
+	{
+		id: 4,
+		title: "Travel Destinations for 2025",
+		description:
+			"A guide to the top travel destinations to visit this year, featuring hidden gems and popular spots.",
+	},
+	{
+		id: 5,
+		title: "The Impact of Climate Change",
+		description:
+			"An analysis of the effects of climate change on our planet and what can be done to mitigate it.",
+	},
+	{
+		id: 6,
+		title: "Understanding Mental Health",
+		description:
+			"An informative piece discussing the importance of mental health awareness and resources available.",
+	},
+];
+---
+
+<FlexLayout>
+	<Section>
+		<p class="p-3 intro">
+			Fugiat anim ullamco cillum Lorem sit velit sit cupidatat dolor labore sint eu elit.
+			Culpa ullamco cillum elit dolore tempor anim cillum anim pariatur ullamco. Id magna
+			incididunt ullamco ea eu pariatur aute minim et elit veniam sint deserunt.
+			Incididunt est ullamco laboris commodo et Lorem commodo dolor esse magna consectetur
+			duis. Incididunt consequat ad officia irure nostrud et aute quis nulla enim in
+			nostrud pariatur mollit sunt.
+		</p>
+	</Section>
+	<Section>
+		<HorizontalPicker projects={articles} client:load />
+	</Section>
+</FlexLayout>
+
+<style>
+	.intro {
+		margin-top: 0;
+	}
+</style>
