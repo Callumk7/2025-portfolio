@@ -1,50 +1,18 @@
 ---
-import About from "../components/home/About.astro";
-import ContactRow from "../components/home/ContactRow.astro";
-import { ProjectPicker } from "../components/home/interactive/project-picker";
-import Latest from "../components/home/Latest.astro";
-import Projects from "../components/home/Projects.astro";
-import SplitSection from "../components/home/SplitSection.astro";
-import Section from "../components/Section.astro";
-import FlexLayout from "../layouts/FlexLayout.astro";
-const articles = [
-	{
-		id: 1,
-		title: "Exploring the Universe",
-		description:
-			"An in-depth look at the latest discoveries in space exploration and astronomy.",
-	},
-	{
-		id: 2,
-		title: "The Future of Technology",
-		description:
-			"A comprehensive overview of emerging technologies that will shape our future.",
-	},
-	{
-		id: 3,
-		title: "Healthy Living Tips",
-		description:
-			"Practical advice on maintaining a balanced diet and a healthy lifestyle.",
-	},
-	{
-		id: 4,
-		title: "Travel Destinations for 2025",
-		description:
-			"A guide to the top travel destinations to visit this year, featuring hidden gems and popular spots.",
-	},
-	{
-		id: 5,
-		title: "The Impact of Climate Change",
-		description:
-			"An analysis of the effects of climate change on our planet and what can be done to mitigate it.",
-	},
-	{
-		id: 6,
-		title: "Understanding Mental Health",
-		description:
-			"An informative piece discussing the importance of mental health awareness and resources available.",
-	},
-];
+import About from "~/components/home/About.astro";
+import ContactRow from "~/components/home/ContactRow.astro";
+import { ProjectPicker } from "~/components/interactive/project-picker";
+import Latest from "~/components/home/Latest.astro";
+import Projects from "~/components/home/Projects.astro";
+import SplitSection from "~/components/home/SplitSection.astro";
+import Section from "~/components/Section.astro";
+import FlexLayout from "~/layouts/FlexLayout.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects").then((projects) =>
+	projects.map((proj) => proj.data),
+);
+
 ---
 
 <FlexLayout>
@@ -55,7 +23,7 @@ const articles = [
 		<ContactRow />
 	</Section>
 	<Section grow>
-		<Latest articles={articles} />
+		<Latest projects={projects} />
 	</Section>
 	<Section shrink>
 		<div class="bar">
@@ -63,14 +31,11 @@ const articles = [
 		</div>
 	</Section>
 	<Section shrink>
-		<ProjectPicker
-			projects={articles}
-			client:load
-		/>
+		<ProjectPicker projects={projects} client:load />
 	</Section>
 	<Section>
 		<SplitSection>
-			<Projects featured={articles.slice(0, 3)} />
+			<Projects featured={projects.slice(0, 3)} />
 		</SplitSection>
 	</Section>
 </FlexLayout>

@@ -1,17 +1,15 @@
 ---
+import type { Project } from "~/types";
 import ArticlePreview from "./ArticlePreview.astro";
 
 interface Props {
-	articles: {
-		title: string;
-		description: string;
-	}[];
+	projects: Project[]
 }
-const { articles } = Astro.props;
+const { projects } = Astro.props;
 ---
 
 <div class="latest-grid">
-	{articles.map((article) => <ArticlePreview article={article} />)}
+	{projects.map((proj) => <ArticlePreview project={proj} />)}
 </div>
 
 <style>

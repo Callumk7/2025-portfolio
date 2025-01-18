@@ -1,17 +1,19 @@
 ---
+import type { Project } from '~/types';
+
 interface Props {
-	article: { title: string; description: string };
+	project: Project
 }
 
-const { article } = Astro.props;
+const { project } = Astro.props;
 ---
 
 <div class="article">
 	<div>
-		<h3>{article.title}</h3>
+		<h3>{project.name}</h3>
 		<a href="place">Read more.</a>
 	</div>
-	<p>{article.description}</p>
+	<p>{project.description}</p>
 </div>
 
 <style>

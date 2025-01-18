@@ -1,13 +1,9 @@
 import { createSignal, For } from "solid-js";
+import { ProjectView } from "./project-view";
+import type { Project } from "~/types";
 
 interface ProjectPickerProps {
 	projects: Project[];
-}
-
-interface Project {
-	id: number;
-	title: string;
-	description: string;
 }
 
 export function ProjectPicker(props: ProjectPickerProps) {
@@ -22,26 +18,16 @@ export function ProjectPicker(props: ProjectPickerProps) {
 							onClick={() => setSelected(project)}
 							class="selector"
 							classList={{
-								"slider-selected text-left": selected().id === project.id,
-								"slider text-left": selected().id !== project.id,
+								"slider-selected text-left": selected().slug === project.slug,
+								"slider text-left": selected().slug !== project.slug,
 							}}
 						>
-							{project.title}
+							{project.name}
 						</button>
 					)}
 				</For>
 			</div>
 			<ProjectView project={selected()} />
-		</div>
-	);
-}
-
-export function ProjectView(props: { project: Project }) {
-	return (
-		<div class="p-3 d-flex flex-column justify-content-stretch h-100">
-			<h2>{props.project.title}</h2>
-			<p>{props.project.description}</p>
-			<a href="/place">Read more.</a>
 		</div>
 	);
 }
