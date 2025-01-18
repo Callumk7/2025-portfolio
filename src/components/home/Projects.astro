@@ -8,13 +8,6 @@ interface Props {
 const { featured } = Astro.props;
 ---
 
-<div class="flex-col">
+<div class="flex-column">
 	{featured.map((article) => <ArticlePreview article={article} />)}
 </div>
-
-<style>
-	.flex-col {
-		display: flex;
-		flex-direction: column;
-	}
-</style>

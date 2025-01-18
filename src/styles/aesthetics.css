@@ -5,11 +5,6 @@
     border: 0;
 }
 
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
 .slider {
     padding: 6px;
     border-radius: 0;
@@ -65,7 +60,30 @@
 }
 
 /* Color utilities */
-.swipe-primary::before { background-color: var(--scale-600); }
-.swipe-secondary::before { background-color: var(--scale-500); }
-.swipe-tertiary::before { background-color: var(--scale-400); }
-.text-light:hover { color: white; }
+.swipe-primary::before {
+    background-color: var(--scale-600);
+}
+
+.swipe-secondary::before {
+    background-color: var(--scale-500);
+}
+
+.swipe-tertiary::before {
+    background-color: var(--scale-400);
+}
+
+.text-light:hover {
+    color: white;
+}
+
+/* Font Styling */
+.sans {
+    font-family: "Satoshi", sans-serif;
+}
+
+.selector {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--scale-50);
+}

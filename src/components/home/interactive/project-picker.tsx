@@ -13,28 +13,35 @@ interface Project {
 export function ProjectPicker(props: ProjectPickerProps) {
 	const [selected, setSelected] = createSignal<Project>(props.projects[0]);
 	return (
-		<div class="grid-2">
-			<div class="d-flex flex-column border-right divide-y">
+		<div class="split">
+			<div class="left-stack">
 				<For each={props.projects}>
 					{(project) => (
 						<button
 							type="button"
 							onClick={() => setSelected(project)}
+							class="selector"
 							classList={{
 								"slider-selected text-left": selected().id === project.id,
 								"slider text-left": selected().id !== project.id,
 							}}
 						>
-							<h2>{project.title}</h2>
+							{project.title}
 						</button>
 					)}
 				</For>
 			</div>
-			<div class="p-3 d-flex flex-column justify-content-stretch h-100">
-				<h2>{selected().title}</h2>
-				<p>{selected().description}</p>
-				<a href="/place">Read more.</a>
-			</div>
+			<ProjectView project={selected()} />
+		</div>
+	);
+}
+
+export function ProjectView(props: { project: Project }) {
+	return (
+		<div class="p-3 d-flex flex-column justify-content-stretch h-100">
+			<h2>{props.project.title}</h2>
+			<p>{props.project.description}</p>
+			<a href="/place">Read more.</a>
 		</div>
 	);
 }

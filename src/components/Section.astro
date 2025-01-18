@@ -8,46 +8,8 @@ interface Props {
 const { grow, shrink, colour } = Astro.props;
 ---
 
-<div class:list={["outer", { grow: grow, shrink: shrink }, colour]}>
-	<div class="inner">
+<div class:list={["section", { grow: grow, shrink: shrink }, colour]}>
+	<div>
 		<slot />
 	</div>
 </div>
-
-<style>
-	.outer {
-		border-top: 1px solid var(--border);
-		width: 100%;
-	}
-	.grow {
-		flex-grow: 1;
-	}
-	.shrink {
-		flex-shrink: 1;
-	}
-	.inner {
-		margin: 0px calc(10vw + 16px);
-		border-left: 1px solid var(--border);
-		border-right: 1px solid var(--border);
-		height: 100%;
-	}
-	.blue {
-		background-color: var(--scale-900);
-	}
-	.purple {
-		background-color: var(--scale-800);
-	}
-	.orange {
-		background-color: var(--scale-400);
-	}
-	.black {
-		background-color: var(--black);
-		color: var(--white);
-	}
-	.yellow {
-		background-color: var(--scale-200);
-	}
-	.white {
-		background-color: var(--white);
-	}
-</style>
