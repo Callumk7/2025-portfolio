@@ -1,11 +1,6 @@
 import { createSignal, For, Show } from "solid-js";
 import styles from "./picker-styles.module.css";
-
-interface Project {
-	title: string;
-	description: string;
-	subProjects?: Project[];
-}
+import type { Project } from "~/types";
 
 interface HorizontalPickerProps {
 	projects: Project[];
@@ -24,10 +19,10 @@ export function HorizontalPicker(props: HorizontalPickerProps) {
 							onClick={() => setSelectedProject(project)}
 							class="p-2 grow selector"
 							classList={{
-								[styles.selected]: selectedProject().title === project.title,
+								[styles.selected]: selectedProject().slug === project.slug,
 							}}
 						>
-							<p>{project.title}</p>
+							<p>{project.name}</p>
 						</button>
 					)}
 				</For>
