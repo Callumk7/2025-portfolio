@@ -12,9 +12,4 @@ export default defineConfig({
     experimental: {
         svg: true
     },
-    vite: {
-        css: {
-            transformer: "lightningcss",
-        },
-    },
 });

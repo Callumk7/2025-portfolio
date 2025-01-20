@@ -1,5 +1,4 @@
 ---
-import SplitSection from "../components/home/SplitSection.astro";
 import Section from "../components/Section.astro";
 import VerticalStackItem from "../components/VerticalStackItem.astro";
 import FlexLayout from "../layouts/FlexLayout.astro";
@@ -10,44 +9,41 @@ import Github from "../components/icons/github.svg";
 ---
 
 <FlexLayout>
-	<Section grow>
-		<SplitSection>
-			<div class="left-stack">
-				<VerticalStackItem>
-					<div class="p-5 hover-swipe swipe-primary">
-						<Bluesky />
-						<span class="ml-2">Bluesky</span>
-					</div>
-				</VerticalStackItem>
-				<VerticalStackItem>
-					<div class="p-5 hover-swipe swipe-secondary">
-						<LinkedIn />
-						<span class="ml-2">LinkedIn</span>
-					</div>
-				</VerticalStackItem>
-				<VerticalStackItem>
-					<div class="p-5 hover-swipe swipe-tertiary">
-						<Email />
-						<span class="ml-2">Email</span>
-					</div>
-				</VerticalStackItem>
-				<VerticalStackItem>
-					<div class="p-5 hover-swipe swipe-primary">
-						<Github />
-						<span class="ml-2">Github</span>
-					</div>
-				</VerticalStackItem>
-			</div>
-			<div class="p-4">
-				Ullamco pariatur fugiat fugiat. Adipisicing dolore aliqua aliquip enim officia
-				sint Lorem cillum excepteur elit non sunt dolor aliqua duis. Culpa officia elit
-				consequat quis nisi aliqua. Lorem irure sit enim. Adipisicing veniam cupidatat
-				Lorem exercitation commodo deserunt cillum ad. Ullamco sint quis ipsum est aute
-				fugiat quis incididunt consequat consectetur. Excepteur laborum elit sint sint
-				magna eu deserunt.
-			</div>
-		</SplitSection>
-		<hr />
+	<Section type="split">
+		<div>
+			<VerticalStackItem>
+				<div class="p-5 hover-swipe-primary">
+					<Bluesky />
+					<span class="ml-2">Bluesky</span>
+				</div>
+			</VerticalStackItem>
+			<VerticalStackItem>
+				<div class="p-5 hover-swipe-secondary">
+					<LinkedIn />
+					<span class="ml-2">LinkedIn</span>
+				</div>
+			</VerticalStackItem>
+			<VerticalStackItem>
+				<div class="p-5 hover-swipe-tertiary">
+					<Email />
+					<span class="ml-2">Email</span>
+				</div>
+			</VerticalStackItem>
+			<VerticalStackItem>
+				<div class="p-5 hover-swipe-primary">
+					<Github />
+					<span class="ml-2">Github</span>
+				</div>
+			</VerticalStackItem>
+		</div>
+		<div class="p-4">
+			Ullamco pariatur fugiat fugiat. Adipisicing dolore aliqua aliquip enim officia
+			sint Lorem cillum excepteur elit non sunt dolor aliqua duis. Culpa officia elit
+			consequat quis nisi aliqua. Lorem irure sit enim. Adipisicing veniam cupidatat
+			Lorem exercitation commodo deserunt cillum ad. Ullamco sint quis ipsum est aute
+			fugiat quis incididunt consequat consectetur. Excepteur laborum elit sint sint
+			magna eu deserunt.
+		</div>
 	</Section>
 </FlexLayout>
 

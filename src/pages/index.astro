@@ -4,7 +4,6 @@ import ContactRow from "~/components/home/ContactRow.astro";
 import { ProjectPicker } from "~/components/interactive/project-picker";
 import Latest from "~/components/home/Latest.astro";
 import Projects from "~/components/home/Projects.astro";
-import SplitSection from "~/components/home/SplitSection.astro";
 import Section from "~/components/Section.astro";
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import { getCollection } from "astro:content";
@@ -30,13 +29,8 @@ const projects = await getCollection("projects").then((projects) =>
 			<p class="no-margin">I have experience with modern tech</p>
 		</div>
 	</Section>
-	<Section shrink>
+	<Section shrink type="split">
 		<ProjectPicker projects={projects} client:load />
-	</Section>
-	<Section>
-		<SplitSection>
-			<Projects featured={projects.slice(0, 3)} />
-		</SplitSection>
 	</Section>
 </FlexLayout>
 

@@ -7,7 +7,7 @@ interface Props {
 const { label, className } = Astro.props;
 ---
 
-<div class:list={["contact-button hover-swipe", className]}>
+<div class:list={["contact-button", className]}>
 	<div>
 		<slot />
 		<span>{label}</span>

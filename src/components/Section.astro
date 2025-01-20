@@ -2,14 +2,15 @@
 interface Props {
 	grow?: boolean;
 	shrink?: boolean;
-	colour?: string;
+	type?: "single" | "split";
 }
 
-const { grow, shrink, colour } = Astro.props;
+let { grow, shrink, type } = Astro.props;
+if (!type) type = "single";
 ---
 
-<div class:list={["section", { grow: grow, shrink: shrink }, colour]}>
-	<div>
+<div class:list={["section", { "flex-grow": grow, "flex-shrink": shrink }]}>
+	<div class={type === "split" ? "split" : undefined}>
 		<slot />
 	</div>
 </div>

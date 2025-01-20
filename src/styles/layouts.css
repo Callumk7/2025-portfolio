@@ -1,31 +1,3 @@
-/* Main Section Divider Styles */
-
-.section {
-    border-top: 1px solid var(--border);
-    width: 100%;
-}
-
-.section>div {
-    margin: 0px calc(10vw + 16px);
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-    height: 100%;
-}
-
-.split {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.left-stack {
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid var(--border);
-}
-.left-stack>*:not(:last-child) {
-    border-bottom: 1px solid var(--border);
-}
-
 .stack-item {
     width: 100%;
     padding: 20px, 0;

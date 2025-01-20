@@ -1,0 +1,66 @@
+// Variables
+$border: 1px solid var(--border);
+
+@mixin flex($direction, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+@mixin side-borders {
+  border-left: $border;
+  border-right: $border;
+}
+
+// Page level layouts
+.flex-layout {
+  height: 100%;
+  @include flex(column, stretch)
+}
+
+// Sections
+.section {
+  border-top: $border;
+  width: 100%;
+
+  >div {
+    @include side-borders;
+    margin: 0px calc(10vw + 16px);
+  }
+
+  &:last-child,
+  &:only-child {
+    border-bottom: $border;
+  }
+}
+
+// This is tied to the above class on the component level
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  >* {
+    @include flex(column, space-evenly);
+
+    &:not(:last-child) {
+      border-right: $border;
+    }
+  }
+}
+
+.stack {
+  @include flex(column, space-evenly)
+}
+
+// Utility Classes
+.h-view {
+  height: 100vh;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}

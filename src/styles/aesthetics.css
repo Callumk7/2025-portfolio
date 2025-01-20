@@ -31,50 +31,6 @@
     border-right: 1px solid var(--border);
 }
 
-.hover-swipe {
-    position: relative;
-    padding: 20px 40px;
-    font-size: 24px;
-    overflow: hidden;
-    transition: color 0.3s ease;
-    cursor: pointer;
-}
-
-.hover-swipe::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    transition: left 0.3s ease;
-    z-index: -1;
-}
-
-.hover-swipe:hover::before {
-    left: 0;
-}
-
-.hover-swipe:hover {
-    z-index: 1;
-}
-
-/* Color utilities */
-.swipe-primary::before {
-    background-color: var(--scale-600);
-}
-
-.swipe-secondary::before {
-    background-color: var(--scale-500);
-}
-
-.swipe-tertiary::before {
-    background-color: var(--scale-400);
-}
-
-.text-light:hover {
-    color: white;
-}
 
 /* Font Styling */
 .sans {
