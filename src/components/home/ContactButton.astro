@@ -19,8 +19,17 @@ const { label, className } = Astro.props;
 		padding: 20px;
 		flex-grow: 1;
 		width: 100%;
+		box-sizing: border-box;
 	}
-	.contact-button:not(:first-child) {
-		border-left: 1px solid var(--border);
+	@media (min-width: 1024px) {
+		.contact-button:not(:first-child) {
+			border-left: 1px solid var(--border);
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.contact-button:not(:first-child) {
+			border-top: 1px solid var(--border);
+		}
 	}
 </style>

@@ -9,7 +9,7 @@ const { grow, shrink, colour } = Astro.props;
 ---
 
 <div class:list={["section", { grow: grow, shrink: shrink }, colour]}>
-	<div>
+	<div class="sub-section">
 		<slot />
 	</div>
 </div>

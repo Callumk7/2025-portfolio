@@ -6,7 +6,7 @@ import Github from "../../components/icons/github.svg";
 import ContactButton from "./ContactButton.astro";
 ---
 
-<div class="flex-row w-100">
+<div class="contact-row w-100">
 	<ContactButton label="Bluesky" className="swipe-primary">
 		<Bluesky />
 	</ContactButton>
@@ -20,3 +20,15 @@ import ContactButton from "./ContactButton.astro";
 		<Email />
 	</ContactButton>
 </div>
+
+{/* Figuring out width issues */}
+<style>
+	.contact-row {
+		display: flex;
+	}
+	@media (max-width: 1024px) {
+		.contact-row {
+			flex-direction: column;
+		}
+	}
+</style>

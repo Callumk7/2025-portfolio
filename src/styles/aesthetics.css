@@ -24,11 +24,11 @@
 }
 
 .divide-y>*:not(:last-child) {
-    border-bottom: 1px solid var(--border);
+    border-bottom: var(--border);
 }
 
 .divide-x>*:not(:last-child) {
-    border-right: 1px solid var(--border);
+    border-right: var(--border);
 }
 
 .hover-swipe {
@@ -87,3 +87,28 @@
     font-size: 1.2rem;
     color: var(--scale-50);
 }
+
+.bg-background {
+    background-color: var(--background);
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.bg-600 {
+    background-color: var(--scale-600);
+}
+
+.bg-500 {
+    background-color: var(--scale-500);
+}
+
+.bg-400 {
+    background-color: var(--scale-400);
+}
+
+.bg-300 {
+    background-color: var(--scale-300);
+}
+

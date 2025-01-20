@@ -8,11 +8,11 @@ import SplitSection from "~/components/home/SplitSection.astro";
 import Section from "~/components/Section.astro";
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import { getCollection } from "astro:content";
+import TextRow from "~/components/home/TextRow.astro";
 
 const projects = await getCollection("projects").then((projects) =>
 	projects.map((proj) => proj.data),
 );
-
 ---
 
 <FlexLayout>
@@ -26,9 +26,7 @@ const projects = await getCollection("projects").then((projects) =>
 		<Latest projects={projects} />
 	</Section>
 	<Section shrink>
-		<div class="bar">
-			<p class="no-margin">I have experience with modern tech</p>
-		</div>
+		<TextRow>I have experience with modern tech</TextRow>
 	</Section>
 	<Section shrink>
 		<ProjectPicker projects={projects} client:load />
@@ -39,14 +37,3 @@ const projects = await getCollection("projects").then((projects) =>
 		</SplitSection>
 	</Section>
 </FlexLayout>
-
-<style>
-	.bar {
-		text-align: center;
-		width: 100%;
-	}
-	.no-margin {
-		margin: 0;
-		padding: 16px 0;
-	}
-</style>
