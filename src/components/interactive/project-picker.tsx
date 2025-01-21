@@ -23,6 +23,7 @@ export function ProjectPicker(props: ProjectPickerProps) {
 							setSelected={setSelected}
 						/>
 					</div>
+					<hr />
 				</Match>
 				<Match when={direction() === "horizontal"}>
 					<HorizontalList
@@ -45,13 +46,13 @@ interface ListProps {
 
 function VerticalList(props: ListProps) {
 	return (
-		<div class="left-stack">
+		<div class="border-right">
 			<For each={props.projects}>
 				{(project) => (
 					<button
 						type="button"
 						onClick={() => props.setSelected(project)}
-						class="selector"
+						class="vertical-stacked-element hover-swipe swipe-primary"
 						classList={{
 							"slider-selected text-left": props.selectedSlug === project.slug,
 							"slider text-left": props.selectedSlug !== project.slug,
@@ -67,13 +68,13 @@ function VerticalList(props: ListProps) {
 
 function HorizontalList(props: ListProps) {
 	return (
-		<div class="flex-row w-100 divide-x text-center border-bottom justify-content-stretch">
+		<div class="responsive-row w-100 text-center border-bottom justify-content-stretch">
 			<For each={props.projects}>
 				{(project) => (
 					<button
 						type="button"
 						onClick={() => props.setSelected(project)}
-						class="p-2 grow selector"
+						class="horizontal-stacked-element hover-swipe swipe-secondary"
 						classList={{
 							[styles.selected]: props.selectedSlug === project.slug,
 						}}

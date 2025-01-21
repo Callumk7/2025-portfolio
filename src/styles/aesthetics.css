@@ -1,8 +1,13 @@
 .button {
     background-color: rgba(var(--scale-100-rgb), 0.1);
     color: var(--scale-100);
-    padding: 6px;
+    padding: 0.25rem 0.5rem;
     border: 0;
+}
+
+.button:hover {
+    background-color: var(--scale-900);
+    transition: all 0.3s ease;
 }
 
 .slider {
@@ -34,7 +39,6 @@
 .hover-swipe {
     position: relative;
     padding: 20px 40px;
-    font-size: 24px;
     overflow: hidden;
     transition: color 0.3s ease;
     cursor: pointer;
@@ -72,8 +76,8 @@
     background-color: var(--scale-400);
 }
 
-.text-light:hover {
-    color: white;
+.text-large {
+    font-size: 1.8rem;
 }
 
 /* Font Styling */
@@ -81,8 +85,8 @@
     font-family: "Satoshi", sans-serif;
 }
 
-.selector {
-    font-family: "Satoshi", sans-serif;
+.text-interactive {
+    font-family: "Space Mono", sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
     color: var(--scale-50);
@@ -111,4 +115,3 @@
 .bg-300 {
     background-color: var(--scale-300);
 }
-

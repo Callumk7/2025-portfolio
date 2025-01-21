@@ -1,7 +1,6 @@
 ---
 import SplitSection from "../components/home/SplitSection.astro";
 import Section from "../components/Section.astro";
-import VerticalStackItem from "../components/VerticalStackItem.astro";
 import FlexLayout from "../layouts/FlexLayout.astro";
 import Bluesky from "../components/icons/bluesky.svg";
 import LinkedIn from "../components/icons/linkedin.svg";
@@ -12,31 +11,31 @@ import Github from "../components/icons/github.svg";
 <FlexLayout>
 	<Section grow>
 		<SplitSection>
-			<div class="left-stack">
-				<VerticalStackItem>
-					<div class="p-5 hover-swipe swipe-primary">
+			<div class="flex-column border-right">
+				<div class="vertical-stacked-element v-center hover-swipe swipe-primary">
+					<div class="v-center">
 						<Bluesky />
-						<span class="ml-2">Bluesky</span>
+						<span class="ml-2 text-large">Bluesky</span>
 					</div>
-				</VerticalStackItem>
-				<VerticalStackItem>
-					<div class="p-5 hover-swipe swipe-secondary">
+				</div>
+				<div class="vertical-stacked-element v-center hover-swipe swipe-secondary">
+					<div class="v-center">
 						<LinkedIn />
-						<span class="ml-2">LinkedIn</span>
+						<span class="ml-2 text-large">LinkedIn</span>
 					</div>
-				</VerticalStackItem>
-				<VerticalStackItem>
-					<div class="p-5 hover-swipe swipe-tertiary">
+				</div>
+				<div class="vertical-stacked-element v-center hover-swipe swipe-tertiary">
+					<div class="v-center">
 						<Email />
-						<span class="ml-2">Email</span>
+						<span class="ml-2 text-large">Email</span>
 					</div>
-				</VerticalStackItem>
-				<VerticalStackItem>
-					<div class="p-5 hover-swipe swipe-primary">
+				</div>
+				<div class="vertical-stacked-element v-center hover-swipe swipe-primary">
+					<div class="v-center">
 						<Github />
-						<span class="ml-2">Github</span>
+						<span class="ml-2 text-large">Github</span>
 					</div>
-				</VerticalStackItem>
+				</div>
 			</div>
 			<div class="p-4">
 				Ullamco pariatur fugiat fugiat. Adipisicing dolore aliqua aliquip enim officia
@@ -49,4 +48,3 @@ import Github from "../components/icons/github.svg";
 		</SplitSection>
 	</Section>
 </FlexLayout>
-

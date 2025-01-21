@@ -31,9 +31,4 @@ const projects = await getCollection("projects").then((projects) =>
 	<Section shrink>
 		<ProjectPicker projects={projects} client:load />
 	</Section>
-	<Section>
-		<SplitSection>
-			<Projects featured={projects.slice(0, 3)} />
-		</SplitSection>
-	</Section>
 </FlexLayout>
