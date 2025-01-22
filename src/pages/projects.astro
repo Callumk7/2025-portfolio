@@ -1,13 +1,11 @@
 ---
-import TextRow from "~/components/home/TextRow.astro";
 import Section from "../components/Section.astro";
 import FlexLayout from "../layouts/FlexLayout.astro";
 import { getCollection } from "astro:content";
 import { ProjectPicker } from "~/components/interactive/project-picker";
+import { SearchContainer } from "~/components/interactive/search-container";
 
-const projects = await getCollection("projects").then((projects) =>
-	projects.map((proj) => proj.data),
-);
+const projects = await getCollection("projects");
 ---
 
 <FlexLayout>
@@ -22,7 +20,14 @@ const projects = await getCollection("projects").then((projects) =>
 		</p>
 	</Section>
 	<Section>
-		<ProjectPicker direction="horizontal" projects={projects} client:load />
+		<ProjectPicker
+			direction="horizontal"
+			projects={projects.map((proj) => proj.data)}
+			client:load
+		/>
+	</Section>
+	<Section>
+		<SearchContainer client:load projects={projects.map(proj => proj.data)} />
 	</Section>
 </FlexLayout>
 

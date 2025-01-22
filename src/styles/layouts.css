@@ -11,7 +11,8 @@
     width: 100%;
 }
 
-.section:is(:last-child) {
+.section:last-child,
+.section:only-child {
     border-bottom: 1px solid var(--border);
 }
 
