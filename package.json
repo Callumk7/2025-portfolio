@@ -19,9 +19,9 @@
     },
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
-        "lightningcss": "^1.29.1",
         "prettier": "^3.4.2",
         "prettier-plugin-astro": "^0.14.1",
+        "sass": "^1.83.4",
         "typescript": "^5.7.3"
     }
 }
