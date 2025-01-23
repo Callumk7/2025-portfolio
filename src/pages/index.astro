@@ -1,9 +1,7 @@
 ---
 import { ProjectPicker } from "~/components/interactive/project-picker";
-import Latest from "~/components/home/Latest.astro";
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import { getCollection } from "astro:content";
-import TextRow from "~/components/home/TextRow.astro";
 import { Section } from "~/components/layout/section";
 import { About } from "~/components/sections/about";
 import { FlexRow } from "~/components/sections/flex-row";
@@ -13,6 +11,13 @@ import Bluesky from "~/components/icons/bluesky.svg";
 import LinkedIn from "~/components/icons/linkedin.svg";
 import Email from "~/components/icons/email.svg";
 import Github from "~/components/icons/github.svg";
+
+import AstroIcon from "~/components/icons/astro.svg";
+import React from "~/components/icons/react.svg";
+import Next from "~/components/icons/next.svg";
+import Remix from "~/components/icons/remix.svg";
+import Node from "~/components/icons/node.svg";
+import TextRow from "~/components/home/TextRow.astro";
 
 const projects = await getCollection("projects").then((projects) =>
 	projects.map((proj) => proj.data),
@@ -26,26 +31,43 @@ const projects = await getCollection("projects").then((projects) =>
 	<Section shrink>
 		<FlexRow responsive>
 			<ContactButton label="Bluesky" className="swipe-primary">
-				<Bluesky />
+				<Bluesky class="w-icon" />
 			</ContactButton>
 			<ContactButton label="LinkedIn" className="swipe-secondary">
-				<LinkedIn />
+				<LinkedIn class="w-icon" />
 			</ContactButton>
 			<ContactButton label="Github" className="swipe-tertiary">
-				<Github />
+				<Github class="w-icon" />
 			</ContactButton>
 			<ContactButton label="Email" className="swipe-primary">
-				<Email />
+				<Email class="w-icon" />
 			</ContactButton>
 		</FlexRow>
+	</Section>
+	<Section>
+		<div class="panel">
+			<h2>Some Projects</h2>
+			<p>
+				Minim nulla labore nisi. Nostrud sunt proident eu nostrud amet aliquip deserunt
+				tempor ex et dolore eu fugiat do laborum. Eu do non excepteur dolore minim Lorem
+				occaecat consequat voluptate Lorem anim ex ipsum sunt. Aliqua laborum ut
+				reprehenderit aliqua non. Anim dolore incididunt pariatur dolore dolore elit et
+				deserunt laboris mollit eiusmod id. Lorem veniam laboris labore aliquip eiusmod.
+			</p>
+		</div>
 	</Section>
 	<Section shrink>
 		<ProjectPicker projects={projects} client:load />
 	</Section>
-	<Section grow>
-		<Latest projects={projects} />
-	</Section>
 	<Section shrink>
-		<TextRow>I have experience with modern tech</TextRow>
+		<TextRow>I have experience with the latest technology</TextRow>
+		<hr />
+		<FlexRow responsive>
+			<React />
+			<Remix />
+			<Next />
+			<Node />
+			<AstroIcon />
+		</FlexRow>
 	</Section>
 </FlexLayout>

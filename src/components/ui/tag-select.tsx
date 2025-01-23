@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js/types/server/reactive.js";
+import { createSignal } from "solid-js";
 
 export function TagSelect(props: { tags: string[] }) {
 	const [selected, setSelected] = createSignal<Set<string>>(new Set([]));

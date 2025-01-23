@@ -164,6 +164,10 @@
     width: 50%;
 }
 
+.w-icon {
+    width: 24px;
+}
+
 .w-view {
     width: 100vw;
 }
@@ -280,4 +284,8 @@
 
 .text-capitalize {
     text-transform: capitalize;
+}
+
+.panel {
+    padding: 1.5rem;
 }

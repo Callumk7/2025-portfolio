@@ -13,28 +13,26 @@ export function ProjectPicker(props: ProjectPickerProps) {
 	const [selected, setSelected] = createSignal<Project>(props.projects[0]);
 	const direction = () => props.direction ?? "vertical";
 	return (
-		<>
-			<Switch>
-				<Match when={direction() === "vertical"}>
-					<div class="split">
-						<VerticalList
-							projects={props.projects}
-							selectedSlug={selected().slug}
-							setSelected={setSelected}
-						/>
-						<ProjectView project={selected()} />
-					</div>
-				</Match>
-				<Match when={direction() === "horizontal"}>
-					<HorizontalList
+		<Switch>
+			<Match when={direction() === "vertical"}>
+				<div class="split">
+					<VerticalList
 						projects={props.projects}
 						selectedSlug={selected().slug}
 						setSelected={setSelected}
 					/>
 					<ProjectView project={selected()} />
-				</Match>
-			</Switch>
-		</>
+				</div>
+			</Match>
+			<Match when={direction() === "horizontal"}>
+				<HorizontalList
+					projects={props.projects}
+					selectedSlug={selected().slug}
+					setSelected={setSelected}
+				/>
+				<ProjectView project={selected()} />
+			</Match>
+		</Switch>
 	);
 }
 
