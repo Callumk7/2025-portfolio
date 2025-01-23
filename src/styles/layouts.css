@@ -58,15 +58,15 @@
     }
 }
 
-.responsive-row {
-    display: flex;
-}
-
-@media (max-width: 1024px) {
-    .responsive-row {
-        flex-direction: column;
-    }
-}
+/*.responsive-row {*/
+/*    display: flex;*/
+/*}*/
+/**/
+/*@media (max-width: 1024px) {*/
+/*    .responsive-row {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
 
 /* Utility Classes */
 /* Margin */

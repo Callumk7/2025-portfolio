@@ -1,5 +1,4 @@
 ---
-import ContactRow from "~/components/home/ContactRow.astro";
 import { ProjectPicker } from "~/components/interactive/project-picker";
 import Latest from "~/components/home/Latest.astro";
 import FlexLayout from "~/layouts/FlexLayout.astro";
@@ -7,6 +6,13 @@ import { getCollection } from "astro:content";
 import TextRow from "~/components/home/TextRow.astro";
 import { Section } from "~/components/layout/section";
 import { About } from "~/components/sections/about";
+import { FlexRow } from "~/components/sections/flex-row";
+import ContactButton from "~/components/home/ContactButton.astro";
+
+import Bluesky from "~/components/icons/bluesky.svg";
+import LinkedIn from "~/components/icons/linkedin.svg";
+import Email from "~/components/icons/email.svg";
+import Github from "~/components/icons/github.svg";
 
 const projects = await getCollection("projects").then((projects) =>
 	projects.map((proj) => proj.data),
@@ -18,15 +24,28 @@ const projects = await getCollection("projects").then((projects) =>
 		<About />
 	</Section>
 	<Section shrink>
-		<ContactRow />
+		<FlexRow responsive>
+			<ContactButton label="Bluesky" className="swipe-primary">
+				<Bluesky />
+			</ContactButton>
+			<ContactButton label="LinkedIn" className="swipe-secondary">
+				<LinkedIn />
+			</ContactButton>
+			<ContactButton label="Github" className="swipe-tertiary">
+				<Github />
+			</ContactButton>
+			<ContactButton label="Email" className="swipe-primary">
+				<Email />
+			</ContactButton>
+		</FlexRow>
+	</Section>
+	<Section shrink>
+		<ProjectPicker projects={projects} client:load />
 	</Section>
 	<Section grow>
 		<Latest projects={projects} />
 	</Section>
 	<Section shrink>
 		<TextRow>I have experience with modern tech</TextRow>
-	</Section>
-	<Section shrink>
-		<ProjectPicker projects={projects} client:load />
 	</Section>
 </FlexLayout>

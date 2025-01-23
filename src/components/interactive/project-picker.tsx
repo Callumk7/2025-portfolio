@@ -22,8 +22,8 @@ export function ProjectPicker(props: ProjectPickerProps) {
 							selectedSlug={selected().slug}
 							setSelected={setSelected}
 						/>
+						<ProjectView project={selected()} />
 					</div>
-					<hr />
 				</Match>
 				<Match when={direction() === "horizontal"}>
 					<HorizontalList
@@ -31,9 +31,9 @@ export function ProjectPicker(props: ProjectPickerProps) {
 						selectedSlug={selected().slug}
 						setSelected={setSelected}
 					/>
+					<ProjectView project={selected()} />
 				</Match>
 			</Switch>
-			<ProjectView project={selected()} />
 		</>
 	);
 }
