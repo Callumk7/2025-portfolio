@@ -1,0 +1,21 @@
+.layout {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .one {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .two {
+    grid-column: span 2;
+  }
+}
+
+.button {
+  padding: 12px;
+  background: var(--scale-500);
+  border: 0px;
+}
