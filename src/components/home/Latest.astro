@@ -3,7 +3,7 @@ import type { Project } from "~/types";
 import ArticlePreview from "./ArticlePreview.astro";
 
 interface Props {
-	projects: Project[]
+	projects: Project[];
 }
 const { projects } = Astro.props;
 ---
@@ -16,6 +16,11 @@ const { projects } = Astro.props;
 	.latest-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		row-gap: 9px;
+	}
+
+	@media (max-width: 1024px) {
+		.latest-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

@@ -14,3 +14,9 @@ const { project } = Astro.props;
 	</div>
 	<p>{project.description}</p>
 </a>
+
+<style>
+	a:not(:last-child) {
+		border-bottom: 1px solid var(--border);
+	}
+</style>
