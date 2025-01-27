@@ -6,44 +6,37 @@ import Bluesky from "../components/icons/bluesky.svg";
 import LinkedIn from "../components/icons/linkedin.svg";
 import Email from "../components/icons/email.svg";
 import Github from "../components/icons/github.svg";
+import ContactLarge from "~/components/ContactLarge.astro";
 ---
 
 <FlexLayout>
 	<Section grow>
 		<SplitSection>
 			<div class="flex-column border-right">
-				<div class="vertical-stacked-element v-center hover-swipe swipe-primary">
-					<div class="v-center">
-						<Bluesky />
-						<span class="ml-2 text-large">Bluesky</span>
-					</div>
-				</div>
-				<div class="vertical-stacked-element v-center hover-swipe swipe-secondary">
-					<div class="v-center">
-						<LinkedIn />
-						<span class="ml-2 text-large">LinkedIn</span>
-					</div>
-				</div>
-				<div class="vertical-stacked-element v-center hover-swipe swipe-tertiary">
-					<div class="v-center">
-						<Email />
-						<span class="ml-2 text-large">Email</span>
-					</div>
-				</div>
-				<div class="vertical-stacked-element v-center hover-swipe swipe-primary">
-					<div class="v-center">
-						<Github />
-						<span class="ml-2 text-large">Github</span>
-					</div>
-				</div>
+				<ContactLarge href="https://bsky.app/profile/callumkloos.dev">
+					<Bluesky slot="icon" />
+					Bluesky
+				</ContactLarge>
+				<ContactLarge href="https://www.linkedin.com/in/callum-kloos/">
+					<LinkedIn slot="icon" />
+					LinkedIn
+				</ContactLarge>
+				<ContactLarge href="mailto:callumkloos@gmail.com">
+					<Email slot="icon" />
+					Email
+				</ContactLarge>
+				<ContactLarge href="https://github.com/Callumk7">
+					<Github slot="icon" />
+					Github
+				</ContactLarge>
 			</div>
 			<div class="p-4">
-				Ullamco pariatur fugiat fugiat. Adipisicing dolore aliqua aliquip enim officia
-				sint Lorem cillum excepteur elit non sunt dolor aliqua duis. Culpa officia elit
-				consequat quis nisi aliqua. Lorem irure sit enim. Adipisicing veniam cupidatat
-				Lorem exercitation commodo deserunt cillum ad. Ullamco sint quis ipsum est aute
-				fugiat quis incididunt consequat consectetur. Excepteur laborum elit sint sint
-				magna eu deserunt.
+				<h4 class="pb-1">Lets Talk 🤙</h4>
+				I am a self taught web developer who can help you with many different problems, so
+				lets talk! You can react me at <a class="link" href="mailto:callumkloos@gmail.com"
+					>callumkloos@gmail.com</a
+				> or on any of the social platforms listed here. Together we can make the web a better
+				place.
 			</div>
 		</SplitSection>
 	</Section>

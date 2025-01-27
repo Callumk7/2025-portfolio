@@ -1,0 +1,17 @@
+.slider {
+    padding: 6px;
+    border-radius: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.slider:hover {
+    background-color: var(--scale-700);
+}
+
+.slider-selected {
+    padding: 6px;
+    border-radius: 0;
+    background-color: var(--scale-400);
+    border: 0;
+}

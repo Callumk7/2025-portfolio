@@ -30,29 +30,42 @@ const projects = await getCollection("projects").then((projects) =>
 	</Section>
 	<Section shrink>
 		<FlexRow responsive>
-			<ContactButton label="Bluesky" className="swipe-primary">
+			<ContactButton
+				href="https://bsky.app/profile/callumkloos.dev"
+				label="Bluesky"
+				className="swipe-primary"
+			>
 				<Bluesky class="w-icon" />
 			</ContactButton>
-			<ContactButton label="LinkedIn" className="swipe-secondary">
+			<ContactButton
+				href="https://www.linkedin.com/in/callum-kloos/"
+				label="LinkedIn"
+				className="swipe-secondary"
+			>
 				<LinkedIn class="w-icon" />
 			</ContactButton>
-			<ContactButton label="Github" className="swipe-tertiary">
+			<ContactButton
+				href="https://github.com/Callumk7"
+				label="Github"
+				className="swipe-tertiary"
+			>
 				<Github class="w-icon" />
 			</ContactButton>
-			<ContactButton label="Email" className="swipe-primary">
+			<ContactButton
+				href="mailto:callumkloos@gmail.com"
+				label="Email"
+				className="swipe-primary"
+			>
 				<Email class="w-icon" />
 			</ContactButton>
 		</FlexRow>
 	</Section>
 	<Section>
 		<div class="panel">
-			<h2>Some Projects</h2>
+			<h4>Some Projects</h4>
 			<p>
-				Minim nulla labore nisi. Nostrud sunt proident eu nostrud amet aliquip deserunt
-				tempor ex et dolore eu fugiat do laborum. Eu do non excepteur dolore minim Lorem
-				occaecat consequat voluptate Lorem anim ex ipsum sunt. Aliqua laborum ut
-				reprehenderit aliqua non. Anim dolore incididunt pariatur dolore dolore elit et
-				deserunt laboris mollit eiusmod id. Lorem veniam laboris labore aliquip eiusmod.
+				With a focus on usability and performance, I have built a number of apps that you
+				can explore below.
 			</p>
 		</div>
 	</Section>
@@ -60,14 +73,35 @@ const projects = await getCollection("projects").then((projects) =>
 		<ProjectPicker projects={projects} client:load />
 	</Section>
 	<Section shrink>
-		<TextRow>I have experience with the latest technology</TextRow>
+		<TextRow>
+			<h4 class="pb-1">I have experience with modern technology like:</h4>
+		</TextRow>
 		<hr />
 		<FlexRow responsive>
-			<React />
-			<Remix />
-			<Next />
-			<Node />
-			<AstroIcon />
+			<div class="icon-c">
+				<React class="icon" />
+			</div>
+			<div class="icon-c">
+				<Remix class="icon" />
+			</div>
+			<div class="icon-c">
+				<Next class="icon" />
+			</div>
+			<div class="icon-c">
+				<Node class="icon" />
+			</div>
+			<div class="icon-c">
+				<AstroIcon class="icon" />
+			</div>
 		</FlexRow>
 	</Section>
 </FlexLayout>
+
+<style>
+	.icon-c {
+		text-align: center;
+	}
+	.icon {
+		max-width: 64px;
+	}
+</style>

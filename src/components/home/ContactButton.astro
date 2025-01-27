@@ -1,15 +1,16 @@
 ---
 interface Props {
+	href: string;
 	label: string;
 	className?: string;
 }
 
-const { label, className } = Astro.props;
+const { href, label, className } = Astro.props;
 ---
 
-<div class:list={["hover-swipe text-large", className]}>
+<a href={href} target="_blank" class:list={["hover-swipe text-large", className]}>
 	<div class="v-center">
 		<slot />
 		<span class="ml-2">{label}</span>
 	</div>
-</div>
+</a>

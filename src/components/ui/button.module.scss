@@ -1,0 +1,17 @@
+.cta {
+  padding: 12px;
+  background: var(--scale-300);
+  border: 0px;
+}
+
+.default {
+  padding: 12px;
+  background: var(--scale-300);
+  border: 0px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--scale-500);
+    box-shadow: 0 10px 20px rgba(var(--scale-900-rgb), 0.2);
+  }
+}
