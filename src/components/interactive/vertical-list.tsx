@@ -1,4 +1,5 @@
 import { createSignal, For } from "solid-js";
+import styles from "./project-picker.module.scss";
 
 export function VerticalList(props: {
 	content: string[];
@@ -11,7 +12,7 @@ export function VerticalList(props: {
 		if (props.setSelected) props.setSelected(item);
 	};
 	return (
-		<div class="border-right">
+		<div class={`border-right flex-column ${styles.minHeight}`}>
 			<For each={props.content}>
 				{(content) => (
 					<button

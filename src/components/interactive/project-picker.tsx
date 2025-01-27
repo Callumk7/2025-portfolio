@@ -1,7 +1,8 @@
 import { createSignal } from "solid-js";
 import { ProjectView } from "./project-view";
 import type { Project } from "~/types";
-import { VerticalList } from "./virtical-list";
+import { VerticalList } from "./vertical-list";
+import styles from "./project-picker.module.scss";
 
 interface ProjectPickerProps {
 	projects: Project[];

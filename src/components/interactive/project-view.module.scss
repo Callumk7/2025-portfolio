@@ -1,0 +1,13 @@
+.container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-content: stretch;
+  height: 100%;
+  gap: 12px;
+}
+
+.tagRow {
+  display: flex;
+}

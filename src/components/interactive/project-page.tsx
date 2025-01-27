@@ -3,7 +3,7 @@ import type { Project } from "~/types";
 import { FlexRow } from "../sections/flex-row";
 
 import { tags } from "~/data";
-import { VerticalList } from "./virtical-list";
+import { VerticalList } from "./vertical-list";
 
 type TopicKey = keyof typeof tags;
 const topics: TopicKey[] = Object.keys(tags) as TopicKey[];

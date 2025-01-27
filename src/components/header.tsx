@@ -16,12 +16,8 @@ export function Header(props: { pathname: string }) {
 			href: "/blog",
 		},
 		{
-			label: "Contact",
+			label: "About",
 			href: "/contact",
-		},
-		{
-			label: "Experience",
-			href: "/experience",
 		},
 	];
 
