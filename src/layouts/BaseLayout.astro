@@ -1,7 +1,8 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
+import BaseHead from "~/components/BaseHead.astro";
+import { Header } from "~/components/header";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+const pathname = Astro.url.pathname;
 ---
 
 <html lang="en">
@@ -9,7 +10,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body class="h-view">
-		<Header />
+		<Header pathname={pathname} />
 		<slot />
 	</body>
 </html>

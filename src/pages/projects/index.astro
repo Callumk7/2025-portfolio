@@ -10,15 +10,17 @@ const projects = await getCollection("projects");
 
 <FlexLayout>
 	<Section>
-		<h1>My Projects</h1>
-		<p>
-			Fugiat anim ullamco cillum Lorem sit velit sit cupidatat dolor labore sint eu elit.
-			Culpa ullamco cillum elit dolore tempor anim cillum anim pariatur ullamco. Id magna
-			incididunt ullamco ea eu pariatur aute minim et elit veniam sint deserunt.
-			Incididunt est ullamco laboris commodo et Lorem commodo dolor esse magna consectetur
-			duis. Incididunt consequat ad officia irure nostrud et aute quis nulla enim in
-			nostrud pariatur mollit sunt.
-		</p>
+		<div class="p-1">
+			<h1>My Projects</h1>
+			<p>
+				Fugiat anim ullamco cillum Lorem sit velit sit cupidatat dolor labore sint eu elit.
+				Culpa ullamco cillum elit dolore tempor anim cillum anim pariatur ullamco. Id magna
+				incididunt ullamco ea eu pariatur aute minim et elit veniam sint deserunt.
+				Incididunt est ullamco laboris commodo et Lorem commodo dolor esse magna consectetur
+				duis. Incididunt consequat ad officia irure nostrud et aute quis nulla enim in
+				nostrud pariatur mollit sunt.
+			</p>
+		</div>
 	</Section>
 	<Section>
 		<SearchContainer client:load projects={projects.map((proj) => proj.data)} />
@@ -27,9 +29,3 @@ const projects = await getCollection("projects");
 		<ProjectPage client:load projects={projects.map((proj) => proj.data)} />
 	</Section>
 </FlexLayout>
-
-<style>
-	.m-0 {
-		margin: 0;
-	}
-</style>

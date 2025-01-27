@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  place-items: center;
+}
+
+.logo {
+  font-weight: 900;
+  color: var(--scale-100);
+  font-family: "Space Mono";
+  font-size: 32px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+}
+
+li {
+  list-style-type: none;
+}
+
+.active {
+  background-color: var(--scale-700);
+}

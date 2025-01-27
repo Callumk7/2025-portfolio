@@ -1,6 +1,7 @@
-import { createSignal, For, type Setter } from "solid-js";
+import { createSignal } from "solid-js";
 import { ProjectView } from "./project-view";
 import type { Project } from "~/types";
+import { VerticalList } from "./virtical-list";
 
 interface ProjectPickerProps {
 	projects: Project[];
@@ -8,41 +9,23 @@ interface ProjectPickerProps {
 
 export function ProjectPicker(props: ProjectPickerProps) {
 	const [selected, setSelected] = createSignal<Project>(props.projects[0]);
-	return (
-				<div class="split">
-					<VerticalList
-						projects={props.projects}
-						selectedSlug={selected().slug}
-						setSelected={setSelected}
-					/>
-					<ProjectView project={selected()} />
-				</div>
-	);
-}
+	const list = props.projects.map((proj) => proj.name);
 
-interface ListProps {
-	projects: Project[];
-	selectedSlug: string;
-	setSelected: Setter<Project>;
-}
+	const handleSelect = (item: string) => {
+		const selectedProj = props.projects.find((proj) => proj.name === item);
+		if (selectedProj) {
+			setSelected(selectedProj);
+		}
+	};
 
-function VerticalList(props: ListProps) {
 	return (
-		<div class="border-right">
-			<For each={props.projects}>
-				{(project) => (
-					<button
-						type="button"
-						onClick={() => props.setSelected(project)}
-						class="vertical-stacked-element hover-swipe swipe-primary"
-						classList={{
-							"text-left": props.selectedSlug === project.slug,
-						}}
-					>
-						{project.name}
-					</button>
-				)}
-			</For>
+		<div class="split">
+			<VerticalList
+				content={list}
+				selected={selected().name}
+				setSelected={handleSelect}
+			/>
+			<ProjectView project={selected()} />
 		</div>
 	);
 }

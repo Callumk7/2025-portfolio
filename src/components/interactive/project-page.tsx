@@ -3,6 +3,7 @@ import type { Project } from "~/types";
 import { FlexRow } from "../sections/flex-row";
 
 import { tags } from "~/data";
+import { VerticalList } from "./virtical-list";
 
 type TopicKey = keyof typeof tags;
 const topics: TopicKey[] = Object.keys(tags) as TopicKey[];
@@ -21,18 +22,7 @@ export function ProjectPage(props: { projects: Project[] }) {
 			</FlexRow>
 			<hr />
 			<div class="split">
-				<div class="border-right">
-					<For each={tags[selectedTopic()]}>
-						{(topic) => (
-							<button
-								type="button"
-								class="vertical-stacked-element hover-swipe swipe-secondary"
-							>
-								{topic}
-							</button>
-						)}
-					</For>
-				</div>
+				<VerticalList content={tags[selectedTopic()]} />
 			</div>
 		</>
 	);
