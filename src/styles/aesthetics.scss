@@ -44,11 +44,11 @@
 }
 
 .divide-y>*:not(:last-child) {
-  border-bottom: var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .divide-x>*:not(:last-child) {
-  border-right: var(--border);
+  border-right: 1px solid var(--border);
 }
 
 .hover-swipe {

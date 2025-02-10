@@ -13,7 +13,7 @@ const posts = (await getCollection("blog")).sort(
 <FlexLayout>
 	<Section>
 		<div class="split">
-			{posts.map((post) => <PostPreview post={post.data} />)}
+			{posts.map((post) => <PostPreview slug={post.id} post={post.data} />)}
 		</div>
 	</Section>
 </FlexLayout>

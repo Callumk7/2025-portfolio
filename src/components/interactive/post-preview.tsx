@@ -1,10 +1,10 @@
 import type { BlogData } from "~/content.config";
 
-export function PostPreview(props: { post: BlogData }) {
+export function PostPreview(props: { post: BlogData, slug: string }) {
 	return (
-		<div class="preview-card">
+		<a href={`/blog/${props.slug}`} class="preview-card">
 			<h3 class="title">{props.post.title}</h3>
 			<p>{props.post.description}</p>
-		</div>
+		</a>
 	);
 }

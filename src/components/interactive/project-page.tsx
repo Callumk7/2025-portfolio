@@ -4,6 +4,7 @@ import { FlexRow } from "../sections/flex-row";
 
 import { tags } from "~/data";
 import { VerticalList } from "./vertical-list";
+import { SearchContainer } from "./search-container";
 
 type TopicKey = keyof typeof tags;
 const topics: TopicKey[] = Object.keys(tags) as TopicKey[];
@@ -17,6 +18,8 @@ const [selectedTopic, setSelectedTopic] = createSignal<TopicKey>(topics[0]);
 export function ProjectPage(props: { projects: Project[] }) {
 	return (
 		<>
+			<SearchContainer projects={props.projects} />
+			<hr />
 			<FlexRow responsive>
 				<TopicRow />
 			</FlexRow>
