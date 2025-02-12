@@ -53,26 +53,3 @@
     font-style: italic;
     font-display: swap;
 }
-
-.heading {
-    font-family: "Satoshi", sans-serif;
-    color: var(--scale-100);
-    text-decoration: underline;
-    text-decoration-color: var(--scale-600);
-}
-
-.title {
-    font-family: "Satoshi", sans-serif;
-    color: var(--scale-100);
-    text-decoration: underline;
-    text-decoration-color: var(--scale-600);
-    font-size: 2.5em;
-}
-
-.sub-title {
-    font-family: "Satoshi", sans-serif;
-    color: var(--scale-100);
-    text-decoration: underline;
-    text-decoration-color: var(--scale-600);
-    font-size: 2.5em;
-}
