@@ -25,7 +25,7 @@ const projects = await getCollection("projects").then((projects) =>
 ---
 
 <FlexLayout>
-	<Section grow>
+	<Section>
 		<About />
 	</Section>
 	<Section shrink>
@@ -61,18 +61,9 @@ const projects = await getCollection("projects").then((projects) =>
 		</FlexRow>
 	</Section>
 	<Section>
-		<div class="panel">
-			<h4>Some Projects</h4>
-			<p>
-				With a focus on usability and performance, I have built a number of apps that you
-				can explore below.
-			</p>
-		</div>
+		<ProjectPicker client:visible projects={projects} />
 	</Section>
-	<Section shrink>
-		<ProjectPicker projects={projects} client:load />
-	</Section>
-	<Section shrink>
+	<Section>
 		<TextRow>
 			<h4>I have experience with modern technology like:</h4>
 		</TextRow>
@@ -94,13 +85,6 @@ const projects = await getCollection("projects").then((projects) =>
 				<AstroIcon class="icon" />
 			</div>
 		</FlexRow>
-	</Section>
-	<Section>
-		<TextRow>
-			Made with love by <a href="https://bsky.app/profile/callumkloos.dev">
-				Callum Kloos.
-			</a>
-		</TextRow>
 	</Section>
 </FlexLayout>
 

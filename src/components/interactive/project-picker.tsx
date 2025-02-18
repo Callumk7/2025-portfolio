@@ -2,7 +2,6 @@ import { createSignal } from "solid-js";
 import { ProjectView } from "./project-view";
 import type { Project } from "~/types";
 import { VerticalList } from "./vertical-list";
-import styles from "./project-picker.module.scss";
 
 interface ProjectPickerProps {
 	projects: Project[];
@@ -20,7 +19,7 @@ export function ProjectPicker(props: ProjectPickerProps) {
 	};
 
 	return (
-		<div class="split">
+		<div class="split-wide">
 			<VerticalList
 				content={list}
 				selected={selected().name}

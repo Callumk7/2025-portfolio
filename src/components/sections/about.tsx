@@ -6,9 +6,7 @@ export function About() {
 		<div class={styles.layout}>
 			<div class={styles.one}>
 				<div>
-					<Button>
-						Work With Me
-					</Button>
+					<Button>Work With Me</Button>
 				</div>
 			</div>
 			<div class={styles.two}>
@@ -16,9 +14,9 @@ export function About() {
 				<p>
 					I am a web developer and designer, with experience in Product and UX design. I
 					love building delightful and beutiful experiences for the web. Advocate for the
-					platform, Passionate for details. London based. Collaborate with me with the
-					links below! 👇
+					platform, Passionate for details. London based.
 				</p>
+				<p>Collaborate with me with the links below! 👇</p>
 			</div>
 		</div>
 	);
