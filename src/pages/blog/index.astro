@@ -7,12 +7,11 @@ import { PostPreview } from "~/components/interactive/post-preview";
 const posts = (await getCollection("blog")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-
 ---
 
 <FlexLayout>
 	<Section>
-		<div class="split">
+		<div class="divide-y">
 			{posts.map((post) => <PostPreview slug={post.id} post={post.data} />)}
 		</div>
 	</Section>

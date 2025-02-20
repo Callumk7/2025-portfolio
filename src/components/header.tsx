@@ -1,5 +1,6 @@
 import { For } from "solid-js";
 import styles from "./header.module.scss";
+import { ThemePicker } from "./interactive/theme-picker";
 
 export function Header(props: { pathname: string }) {
 	const links = [
@@ -12,8 +13,8 @@ export function Header(props: { pathname: string }) {
 			href: "/projects",
 		},
 		{
-			label: "Blog",
-			href: "/blog",
+			label: "Experience",
+			href: "/experience",
 		},
 		{
 			label: "About",

@@ -1,0 +1,152 @@
+---
+import Section from "~/components/Section.astro";
+import FlexLayout from "~/layouts/FlexLayout.astro";
+import { Card } from "~/components/ui/card";
+import { ExperienceCard } from "~/components/experience/experience-card";
+import TextRow from "~/components/home/TextRow.astro";
+---
+
+<FlexLayout>
+	<Section>
+		<div class="p-3">
+			<h2>Professional Experience</h2>
+			<p>
+				Sint eiusmod ad proident nisi Lorem ullamco sint aliquip consectetur veniam
+				consequat magna dolor eiusmod aliquip. Irure veniam dolor dolore reprehenderit
+				consectetur officia sit nulla ullamco elit minim. Voluptate mollit nulla eu
+				officia voluptate cillum incididunt. Velit anim quis aliquip et labore voluptate
+				pariatur cupidatat pariatur nisi irure ea. Labore nisi laboris fugiat officia
+				reprehenderit voluptate aliquip labore excepteur. Laborum deserunt sunt nostrud
+				aliquip reprehenderit.
+			</p>
+			<div class="contact">
+				<div class="wide">
+					<strong>Email</strong>
+					<span>callumkloos@gmail.com</span>
+				</div>
+				<div class="wide">
+					<strong>Bluesky</strong>
+					<span>callumkloos.dev</span>
+				</div>
+			</div>
+		</div>
+	</Section>
+	<Section>
+		<div class="split-wide">
+			<Card title="Technical Skills" className="border-right">
+				<h5>Front End</h5>
+				<div class="flex-wrap">
+					<span class="tag">JavaScript</span>
+					<span class="tag">Typescript</span>
+					<span class="tag">React</span>
+					<span class="tag">Remix</span>
+					<span class="tag">Redux</span>
+					<span class="tag">Zustand</span>
+					<span class="tag">React Router</span>
+					<span class="tag">Astro</span>
+				</div>
+				<h5>Back End</h5>
+				<div class="flex-wrap">
+					<span class="tag">NodeJS</span>
+					<span class="tag">Elixir</span>
+					<span class="tag">Phoenix</span>
+					<span class="tag">SQL</span>
+					<span class="tag">PostgreSQL</span>
+				</div>
+				<h5>Misc</h5>
+				<div class="flex-wrap">
+					<span class="tag">Agile</span>
+					<span class="tag">Kanban</span>
+					<span class="tag">UX Research</span>
+					<span class="tag">Figma</span>
+					<span class="tag">Git</span>
+					<span class="tag">UI Design</span>
+				</div>
+			</Card>
+			<div>
+				<TextRow>
+					<h3>Work History</h3>
+				</TextRow>
+				<hr />
+				<ExperienceCard
+					jobTitle="React Developer"
+					companyName="Freelance"
+					dateStart={new Date("2020-01-01")}
+				>
+					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
+					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
+					veniam. Ex cupidatat deserunt elit enim. Eu id culpa in dolor ex. Est irure nisi
+					mollit ut adipisicing deserunt velit esse fugiat velit. Qui esse laboris aute
+					cupidatat enim aliquip in minim voluptate enim.
+				</ExperienceCard>
+				<ExperienceCard
+					jobTitle="React Developer"
+					companyName="Freelance"
+					dateStart={new Date("2020-01-01")}
+				>
+					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
+					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
+					veniam. Ex cupidatat deserunt elit enim. Eu id culpa in dolor ex. Est irure nisi
+					mollit ut adipisicing deserunt velit esse fugiat velit. Qui esse laboris aute
+					cupidatat enim aliquip in minim voluptate enim.
+				</ExperienceCard>
+				<ExperienceCard
+					jobTitle="React Developer"
+					companyName="Freelance"
+					dateStart={new Date("2020-01-01")}
+				>
+					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
+					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
+					veniam. Ex cupidatat deserunt elit enim. Eu id culpa in dolor ex. Est irure nisi
+					mollit ut adipisicing deserunt velit esse fugiat velit. Qui esse laboris aute
+					cupidatat enim aliquip in minim voluptate enim.
+				</ExperienceCard>
+				<hr />
+				<TextRow>
+					<h3>Education</h3>
+				</TextRow>
+				<hr />
+				<ExperienceCard
+					jobTitle="React Developer"
+					companyName="Freelance"
+					dateStart={new Date("2020-01-01")}
+				>
+					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
+					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
+					veniam. Ex cupidatat deserunt elit enim. Eu id culpa in dolor ex. Est irure nisi
+					mollit ut adipisicing deserunt velit esse fugiat velit. Qui esse laboris aute
+					cupidatat enim aliquip in minim voluptate enim.
+				</ExperienceCard>
+				<ExperienceCard
+					jobTitle="React Developer"
+					companyName="Freelance"
+					dateStart={new Date("2020-01-01")}
+				>
+					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
+					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
+					veniam. Ex cupidatat deserunt elit enim. Eu id culpa in dolor ex. Est irure nisi
+					mollit ut adipisicing deserunt velit esse fugiat velit. Qui esse laboris aute
+					cupidatat enim aliquip in minim voluptate enim.
+				</ExperienceCard>
+			</div>
+		</div>
+	</Section>
+
+	<style lang="scss">
+		.contact {
+			width: 40%;
+			margin-left: auto;
+			margin-right: 1.5rem;
+
+			& > :not(:last-child) {
+				margin-bottom: 0.3rem;
+			}
+		}
+
+		.wide {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+	</style>
+</FlexLayout>

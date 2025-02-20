@@ -17,6 +17,8 @@ import React from "~/components/icons/react.svg";
 import Next from "~/components/icons/next.svg";
 import Remix from "~/components/icons/remix.svg";
 import Node from "~/components/icons/node.svg";
+import Elixir from "~/components/icons/elixir.svg";
+
 import TextRow from "~/components/home/TextRow.astro";
 
 const projects = await getCollection("projects").then((projects) =>
@@ -71,18 +73,27 @@ const projects = await getCollection("projects").then((projects) =>
 		<FlexRow responsive>
 			<div class="icon-c">
 				<React class="icon" />
+				<span class="p-1">React</span>
 			</div>
 			<div class="icon-c">
 				<Remix class="icon" />
+				<span class="p-1">Remix</span>
 			</div>
 			<div class="icon-c">
 				<Next class="icon" />
+				<span class="p-1">NextJS</span>
 			</div>
 			<div class="icon-c">
 				<Node class="icon" />
+				<span class="p-1">NodeJS</span>
 			</div>
 			<div class="icon-c">
 				<AstroIcon class="icon" />
+				<span class="p-1">Astro</span>
+			</div>
+			<div class="icon-c">
+				<Elixir class="icon" />
+				<span class="p-1">Elixir</span>
 			</div>
 		</FlexRow>
 	</Section>
@@ -90,6 +101,9 @@ const projects = await getCollection("projects").then((projects) =>
 
 <style>
 	.icon-c {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		text-align: center;
 	}
 	.icon {
