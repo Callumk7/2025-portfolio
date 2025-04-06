@@ -30,36 +30,29 @@ const projects = await getCollection("projects").then((projects) =>
 	</Section>
 	<Section shrink>
 		<FlexRow responsive>
-			<ContactButton
-				href="https://bsky.app/profile/callumkloos.dev"
-				label="Bluesky"
-			>
+			<ContactButton href="https://bsky.app/profile/callumkloos.dev" label="Bluesky">
 				<Bluesky class="width-icon" />
 			</ContactButton>
-			<ContactButton
-				href="https://www.linkedin.com/in/callum-kloos/"
-				label="LinkedIn"
-			>
+			<ContactButton href="https://www.linkedin.com/in/callum-kloos/" label="LinkedIn">
 				<LinkedIn class="width-icon" />
 			</ContactButton>
-			<ContactButton
-				href="https://github.com/Callumk7"
-				label="Github"
-			>
+			<ContactButton href="https://github.com/Callumk7" label="Github">
 				<Github class="width-icon" />
 			</ContactButton>
-			<ContactButton
-				href="mailto:callumkloos@gmail.com"
-				label="Email"
-			>
+			<ContactButton href="mailto:callumkloos@gmail.com" label="Email">
 				<Email class="width-icon" />
 			</ContactButton>
 		</FlexRow>
 	</Section>
-	<Section header={{title: "Projects", description: "Some of the work I have done in the past."}}>
+	<Section
+		header={{
+			title: "Projects",
+			description: "Some of the work I have done in the past.",
+		}}
+	>
 		<ProjectPicker client:visible projects={projects} />
 	</Section>
-	<Section header={{title: "My Toolbelt"}} align="right">
+	<Section header={{ title: "My Toolbelt" }} align="right">
 		<FlexRow responsive>
 			<div class="icon-large">
 				<React class="icon-large__icon" />
