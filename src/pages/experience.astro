@@ -4,20 +4,48 @@ import FlexLayout from "~/layouts/FlexLayout.astro";
 import { Card } from "~/components/ui/card";
 import { ExperienceCard } from "~/components/experience/experience-card";
 import TextRow from "~/components/home/TextRow.astro";
+
+const technicalSkills = [
+	"HTML5",
+	"CSS3",
+	"JavaScript (ES6+)",
+	"TypeScript",
+	"React",
+	"Node.js",
+	"Express",
+	"Git",
+	"Responsive Web Design",
+	"Database Management, (SQL)",
+];
+
+const productSkills = [
+	"Agile",
+	"Scrum",
+	"User Research",
+	"Wireframing and Prototyping",
+	"User Story Development",
+	"Product Roadmapping",
+	"Stakeholder Management",
+];
+
+const softSkills = [
+	"Leadership",
+	"Cross functional team collaboration",
+	"Problem Solving",
+	"Project Management",
+];
 ---
 
 <FlexLayout>
 	<Section>
 		<div class="p-3">
-			<h2>Professional Experience</h2>
+			<h2>Professional Profile</h2>
 			<p>
-				Sint eiusmod ad proident nisi Lorem ullamco sint aliquip consectetur veniam
-				consequat magna dolor eiusmod aliquip. Irure veniam dolor dolore reprehenderit
-				consectetur officia sit nulla ullamco elit minim. Voluptate mollit nulla eu
-				officia voluptate cillum incididunt. Velit anim quis aliquip et labore voluptate
-				pariatur cupidatat pariatur nisi irure ea. Labore nisi laboris fugiat officia
-				reprehenderit voluptate aliquip labore excepteur. Laborum deserunt sunt nostrud
-				aliquip reprehenderit.
+				Detail-orientated Junior Web Developer with a unique background in Product
+				Management and UX Design. Leveraging comprehensive understanding of the product
+				development lifecycle to create user-centered web solutions. Strong
+				problem-solving abilities with a passion for clean efficient code and intuitive
+				user experiences.
 			</p>
 			<div class="contact">
 				<div class="wide">
@@ -33,51 +61,58 @@ import TextRow from "~/components/home/TextRow.astro";
 	</Section>
 	<Section>
 		<div class="split-wide">
-			<Card title="Technical Skills" className="border-right">
-				<h5>Front End</h5>
+			<Card title="Skills" className="border-right">
+				<h5>Technical</h5>
 				<div class="flex-wrap">
-					<span class="tag">JavaScript</span>
-					<span class="tag">Typescript</span>
-					<span class="tag">React</span>
-					<span class="tag">Remix</span>
-					<span class="tag">Redux</span>
-					<span class="tag">Zustand</span>
-					<span class="tag">React Router</span>
-					<span class="tag">Astro</span>
+					{technicalSkills.map((skill) => <span class="tag">{skill}</span>)}
 				</div>
-				<h5>Back End</h5>
+				<h5>Product and UX</h5>
 				<div class="flex-wrap">
-					<span class="tag">NodeJS</span>
-					<span class="tag">Elixir</span>
-					<span class="tag">Phoenix</span>
-					<span class="tag">SQL</span>
-					<span class="tag">PostgreSQL</span>
+					{productSkills.map((skill) => <span class="tag">{skill}</span>)}
 				</div>
-				<h5>Misc</h5>
+				<h5>Professional</h5>
 				<div class="flex-wrap">
-					<span class="tag">Agile</span>
-					<span class="tag">Kanban</span>
-					<span class="tag">UX Research</span>
-					<span class="tag">Figma</span>
-					<span class="tag">Git</span>
-					<span class="tag">UI Design</span>
+					{softSkills.map((skill) => <span class="tag">{skill}</span>)}
 				</div>
 			</Card>
 			<div>
 				<TextRow>
-					<h3>Work History</h3>
+					<h3>Professional Experience</h3>
 				</TextRow>
 				<hr />
 				<ExperienceCard
-					jobTitle="React Developer"
+					jobTitle="Web Development Training & Projects | Self-directed Learning"
 					companyName="Freelance"
-					dateStart={new Date("2020-01-01")}
+					dateStart={new Date("2023-01-01")}
 				>
-					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
-					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
-					veniam. Ex cupidatat deserunt elit enim. Eu id culpa in dolor ex. Est irure nisi
-					mollit ut adipisicing deserunt velit esse fugiat velit. Qui esse laboris aute
-					cupidatat enim aliquip in minim voluptate enim.
+					<div>
+						<p>
+							Committed to intensive self-directed learning to transition into web
+							development:
+						</p>
+						<ul>
+							<li>
+								Completed comprehensive web development bootcamp covering front-end and
+								back-end technologies
+							</li>
+							<li>
+								Developed a portfolio of 5 responsive websites showcasing progressive
+								skill development
+							</li>
+							<li>
+								Created a full-stack e-commerce application using React.js, Node.js, and
+								MongoDB
+							</li>
+							<li>
+								Contributed to open-source projects to gain collaborative development
+								experience
+							</li>
+							<li>
+								Participated in coding challenges and hackathons to strengthen
+								problem-solving abilities
+							</li>
+						</ul>
+					</div>
 				</ExperienceCard>
 				<ExperienceCard
 					jobTitle="React Developer"
@@ -118,7 +153,7 @@ import TextRow from "~/components/home/TextRow.astro";
 					cupidatat enim aliquip in minim voluptate enim.
 				</ExperienceCard>
 				<ExperienceCard
-					jobTitle="React Developer"
+					jobTitle="Product Manager"
 					companyName="Freelance"
 					dateStart={new Date("2020-01-01")}
 				>
@@ -133,6 +168,10 @@ import TextRow from "~/components/home/TextRow.astro";
 	</Section>
 
 	<style lang="scss">
+		h5 {
+			margin-top: 0.9rem;
+		}
+
 		.contact {
 			width: 40%;
 			margin-left: auto;

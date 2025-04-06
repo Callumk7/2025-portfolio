@@ -16,7 +16,7 @@ export function About() {
 					love building delightful and beutiful experiences for the web. Advocate for the
 					platform, Passionate for details. London based.
 				</p>
-				<p>Collaborate with me with the links below! 👇</p>
+				<h4>Collaborate with me with the links below! 👇</h4>
 			</div>
 		</div>
 	);

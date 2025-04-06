@@ -6,11 +6,11 @@
 	line-height: 1;
 	outline: none;
 	border-left: 1px solid var(--border);
-	border-right: 1px solid var(--border);
 	transition:
 		border-color 250ms,
 		color 250ms;
 	max-width: 360px;
+    cursor: pointer;
 }
 
 .trigger:hover {
@@ -103,7 +103,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 2rem;
+	height: 1.5rem;
 	padding: 0 1rem;
 	position: relative;
 	user-select: none;

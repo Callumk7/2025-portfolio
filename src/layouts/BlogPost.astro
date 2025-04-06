@@ -3,33 +3,35 @@ import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
 import FlexLayout from "./FlexLayout.astro";
+import Section from "~/components/Section.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, pubDate, updatedDate } = Astro.props;
 ---
 
-<FlexLayout
-	><article>
-		<div class="prose">
-			<div class="title">
-				<div class="date">
-					<FormattedDate date={pubDate} />
-					{
+<FlexLayout>
+	<Section>
+		<article>
+			<div class="prose">
+				<div class="title">
+					<div class="date">
+						<FormattedDate date={pubDate} />
+						{
 						updatedDate && (
-							<div class="last-updated-on">
-								Last updated on <FormattedDate date={updatedDate} />
-							</div>
+						<div class="last-updated-on">
+							Last updated on <FormattedDate date={updatedDate} />
+						</div>
 						)
-					}
+						}
+					</div>
+					<h1>{title}</h1>
 				</div>
-				<h1>{title}</h1>
-				<hr />
+				<slot />
 			</div>
-			<slot />
-		</div>
-	</article></FlexLayout
->
+		</article>
+	</Section>
+</FlexLayout>
 
 <style>
 	main {
@@ -54,10 +56,11 @@ const { title, pubDate, updatedDate } = Astro.props;
 		color: rgb(var(--gray-dark));
 	}
 	.title {
-		margin-bottom: 1em;
+		margin-bottom: 1.9em;
 		padding: 1em 0;
 		text-align: center;
 		line-height: 1;
+		border-bottom: 5px solid var(--scale-400);
 	}
 	.title h1 {
 		margin: 0 0 0.5em 0;

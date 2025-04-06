@@ -1,8 +1,9 @@
-import Fuse from "fuse.js";
 import { For } from "solid-js";
-import { createSignal, createMemo } from "solid-js";
+import { createSignal } from "solid-js";
 import type { Project } from "~/types";
-import { Select } from "../ui/select";
+import { Select } from "~/components/ui/select";
+import { createFuzzyProjectSearch } from "./fuzzy-search";
+import { Tags } from "../tags";
 
 const [term, setTerm] = createSignal("");
 const [selectedTags, setSelectedTags] = createSignal<string[]>([]);
@@ -17,26 +18,13 @@ export function SearchContainer(props: { projects: Project[] }) {
 		);
 	};
 
-	const fuse = createMemo(
-		() =>
-			new Fuse(filteredProjects(), {
-				keys: ["name"],
-			}),
-	);
+	const result = createFuzzyProjectSearch(filteredProjects, term);
 
-	const result = () => {
-		if (term() === "") {
-			return filteredProjects();
-		}
-
-		return fuse()
-			.search(term())
-			.map((result) => result.item);
-	};
+	const options = getProjectTags(props.projects);
 
 	return (
 		<div class="py-2">
-			<SearchBar />
+			<SearchBar options={[...options]} />
 			<hr />
 			<div class="divide-y">
 				<For each={result()}>{(item) => <ProjectCard project={item} />}</For>
@@ -45,9 +33,9 @@ export function SearchContainer(props: { projects: Project[] }) {
 	);
 }
 
-function SearchBar() {
+function SearchBar(props: { options: string[] }) {
 	return (
-		<div class="flex-row">
+		<div class="flex-row justify-content-space-between w-100">
 			<input
 				class="search"
 				type="text"
@@ -56,7 +44,7 @@ function SearchBar() {
 				placeholder="Search Projects"
 			/>
 			<Select
-				options={["react", "node", "remix", "elixir", "next.js"]}
+				options={props.options}
 				placeholder="Filter"
 				selected={selectedTags()}
 				setSelected={setSelectedTags}
@@ -69,7 +57,13 @@ function ProjectCard(props: { project: Project }) {
 	return (
 		<a href={`/projects/${props.project.slug}`} class="preview-card">
 			<h4 class="title">{props.project.name}</h4>
+			<Tags tags={props.project.tags} />
 			<p>{props.project.description}</p>
 		</a>
 	);
+}
+
+function getProjectTags(projects: Project[]) {
+	const tags = new Set(projects.flatMap((project) => project.tags));
+	return [...tags];
 }

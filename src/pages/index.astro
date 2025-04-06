@@ -18,8 +18,8 @@ import Next from "~/components/icons/next.svg";
 import Remix from "~/components/icons/remix.svg";
 import Node from "~/components/icons/node.svg";
 import Elixir from "~/components/icons/elixir.svg";
-
-import TextRow from "~/components/home/TextRow.astro";
+import Typescript from "~/components/icons/typescript.svg";
+import Lua from "~/components/icons/lua.svg";
 
 const projects = await getCollection("projects").then((projects) =>
 	projects.map((proj) => proj.data),
@@ -42,14 +42,14 @@ const projects = await getCollection("projects").then((projects) =>
 			<ContactButton
 				href="https://www.linkedin.com/in/callum-kloos/"
 				label="LinkedIn"
-				className="swipe-secondary"
+				className="swipe-primary"
 			>
 				<LinkedIn class="w-icon" />
 			</ContactButton>
 			<ContactButton
 				href="https://github.com/Callumk7"
 				label="Github"
-				className="swipe-tertiary"
+				className="swipe-primary"
 			>
 				<Github class="w-icon" />
 			</ContactButton>
@@ -62,14 +62,10 @@ const projects = await getCollection("projects").then((projects) =>
 			</ContactButton>
 		</FlexRow>
 	</Section>
-	<Section>
+	<Section header={{title: "Projects", description: "Some of the work I have done in the past."}}>
 		<ProjectPicker client:visible projects={projects} />
 	</Section>
-	<Section>
-		<TextRow>
-			<h4>I have experience with modern technology like:</h4>
-		</TextRow>
-		<hr />
+	<Section header={{title: "My Toolbelt"}} align="right">
 		<FlexRow responsive>
 			<div class="icon-c">
 				<React class="icon" />
@@ -95,16 +91,29 @@ const projects = await getCollection("projects").then((projects) =>
 				<Elixir class="icon" />
 				<span class="p-1">Elixir</span>
 			</div>
+			<div class="icon-c">
+				<Typescript class="icon" />
+				<span class="p-1">Typescript</span>
+			</div>
+			<div class="icon-c">
+				<Lua class="icon" />
+				<span class="p-1">Lua</span>
+			</div>
 		</FlexRow>
 	</Section>
 </FlexLayout>
 
-<style>
+<style lang="scss">
 	.icon-c {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+		transition: color 200ms ease-in-out;
+
+		&:hover {
+			color: var(--scale-500);
+		}
 	}
 	.icon {
 		max-width: 64px;

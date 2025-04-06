@@ -1,6 +1,5 @@
 import { For } from "solid-js";
 import styles from "./header.module.scss";
-import { ThemePicker } from "./interactive/theme-picker";
 
 export function Header(props: { pathname: string }) {
 	const links = [
@@ -24,7 +23,7 @@ export function Header(props: { pathname: string }) {
 
 	return (
 		<nav class="d-flex justify-content-space-between w-100 p-4">
-			<span class={styles.logo}>callumKloos</span>
+			<a href="/" class={styles.logo}>callumKloos</a>
 			<ul class={styles.links}>
 				<For each={links}>
 					{(link) => (
