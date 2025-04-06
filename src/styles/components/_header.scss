@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.header__logo {
+  color: var(--scale-100);
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.header__links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  .header__link {
+    list-style-type: none;
+
+    &__active {
+      background-color: var(--scale-700);
+    }
+  }
+}

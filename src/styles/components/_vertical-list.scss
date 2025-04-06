@@ -1,0 +1,20 @@
+.vertical-list {
+  display: flex;
+  flex-direction: column;
+  border-right: $border;
+}
+
+.vertical-list__item {
+  @include hover-swipe;
+  @include stacked-element;
+
+  text-align: left;
+
+  &:not(:first-child) {
+    border-top: $border;
+  }
+
+  &--selected {
+    background-color: var(--scale-400);
+  }
+}

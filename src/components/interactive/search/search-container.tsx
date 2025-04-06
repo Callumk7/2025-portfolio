@@ -35,9 +35,9 @@ export function SearchContainer(props: { projects: Project[] }) {
 
 function SearchBar(props: { options: string[] }) {
 	return (
-		<div class="flex-row justify-content-space-between w-100">
+		<div class="search-bar">
 			<input
-				class="search"
+				class="input"
 				type="text"
 				value={term()}
 				onInput={(e) => setTerm(e.currentTarget.value)}
@@ -56,7 +56,7 @@ function SearchBar(props: { options: string[] }) {
 function ProjectCard(props: { project: Project }) {
 	return (
 		<a href={`/projects/${props.project.slug}`} class="preview-card">
-			<h4 class="title">{props.project.name}</h4>
+			<h4 class="preview-card__title">{props.project.name}</h4>
 			<Tags tags={props.project.tags} />
 			<p>{props.project.description}</p>
 		</a>

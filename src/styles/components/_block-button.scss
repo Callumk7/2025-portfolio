@@ -1,0 +1,15 @@
+.block-button {
+  @include hover-swipe;
+  
+  font-size: 1.8rem;
+}
+
+.block-button__content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.block-button__label {
+  margin-left: 0.5rem;
+}

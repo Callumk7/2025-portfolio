@@ -15,16 +15,17 @@ export function Section(props: {
 
 	const c = children(() => props.children);
 
+	// Boolean for alignment style. If alignment provided, align is true
 	const align = props.align !== undefined;
 
 	return (
-		<div classList={{ section: true, grow, shrink }}>
-			<div class="sub-section">
+		<div class="section" classList={{ grow, shrink }}>
+			<div class="section__inner">
 				{props.header && (
-					<div classList={{ header: true, [`text-${props.align}`]: align }}>
+					<div class="section__header" classList={{ [`text-${props.align}`]: align }}>
 						<h3>{props.header.title}</h3>
 						{props.header.description && (
-							<div class="description">{props.header.description}</div>
+							<p>{props.header.description}</p>
 						)}
 					</div>
 				)}

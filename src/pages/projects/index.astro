@@ -1,25 +1,20 @@
 ---
-import Section from "~/components/Section.astro";
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import { getCollection } from "astro:content";
 import { ProjectPage } from "~/components/interactive/project-page";
+import { Section } from "~/components/layout/section";
 
 const projects = await getCollection("projects");
 ---
 
 <FlexLayout>
-	<Section>
-		<div class="p-4">
-			<h1>My Projects</h1>
-			<p>
-				Feel free to checkout some of my work 👇
-			</p>
-			<p>
-				I specialise in full stack Typescript projects, utilising Node, Hono or Express on the backend, and usually I like to work with a React Framework like Remix or Next.
-			</p>
-		</div>
-	</Section>
-	<Section>
+	<Section
+		header={{
+			title: "My Projects",
+			description:
+				"I specialise in full stack Typescript projects utilising Node.js, Hono, and Remix / React Router.",
+		}}
+	>
 		<ProjectPage client:load projects={projects.map((proj) => proj.data)} />
 	</Section>
 </FlexLayout>

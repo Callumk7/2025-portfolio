@@ -19,7 +19,7 @@ export function ProjectPicker(props: ProjectPickerProps) {
 	};
 
 	return (
-		<div class="split-wide">
+		<div class="grid-split-wide">
 			<VerticalList
 				content={list}
 				selected={selected().name}

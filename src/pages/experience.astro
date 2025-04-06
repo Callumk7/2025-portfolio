@@ -1,9 +1,9 @@
 ---
-import Section from "~/components/Section.astro";
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import { Card } from "~/components/ui/card";
 import { ExperienceCard } from "~/components/experience/experience-card";
 import TextRow from "~/components/home/TextRow.astro";
+import { Section } from "~/components/layout/section";
 
 const technicalSkills = [
 	"HTML5",
@@ -30,7 +30,7 @@ const productSkills = [
 
 const softSkills = [
 	"Leadership",
-	"Cross functional team collaboration",
+	"Cross team collaboration",
 	"Problem Solving",
 	"Project Management",
 ];
@@ -38,7 +38,7 @@ const softSkills = [
 
 <FlexLayout>
 	<Section>
-		<div class="p-3">
+		<div class="padding-3">
 			<h2>Professional Profile</h2>
 			<p>
 				Detail-orientated Junior Web Developer with a unique background in Product
@@ -60,7 +60,7 @@ const softSkills = [
 		</div>
 	</Section>
 	<Section>
-		<div class="split-wide">
+		<div class="grid-split-wide">
 			<Card title="Skills" className="border-right">
 				<h5>Technical</h5>
 				<div class="flex-wrap">

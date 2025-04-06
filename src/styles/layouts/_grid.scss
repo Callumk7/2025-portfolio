@@ -1,0 +1,18 @@
+.grid-split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-split-wide {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  > :first-child {
+    grid-column: 1;
+  }
+
+  > :last-child {
+    grid-column: 2;
+  }
+}
+

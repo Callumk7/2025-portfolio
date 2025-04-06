@@ -17,9 +17,7 @@ import React from "~/components/icons/react.svg";
 import Next from "~/components/icons/next.svg";
 import Remix from "~/components/icons/remix.svg";
 import Node from "~/components/icons/node.svg";
-import Elixir from "~/components/icons/elixir.svg";
 import Typescript from "~/components/icons/typescript.svg";
-import Lua from "~/components/icons/lua.svg";
 
 const projects = await getCollection("projects").then((projects) =>
 	projects.map((proj) => proj.data),
@@ -35,30 +33,26 @@ const projects = await getCollection("projects").then((projects) =>
 			<ContactButton
 				href="https://bsky.app/profile/callumkloos.dev"
 				label="Bluesky"
-				className="swipe-primary"
 			>
-				<Bluesky class="w-icon" />
+				<Bluesky class="width-icon" />
 			</ContactButton>
 			<ContactButton
 				href="https://www.linkedin.com/in/callum-kloos/"
 				label="LinkedIn"
-				className="swipe-primary"
 			>
-				<LinkedIn class="w-icon" />
+				<LinkedIn class="width-icon" />
 			</ContactButton>
 			<ContactButton
 				href="https://github.com/Callumk7"
 				label="Github"
-				className="swipe-primary"
 			>
-				<Github class="w-icon" />
+				<Github class="width-icon" />
 			</ContactButton>
 			<ContactButton
 				href="mailto:callumkloos@gmail.com"
 				label="Email"
-				className="swipe-primary"
 			>
-				<Email class="w-icon" />
+				<Email class="width-icon" />
 			</ContactButton>
 		</FlexRow>
 	</Section>
@@ -67,55 +61,30 @@ const projects = await getCollection("projects").then((projects) =>
 	</Section>
 	<Section header={{title: "My Toolbelt"}} align="right">
 		<FlexRow responsive>
-			<div class="icon-c">
-				<React class="icon" />
-				<span class="p-1">React</span>
+			<div class="icon-large">
+				<React class="icon-large__icon" />
+				<span class="padding-1">React</span>
 			</div>
-			<div class="icon-c">
-				<Remix class="icon" />
-				<span class="p-1">Remix</span>
+			<div class="icon-large">
+				<Remix class="icon-large__icon" />
+				<span class="padding-1">Remix</span>
 			</div>
-			<div class="icon-c">
-				<Next class="icon" />
-				<span class="p-1">NextJS</span>
+			<div class="icon-large">
+				<Next class="icon-large__icon" />
+				<span class="padding-1">NextJS</span>
 			</div>
-			<div class="icon-c">
-				<Node class="icon" />
-				<span class="p-1">NodeJS</span>
+			<div class="icon-large">
+				<Node class="icon-large__icon" />
+				<span class="padding-1">NodeJS</span>
 			</div>
-			<div class="icon-c">
-				<AstroIcon class="icon" />
-				<span class="p-1">Astro</span>
+			<div class="icon-large">
+				<AstroIcon class="icon-large__icon" />
+				<span class="padding-1">Astro</span>
 			</div>
-			<div class="icon-c">
-				<Elixir class="icon" />
-				<span class="p-1">Elixir</span>
-			</div>
-			<div class="icon-c">
-				<Typescript class="icon" />
-				<span class="p-1">Typescript</span>
-			</div>
-			<div class="icon-c">
-				<Lua class="icon" />
-				<span class="p-1">Lua</span>
+			<div class="icon-large">
+				<Typescript class="icon-large__icon" />
+				<span class="padding-1">Typescript</span>
 			</div>
 		</FlexRow>
 	</Section>
 </FlexLayout>
-
-<style lang="scss">
-	.icon-c {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		transition: color 200ms ease-in-out;
-
-		&:hover {
-			color: var(--scale-500);
-		}
-	}
-	.icon {
-		max-width: 64px;
-	}
-</style>

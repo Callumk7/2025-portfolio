@@ -3,13 +3,18 @@ import BaseLayout from "./BaseLayout.astro";
 ---
 
 <BaseLayout>
-	<div class="flex-layout height">
+	<div class="flex-layout">
 		<slot />
 	</div>
 </BaseLayout>
 
 <style>
-.height {
-	min-height: 100vh;
-}
+	.flex-layout {
+		height: 100%;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: stretch;
+		align-items: center;
+	}
 </style>

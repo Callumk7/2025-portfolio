@@ -1,5 +1,4 @@
 import { For } from "solid-js";
-import styles from "./header.module.scss";
 
 export function Header(props: { pathname: string }) {
 	const links = [
@@ -22,16 +21,18 @@ export function Header(props: { pathname: string }) {
 	];
 
 	return (
-		<nav class="d-flex justify-content-space-between w-100 p-4">
-			<a href="/" class={styles.logo}>callumKloos</a>
-			<ul class={styles.links}>
+		<nav class="header">
+			<a href="/" class="header__logo">
+				callumKloos
+			</a>
+			<ul class="header__links">
 				<For each={links}>
 					{(link) => (
-						<li>
+						<li class="header__link">
 							<a
 								href={link.href}
 								class="button"
-								classList={{ [styles.active]: props.pathname === link.href }}
+								classList={{ header__link__active: props.pathname === link.href }}
 							>
 								{link.label}
 							</a>

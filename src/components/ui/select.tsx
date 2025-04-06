@@ -1,6 +1,5 @@
 import { Select as KobalteSelect } from "@kobalte/core/select";
 import { For, type Setter } from "solid-js";
-import styles from "./select.module.scss";
 
 interface SelectProps {
 	options: string[];
@@ -18,24 +17,24 @@ export function Select(props: SelectProps) {
 			options={props.options}
 			placeholder={props.placeholder}
 			itemComponent={(p) => (
-				<KobalteSelect.Item item={p.item} class={styles.item}>
+				<KobalteSelect.Item item={p.item} class="select__item">
 					<KobalteSelect.ItemLabel>{p.item.rawValue}</KobalteSelect.ItemLabel>
-					<KobalteSelect.ItemIndicator class={styles["item-indicator"]}>
+					<KobalteSelect.ItemIndicator class="select__item-indicator">
 						Y
 					</KobalteSelect.ItemIndicator>
 				</KobalteSelect.Item>
 			)}
 		>
-			<KobalteSelect.Trigger class={styles.trigger} as="div">
-				<KobalteSelect.Value<string> class={styles.value}>
+			<KobalteSelect.Trigger class="select__trigger" as="div">
+				<KobalteSelect.Value<string> class="select__value">
 					{(state) => (
 						<>
-							<div class={styles["selected-value-container"]}>
+							<div class="select__selected-value-container">
 								<For each={state.selectedOptions()}>
 									{(option) => (
 										<span
 											onPointerDown={(e) => e.stopPropagation()}
-											class={styles["selected-value"]}
+											class="select__selected-value"
 										>
 											{option}
 											<button type="button" onClick={() => state.remove(option)}>
@@ -50,8 +49,8 @@ export function Select(props: SelectProps) {
 				</KobalteSelect.Value>
 			</KobalteSelect.Trigger>
 			<KobalteSelect.Portal>
-				<KobalteSelect.Content class={styles.content}>
-					<KobalteSelect.Listbox class={styles.listbox} />
+				<KobalteSelect.Content class="select__content">
+					<KobalteSelect.Listbox class="select__listbox" />
 				</KobalteSelect.Content>
 			</KobalteSelect.Portal>
 		</KobalteSelect>

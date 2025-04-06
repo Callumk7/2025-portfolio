@@ -1,0 +1,90 @@
+.height-full {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.width-icon {
+  width: 24px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.padding-1 {
+  padding: 0.25rem;
+}
+
+.padding-2 {
+  padding: 0.5rem;
+}
+
+.padding-3 {
+  padding: 1rem;
+}
+
+.padding-4 {
+  padding: 1.5rem;
+}
+
+.margin-1 {
+  margin: 0.25rem;
+}
+
+.margin-2 {
+  margin: 0.5rem;
+}
+
+.margin-3 {
+  margin: 1rem;
+}
+
+.margin-4 {
+  margin: 1.5rem;
+}
+
+.margin-5 {
+  margin: 3rem;
+}
+
+// Add border between elements in a list
+.divide-y>*:not(:last-child) {
+  border-bottom: $border;
+}
+
+.divide-x>*:not(:last-child) {
+  border-right: $border;
+}
+
+.border {
+  border: $border;
+}
+.border-top {
+  border-top: $border;
+}
+.border-right {
+  border-right: $border;
+}
+.border-bottom {
+  border-bottom: $border;
+}
+.border-left {
+  border-left: $border;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}

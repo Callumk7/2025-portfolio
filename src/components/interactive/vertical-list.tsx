@@ -1,5 +1,4 @@
 import { createSignal, For } from "solid-js";
-import styles from "./project-picker.module.scss";
 
 export function VerticalList(props: {
 	content: string[];
@@ -12,15 +11,15 @@ export function VerticalList(props: {
 		if (props.setSelected) props.setSelected(item);
 	};
 	return (
-		<div class={`border-right flex-column ${styles.minHeight}`}>
+		<div class="vertical-list">
 			<For each={props.content}>
 				{(content) => (
 					<button
 						type="button"
 						onClick={() => handleSelect(content)}
-						class="vertical-stacked-element hover-swipe swipe-primary text-left"
+						class="vertical-list__item"
 						classList={{
-							"selected-element": localSelected() === content,
+							"vertical-list__item--selected": localSelected() === content,
 						}}
 					>
 						{content}

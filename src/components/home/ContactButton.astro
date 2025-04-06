@@ -8,9 +8,9 @@ interface Props {
 const { href, label, className } = Astro.props;
 ---
 
-<a href={href} target="_blank" class:list={["hover-swipe text-large", className]}>
-	<div class="v-center">
+<a href={href} target="_blank" class:list={["block-button", className]}>
+	<div class="block-button__content">
 		<slot />
-		<span class="ml-2">{label}</span>
+		<span class="block-button__label">{label}</span>
 	</div>
 </a>

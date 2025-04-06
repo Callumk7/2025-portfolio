@@ -1,0 +1,21 @@
+.section {
+  border-top: $border;
+  width: 100%;
+
+  &:last-child,
+  &:only-child {
+    border-bottom: $border;
+  }
+
+  &>.section__inner {
+    margin: 0px calc(10vw + 16px);
+    border-left: $border;
+    border-right: $border;
+    height: 100%;
+  }
+}
+
+.section__header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
