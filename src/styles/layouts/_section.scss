@@ -13,9 +13,18 @@
     border-right: $border;
     height: 100%;
   }
+
+  &--lighter {
+    background-color: var(--scale-700);
+  }
+
+  &--darker {
+    background-color: var(--black);
+  }
 }
 
 .section__header {
   padding: 1rem;
   border-bottom: 1px solid var(--border);
 }
+

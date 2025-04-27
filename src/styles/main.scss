@@ -3,7 +3,7 @@
 @import "abstracts/mixins";
 
 // Global styles
-@import "base/reset";
+@import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
@@ -22,3 +22,4 @@
 @import "components/project-card";
 @import "components/tag";
 @import "components/link";
+@import "components/content-preview";
