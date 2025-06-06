@@ -27,23 +27,18 @@ const projects = await getCollection("projects").then((projects) =>
 const frontendContent: Content[] = [
 	{
 		title: "Rich interactive user interfaces",
-		body:
-			"Creating rich and engaging user interfaces with React, Next.js, and Remix.",
-		link: "/projects/game-master"
-	}
-]
+		body: "Creating rich and engaging user interfaces with React, Next.js, and Remix.",
+		link: "/projects/game-master",
+	},
+];
 ---
 
 <FlexLayout>
 	<Section>
 		<div class="padding-4">
 			<h1>Hi, I'm Callum 👋</h1>
-			<p>
-				I am a web developer and designer, with experience in Product and UX design. I
-				love building delightful and beutiful experiences for the web. Advocate for the
-				platform, Passionate for details. London based.
-			</p>
-			<h4>Collaborate with me with the links below! 👇</h4>
+			<p>I am a freelance web developer, product manager, and designer.</p>
+			<p>Need something done? Let's chat.</p>
 		</div>
 	</Section>
 	<Section shrink>
@@ -64,21 +59,13 @@ const frontendContent: Content[] = [
 	</Section>
 	<Section
 		header={{
-			title: "Frontend",
+			title: "Some Projects",
 			description: "Some of the work I have done in the past.",
 		}}
 	>
 		<ProjectPicker client:visible projects={projects} />
 	</Section>
-	<Section
-		header={{
-			title: "Frontend",
-			description: "Some of the work I have done in the past.",
-		}}
-	>
-		<ContentPicker client:visible content={frontendContent} />
-	</Section>
-	<Section header={{ title: "My Toolbelt" }} align="right">
+	<Section header={{ title: "My Favourite Tools" }} align="right">
 		<FlexRow responsive>
 			<div class="icon-large">
 				<React class="icon-large__icon" />

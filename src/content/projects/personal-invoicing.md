@@ -1,7 +1,7 @@
 ---
-name: Game Master - Tabletop RPG Notes
-shortName: gamemaster
-description: Advanced notes app with deep linking capabilities, focussing on Tabletop RPG players.
+name: Personal Invoicing
+shortName: personalinvoicing
+description: Building out a tool for my own needs. Nuxt, Vue, and Vibes.
 coverImageUrl: http://image.com
 projectUrl: https://playq.xyz
 githubUrl: https://github.com/Callumk7/frontline-v2-remix
@@ -24,7 +24,7 @@ tech:
 wip: false
 cvDescription: I built a playlist management solution that supports server side rendering (SSR), user authentication, aggregated scores and ratings, and a user activity feed. The app uses React and Remix as the full stack framework, with some additional asyncronous tasks offloaded to a cloudflare application.
 screenshotCount: 3
-slug: game-master
+slug: personal-invoicing
 ---
 
 I built **playQ**, a complex CRUD application designed to manage video game collections and playlists. The application leverages modern web technologies to provide a seamless user experience for managing and exploring video games.
