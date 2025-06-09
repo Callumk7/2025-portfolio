@@ -1,6 +1,8 @@
+@use "../abstracts/mixins" as *;
+
 .block-button {
   @include hover-swipe;
-  
+
   font-size: 1.8rem;
 }
 
