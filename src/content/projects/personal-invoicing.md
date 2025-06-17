@@ -1,6 +1,5 @@
 ---
 name: Personal Invoicing
-shortName: personalinvoicing
 description: Building out a tool for my own needs. Nuxt, Vue, and Vibes.
 coverImageUrl: http://image.com
 projectUrl: https://playq.xyz
@@ -11,19 +10,8 @@ tags:
   - supabase
   - typescript
   - flydotio
-caseStudyUrl: /blog/introducing-playq-a-cuttingedge-videogame-playlist-manager
-related:
-tech:
-  - react
-  - remix
-  - supabase
-  - nodejs
-  - typescript
-  - cloudflare pages
-  - SQL
 wip: false
 cvDescription: I built a playlist management solution that supports server side rendering (SSR), user authentication, aggregated scores and ratings, and a user activity feed. The app uses React and Remix as the full stack framework, with some additional asyncronous tasks offloaded to a cloudflare application.
-screenshotCount: 3
 slug: personal-invoicing
 ---
 

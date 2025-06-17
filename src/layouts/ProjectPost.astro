@@ -3,9 +3,12 @@ import type { CollectionEntry } from "astro:content";
 import FlexLayout from "./FlexLayout.astro";
 import { Section } from "~/components/layout/section";
 
+import GithubIcon from "~/components/icons/github.svg";
+import LinkIcon from "~/components/icons/link.svg";
+
 type Props = CollectionEntry<"projects">["data"];
 
-const { name } = Astro.props;
+const { name, githubUrl, projectUrl } = Astro.props;
 ---
 
 <FlexLayout>
@@ -16,6 +19,14 @@ const { name } = Astro.props;
 					<h1>{name}</h1>
 					<hr />
 				</div>
+				<a class="link" href={githubUrl}>
+					<GithubIcon class="icon-link" />
+					<span>Github</span>
+				</a>
+				<a class="link" href={projectUrl}>
+					<LinkIcon class="icon-link" />
+					<span>Project link</span>
+				</a>
 				<slot />
 			</div>
 		</article>
@@ -50,5 +61,15 @@ const { name } = Astro.props;
 	}
 	.last-updated-on {
 		font-style: italic;
+	}
+	.icon-link {
+		width: 24px;
+		height: 24px;
+	}
+	.link {
+		display: flex;
+		align-items: center;
+
+		gap: 12px;
 	}
 </style>
