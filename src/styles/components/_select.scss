@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .select__item {
   line-height: 1;
   display: flex;
@@ -37,7 +39,7 @@
   padding: 2rem;
   line-height: 1;
   outline: none;
-  border-left: 1px solid var(--border);
+  border-left: $border;
   transition:
     border-color 250ms,
     color 250ms;
@@ -132,25 +134,25 @@
 
 // Select animation
 @keyframes contentShow {
-	from {
-		opacity: 0;
-		transform: translateY(-8px);
-	}
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes contentHide {
-	from {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-	to {
-		opacity: 0;
-		transform: translateY(-8px);
-	}
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 }

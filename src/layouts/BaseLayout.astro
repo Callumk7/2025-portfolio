@@ -12,7 +12,22 @@ const pathname = Astro.url.pathname;
 	</head>
 	<body class="height-full">
 		<Header pathname={pathname} />
-		<slot />
+		<div class="content">
+			<slot />
+		</div>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.height-full {
+		min-height: 100vh;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.content {
+		flex: 1 0 auto;
+	}
+</style>

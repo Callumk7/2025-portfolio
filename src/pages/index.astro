@@ -3,7 +3,6 @@ import { ProjectPicker } from "~/components/interactive/project-picker";
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import { getCollection } from "astro:content";
 import { Section } from "~/components/layout/section";
-import { About } from "~/components/sections/about";
 import { FlexRow } from "~/components/sections/flex-row";
 import ContactButton from "~/components/home/ContactButton.astro";
 
@@ -18,48 +17,55 @@ import Next from "~/components/icons/next.svg";
 import Remix from "~/components/icons/remix.svg";
 import Node from "~/components/icons/node.svg";
 import Typescript from "~/components/icons/typescript.svg";
+import type { Content } from "~/components/interactive/content-picker";
+import { ContentPicker } from "~/components/interactive/content-picker";
 
 const projects = await getCollection("projects").then((projects) =>
 	projects.map((proj) => proj.data),
 );
+
+const frontendContent: Content[] = [
+	{
+		title: "Rich interactive user interfaces",
+		body: "Creating rich and engaging user interfaces with React, Next.js, and Remix.",
+		link: "/projects/game-master",
+	},
+];
 ---
 
 <FlexLayout>
 	<Section>
-		<About />
+		<div class="padding-4">
+			<h1>Hi, I'm Callum 👋</h1>
+			<p>I am a freelance web developer, product manager, and designer.</p>
+			<p>Need something done? Let's chat.</p>
+		</div>
 	</Section>
 	<Section shrink>
 		<FlexRow responsive>
-			<ContactButton
-				href="https://bsky.app/profile/callumkloos.dev"
-				label="Bluesky"
-			>
+			<ContactButton href="https://bsky.app/profile/callumkloos.dev" label="Bluesky">
 				<Bluesky class="width-icon" />
 			</ContactButton>
-			<ContactButton
-				href="https://www.linkedin.com/in/callum-kloos/"
-				label="LinkedIn"
-			>
+			<ContactButton href="https://www.linkedin.com/in/callum-kloos/" label="LinkedIn">
 				<LinkedIn class="width-icon" />
 			</ContactButton>
-			<ContactButton
-				href="https://github.com/Callumk7"
-				label="Github"
-			>
+			<ContactButton href="https://github.com/Callumk7" label="Github">
 				<Github class="width-icon" />
 			</ContactButton>
-			<ContactButton
-				href="mailto:callumkloos@gmail.com"
-				label="Email"
-			>
+			<ContactButton href="mailto:callumkloos@gmail.com" label="Email">
 				<Email class="width-icon" />
 			</ContactButton>
 		</FlexRow>
 	</Section>
-	<Section header={{title: "Projects", description: "Some of the work I have done in the past."}}>
+	<Section
+		header={{
+			title: "Some Projects",
+			description: "Some of the work I have done in the past.",
+		}}
+	>
 		<ProjectPicker client:visible projects={projects} />
 	</Section>
-	<Section header={{title: "My Toolbelt"}} align="right">
+	<Section header={{ title: "My Favourite Tools" }} align="right">
 		<FlexRow responsive>
 			<div class="icon-large">
 				<React class="icon-large__icon" />

@@ -1,8 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-import Section from "../../components/Section.astro";
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import { PostPreview } from "~/components/interactive/post-preview";
+import { Section } from "~/components/layout/section";
 
 const posts = (await getCollection("blog")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

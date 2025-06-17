@@ -1,3 +1,5 @@
+// NOTE: These types are not used in this version of the application
+
 interface Post {
 	title: string;
 	description: string;

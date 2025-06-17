@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .vertical-list {
   display: flex;
   flex-direction: column;

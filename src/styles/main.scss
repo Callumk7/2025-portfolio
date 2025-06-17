@@ -1,24 +1,25 @@
 // Abstracts first, so that they are available in other files
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@use "abstracts/variables";
+@use "abstracts/mixins";
 
 // Global styles
-@import "base/reset";
-@import "base/typography";
-@import "base/utilities";
+@use "base/base";
+@use "base/typography";
+@use "base/utilities";
 
 // Components and layouts
-@import "layouts/section";
-@import "layouts/row";
-@import "layouts/grid";
-@import "components/header";
-@import "components/button";
-@import "components/block-button";
-@import "components/vertical-list";
-@import "components/icon-large";
-@import "components/input";
-@import "components/search-bar";
-@import "components/select";
-@import "components/project-card";
-@import "components/tag";
-@import "components/link";
+@use "layouts/section";
+@use "layouts/row";
+@use "layouts/grid";
+@use "components/header";
+@use "components/button";
+@use "components/block-button";
+@use "components/vertical-list";
+@use "components/icon-large";
+@use "components/input";
+@use "components/search-bar";
+@use "components/select";
+@use "components/project-card";
+@use "components/tag";
+@use "components/link";
+@use "components/content-preview";

@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .height-full {
   height: 100%;
   min-height: 100vh;
@@ -64,15 +66,19 @@
 .border {
   border: $border;
 }
+
 .border-top {
   border-top: $border;
 }
+
 .border-right {
   border-right: $border;
 }
+
 .border-bottom {
   border-bottom: $border;
 }
+
 .border-left {
   border-left: $border;
 }
