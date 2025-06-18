@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 import FlexLayout from "./FlexLayout.astro";
 import { Section } from "~/components/layout/section";
 
@@ -8,25 +9,26 @@ import LinkIcon from "~/components/icons/link.svg";
 
 type Props = CollectionEntry<"projects">["data"];
 
-const { name, githubUrl, projectUrl } = Astro.props;
+const { name, githubUrl, projectUrl, coverImageUrl } = Astro.props;
 ---
 
 <FlexLayout>
 	<Section>
 		<article>
 			<div class="prose">
+				{coverImageUrl && <Image src={coverImageUrl} alt={name} />}
 				<div class="title">
 					<h1>{name}</h1>
 					<hr />
+					<a class="link" href={githubUrl}>
+						<GithubIcon class="icon-link" />
+						<span>Github</span>
+					</a>
+					<a class="link" href={projectUrl}>
+						<LinkIcon class="icon-link" />
+						<span>Project link</span>
+					</a>
 				</div>
-				<a class="link" href={githubUrl}>
-					<GithubIcon class="icon-link" />
-					<span>Github</span>
-				</a>
-				<a class="link" href={projectUrl}>
-					<LinkIcon class="icon-link" />
-					<span>Project link</span>
-				</a>
 				<slot />
 			</div>
 		</article>
@@ -69,7 +71,7 @@ const { name, githubUrl, projectUrl } = Astro.props;
 	.link {
 		display: flex;
 		align-items: center;
-
+		margin-top: 8px;
 		gap: 12px;
 	}
 </style>

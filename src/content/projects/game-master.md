@@ -1,7 +1,7 @@
 ---
 name: Game Master - Tabletop RPG Notes
 description: Advanced notes app with deep linking capabilities, focussing on Tabletop RPG players.
-coverImageUrl: http://image.com
+coverImageUrl: ../../images/001-screenshot.png
 projectUrl: https://gm.callumkloos.dev
 githubUrl: https://github.com/Callumk7/game-master
 tags:

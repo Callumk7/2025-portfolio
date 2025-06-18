@@ -17,20 +17,10 @@ import Next from "~/components/icons/next.svg";
 import Remix from "~/components/icons/remix.svg";
 import Node from "~/components/icons/node.svg";
 import Typescript from "~/components/icons/typescript.svg";
-import type { Content } from "~/components/interactive/content-picker";
-import { ContentPicker } from "~/components/interactive/content-picker";
 
 const projects = await getCollection("projects").then((projects) =>
 	projects.map((proj) => proj.data),
 );
-
-const frontendContent: Content[] = [
-	{
-		title: "Rich interactive user interfaces",
-		body: "Creating rich and engaging user interfaces with React, Next.js, and Remix.",
-		link: "/projects/game-master",
-	},
-];
 ---
 
 <FlexLayout>

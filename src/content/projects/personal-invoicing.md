@@ -1,7 +1,6 @@
 ---
 name: Personal Invoicing
 description: Building out a tool for my own needs. Nuxt, Vue, and Vibes.
-coverImageUrl: http://image.com
 projectUrl: https://playq.xyz
 githubUrl: https://github.com/Callumk7/frontline-v2-remix
 tags:

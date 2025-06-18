@@ -2,7 +2,6 @@
 name: This Little Piggy Richmond
 description: A custom application that uses Notion as a CRM to publish information for a guinea pig rescue
 projectUrl: https://thislittlepiggyrichmond.co.uk
-coverImageUrl: http://image.com
 tags:
   - react
   - ssr

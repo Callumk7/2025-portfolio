@@ -13,18 +13,14 @@ interface Post {
 
 interface Project {
 	name: string;
-	shortName: string;
 	description: string;
 	projectUrl?: string; // external link to deployed project
 	githubUrl: string; // github project link
 	coverImageUrl: string;
 	tags: string[];
-	caseStudyUrl?: string;
 	slug: string;
-	tech: string[];
 	wip: boolean;
 	cvDescription?: string;
-	screenshotCount?: number;
 }
 
 interface ProjectWithContent extends Project {

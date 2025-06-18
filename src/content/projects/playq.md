@@ -1,7 +1,7 @@
 ---
 name: playQ Videogame Playlist Manager
 description: Create and share playlists to keep track of what you have been playing
-coverImageUrl: http://image.com
+coverImageUrl: ../../images/002-screenshot.png
 projectUrl: https://app.playq.xyz
 githubUrl: https://github.com/Callumk7/playq-v2
 tags:
@@ -14,8 +14,6 @@ wip: false
 cvDescription: I built a playlist management solution that supports server side rendering (SSR), user authentication, aggregated scores and ratings, and a user activity feed. The app uses React and Remix as the full stack framework, with some additional asyncronous tasks offloaded to a cloudflare application.
 slug: playq
 ---
-
-![playQ home page](/images/002-screenshot.png)
 
 I built **playQ**, a complex CRUD application designed to manage video game collections and playlists. The application leverages modern web technologies to provide a seamless user experience for managing and exploring video games.
 

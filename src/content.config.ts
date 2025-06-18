@@ -21,16 +21,17 @@ export type BlogData = z.infer<typeof blogSchema>;
 
 const projects = defineCollection({
 	loader: glob({ base: "./src/content/projects", pattern: "**/*.{md,mdx}" }),
-	schema: z.object({
-		name: z.string(),
-		description: z.string(),
-		coverImageUrl: z.string(),
-		projectUrl: z.string(),
-		githubUrl: z.string(),
-		tags: z.array(z.string()),
-		wip: z.boolean(),
-		slug: z.string(),
-	}),
+	schema: ({ image }) =>
+		z.object({
+			name: z.string(),
+			description: z.string(),
+			coverImageUrl: image().optional(),
+			projectUrl: z.string(),
+			githubUrl: z.string(),
+			tags: z.array(z.string()),
+			wip: z.boolean(),
+			slug: z.string(),
+		}),
 });
 
 export const collections = { blog, projects };
