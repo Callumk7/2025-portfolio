@@ -1,131 +1,149 @@
 // Satoshi
 @font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Italic.woff") format("woff");
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
+
 @font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Medium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-MediumItalic.woff") format("woff");
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
 }
+
 @font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-	font-family: "Satoshi";
-	src: url("/fonts/Satoshi-Black.woff") format("woff");
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 // IBM Plex Mono
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-Thin.ttf") format("truetype");
-    font-weight: 100;
-    font-style: normal;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-ThinItalic.ttf") format("truetype");
-    font-weight: 100;
-    font-style: italic;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-ExtraLight.ttf") format("truetype");
-	font-weight: 200;
-	font-style: normal;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-ExtraLightItalic.ttf") format("truetype");
-	font-weight: 200;
-	font-style: italic;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-Light.ttf") format("truetype");
-	font-weight: 300;
-	font-style: normal;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-Light.ttf") format("truetype");
-	font-weight: 300;
-	font-style: italic;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
-	font-weight: 400;
-	font-style: normal;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-RegularItalic.ttf") format("truetype");
-	font-weight: 400;
-	font-style: italic;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
 }
+
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-MediumItalic.ttf") format("truetype");
-	font-weight: 500;
-	font-style: italic;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-SemiBold.ttf") format("truetype");
-	font-weight: 600;
-	font-style: normal;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-SemiBoldItalic.ttf") format("truetype");
-	font-weight: 600;
-	font-style: italic;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-Bold.ttf") format("truetype");
-	font-weight: 700;
-	font-style: normal;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
+
 @font-face {
-	font-family: "IBM Plex Mono";
-    src: url("/fonts/IBMPlexMono-BoldItalic.ttf") format("truetype");
-	font-weight: 700;
-	font-style: italic;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
 }
 
 h1 {
@@ -138,64 +156,67 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
-	line-height: 1.2;
-	font-family: "IBM PlexMono", monospace;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  font-family: "IBM PlexMono", monospace;
 }
 
 h1,
 h2,
 h3 {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 h4,
 h5,
 h6 {
-	font-weight: 500;
+  font-weight: 500;
 }
 
 h1 {
-	font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 h2 {
-	font-size: 2.3em;
+  font-size: 2.3em;
 }
 
 h3 {
-	font-size: 2em;
+  font-size: 2em;
 }
 
 h4 {
-	font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 h5 {
-	font-size: 1.25em;
+  font-size: 1.25em;
 }
 
 strong,
 b {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
-	background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 a:hover {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 p {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .prose p {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
+h2>a:hover {
+  color: var(--scale-200);
+}

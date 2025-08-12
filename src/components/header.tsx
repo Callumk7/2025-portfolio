@@ -15,7 +15,7 @@ export function Header(props: { pathname: string }) {
 			href: "/experience",
 		},
 		{
-			label: "About",
+			label: "Contact",
 			href: "/contact",
 		},
 	];

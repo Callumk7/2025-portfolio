@@ -1,5 +1,5 @@
 ---
-name: SpotifiHifi
+name: SpotifHifi
 description: Bringing back the album experience.
 projectUrl: https://playq.xyz
 githubUrl: https://github.com/Callumk7/frontline-v2-remix

@@ -1,5 +1,7 @@
 // NOTE: These types are not used in this version of the application
 
+import type { ImageMetadata } from "astro";
+
 interface Post {
 	title: string;
 	description: string;
@@ -14,13 +16,16 @@ interface Post {
 interface Project {
 	name: string;
 	description: string;
-	projectUrl?: string; // external link to deployed project
+	projectUrl: string; // external link to deployed project
 	githubUrl: string; // github project link
-	coverImageUrl: string;
+	coverImageUrl?: ImageMetadata;
 	tags: string[];
 	slug: string;
 	wip: boolean;
-	cvDescription?: string;
+}
+
+interface ProcessedProject extends Omit<Project, "coverImageUrl"> {
+	coverImageUrl: string | null;
 }
 
 interface ProjectWithContent extends Project {
@@ -46,4 +51,4 @@ type Tags = Record<string, number>;
 
 type KV_KEYS = "postData" | "postTagData" | "projectData" | "projectTagData";
 
-export type { Post, Project, ProjectWithContent, Tags, Photo, KV_KEYS };
+export type { Post, Project, ProcessedProject, ProjectWithContent, Tags, Photo, KV_KEYS };

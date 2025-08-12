@@ -17,9 +17,28 @@ import Next from "~/components/icons/next.svg";
 import Remix from "~/components/icons/remix.svg";
 import Node from "~/components/icons/node.svg";
 import Typescript from "~/components/icons/typescript.svg";
+import type { ProcessedProject } from "~/types";
+import { getImage } from "astro:assets";
 
-const projects = await getCollection("projects").then((projects) =>
-	projects.map((proj) => proj.data),
+const projectsRaw = await getCollection("projects");
+const projects: ProcessedProject[] = await Promise.all(
+	projectsRaw.map(async (proj) => {
+		let processedImageUrl = null;
+		if (proj.data.coverImageUrl) {
+			const optimizedImage = await getImage({
+				src: proj.data.coverImageUrl,
+				width: 640, // Adjust as needed
+				height: 480, // Adjust as needed
+				format: "webp",
+			});
+			processedImageUrl = optimizedImage.src;
+		}
+
+		return {
+			...proj.data,
+			coverImageUrl: processedImageUrl,
+		};
+	}),
 );
 ---
 
