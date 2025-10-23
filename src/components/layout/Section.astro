@@ -17,10 +17,14 @@
 		}
 
 		& > .section__inner {
-			margin: 0px calc(10vw + 32px);
+			margin: 0px calc(10vw + var(--page-margin));
 			border-left: $border;
 			border-right: $border;
 			height: 100%;
+
+			@media (max-width: 768px) {
+				margin: 0px calc(10vw + var(--page-margin-mobile));
+			}
 		}
 	}
 </style>
