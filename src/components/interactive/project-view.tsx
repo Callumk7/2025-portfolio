@@ -22,7 +22,6 @@ export function ProjectView(props: { project: ProcessedProject }) {
 					</a>
 				</div>
 			</div>
-			<img src={props.project.coverImageUrl ?? undefined} />
 		</div>
 	);
 }
