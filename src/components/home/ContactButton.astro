@@ -14,3 +14,24 @@ const { href, label, className } = Astro.props;
 		<span class="block-button__label">{label}</span>
 	</div>
 </a>
+
+<style lang="scss">
+	@use "~/styles/abstracts/variables" as *;
+
+	a {
+		padding: 2rem;
+		flex-grow: 1;
+
+		@media (min-width: 1024px) {
+			&:not(:last-child) {
+				border-right: $border;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			&:not(:last-child) {
+				border-bottom: $border;
+			}
+		}
+	}
+</style>

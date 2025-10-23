@@ -1,0 +1,26 @@
+<div class="section">
+	<div class="section__inner">
+		<slot />
+	</div>
+</div>
+
+<style lang="scss">
+	@use "~/styles/abstracts/variables" as *;
+
+	.section {
+		border-top: $border;
+		width: 100%;
+
+		&:last-child,
+		&:only-child {
+			border-bottom: $border;
+		}
+
+		& > .section__inner {
+			margin: 0px calc(10vw + 32px);
+			border-left: $border;
+			border-right: $border;
+			height: 100%;
+		}
+	}
+</style>

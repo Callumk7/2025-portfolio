@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import "../styles/main.scss";
 
 interface Props {
@@ -39,3 +40,7 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Fonts -->
+<Font cssVariable="--font-zalando-sans" preload />
+<Font cssVariable="--font-zalando-sans-expanded" preload />

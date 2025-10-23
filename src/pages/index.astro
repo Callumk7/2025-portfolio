@@ -2,15 +2,10 @@
 import { ProjectPicker } from "~/components/interactive/project-picker";
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import { getCollection } from "astro:content";
-import { Section } from "~/components/layout/section";
+import Section from "~/components/layout/Section.astro";
+import Title from "~/components/home/Title.astro";
+import ContactRow from "~/components/home/ContactRow.astro";
 import { FlexRow } from "~/components/sections/flex-row";
-import ContactButton from "~/components/home/ContactButton.astro";
-
-import Bluesky from "~/components/icons/bluesky.svg";
-import LinkedIn from "~/components/icons/linkedin.svg";
-import Email from "~/components/icons/email.svg";
-import Github from "~/components/icons/github.svg";
-
 import AstroIcon from "~/components/icons/astro.svg";
 import React from "~/components/icons/react.svg";
 import Next from "~/components/icons/next.svg";
@@ -43,38 +38,12 @@ const projects: ProcessedProject[] = await Promise.all(
 ---
 
 <FlexLayout>
+	<Title />
+	<ContactRow />
 	<Section>
-		<div class="padding-4">
-			<h1>Hi, I'm Callum 👋</h1>
-			<p>I am a freelance web developer, product manager, and designer.</p>
-			<p>Need something done? Let's chat.</p>
-		</div>
-	</Section>
-	<Section shrink>
-		<FlexRow responsive>
-			<ContactButton href="https://bsky.app/profile/callumkloos.dev" label="Bluesky">
-				<Bluesky class="width-icon" />
-			</ContactButton>
-			<ContactButton href="https://www.linkedin.com/in/callum-kloos/" label="LinkedIn">
-				<LinkedIn class="width-icon" />
-			</ContactButton>
-			<ContactButton href="https://github.com/Callumk7" label="Github">
-				<Github class="width-icon" />
-			</ContactButton>
-			<ContactButton href="mailto:callumkloos@gmail.com" label="Email">
-				<Email class="width-icon" />
-			</ContactButton>
-		</FlexRow>
-	</Section>
-	<Section
-		header={{
-			title: "Some Projects",
-			description: "Some of the work I have done in the past.",
-		}}
-	>
 		<ProjectPicker client:visible projects={projects} />
 	</Section>
-	<Section header={{ title: "My Favourite Tools" }} align="right">
+	<Section>
 		<FlexRow responsive>
 			<div class="icon-large">
 				<React class="icon-large__icon" />

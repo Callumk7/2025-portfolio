@@ -1,0 +1,31 @@
+---
+import Section from "~/components/layout/Section.astro";
+---
+
+<Section>
+	<div class="title">
+		<h1>Hi, I'm Callum Kloos</h1>
+		<p>Full stack dev</p>
+	</div>
+</Section>
+
+<Section>
+	<div class="subtitle">
+		<p>I build web apps, squash bugs, and occasionally hike mountains.</p>
+	</div>
+</Section>
+
+<style lang="scss">
+	.title {
+		padding: var(--spacing-large);
+		p {
+			font-size: 1.2em;
+			font-weight: 500;
+			color: var(--accent-dark);
+		}
+	}
+
+	.subtitle {
+		padding: var(--spacing-large);
+	}
+</style>

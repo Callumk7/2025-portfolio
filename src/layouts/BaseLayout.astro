@@ -1,9 +1,7 @@
 ---
 import BaseHead from "~/components/BaseHead.astro";
-import { Header } from "~/components/header";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Footer from "~/components/Footer.astro";
-const pathname = Astro.url.pathname;
 ---
 
 <html lang="en">
@@ -11,7 +9,6 @@ const pathname = Astro.url.pathname;
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body class="height-full">
-		<Header pathname={pathname} />
 		<div class="content">
 			<slot />
 		</div>
