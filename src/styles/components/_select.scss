@@ -84,7 +84,7 @@
 }
 
 .select__selected-value {
-  background-color: var(--scale-900);
+  background-color: var(--color);
   font-size: 0.8rem;
   padding: 0.5rem 0.75rem;
   display: inline-flex;
@@ -112,7 +112,7 @@
 }
 
 .select__content {
-  background-color: var(--scale-900);
+  background-color: var(--background);
   border: 1px solid var(--border);
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 0.1),
