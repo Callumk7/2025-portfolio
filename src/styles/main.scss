@@ -8,12 +8,8 @@
 @use "base/utilities";
 
 // Components and layouts
-@use "layouts/row";
-@use "layouts/grid";
 @use "components/header";
 @use "components/button";
-@use "components/vertical-list";
-@use "components/icon-large";
 @use "components/input";
 @use "components/search-bar";
 @use "components/select";

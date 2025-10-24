@@ -11,39 +11,7 @@ import Section from "../layout/Section.astro";
 
 <Section>
 	<GridSplit>
-		<div class="border-grid">
-			<VerticalList>
-				<ContactButton
-					orientation="vertical"
-					label="Bluesky"
-					href="https://bsky.app/profile/callumkloos.dev"
-				>
-					<Bluesky class="width-icon" />
-				</ContactButton>
-				<ContactButton
-					orientation="vertical"
-					label="LinkedIn"
-					href="https://www.linkedin.com/in/callum-kloos/"
-				>
-					<LinkedIn class="width-icon" />
-				</ContactButton>
-				<ContactButton
-					orientation="vertical"
-					label="Email"
-					href="mailto:callumkloos@gmail.com"
-				>
-					<Email class="width-icon" />
-				</ContactButton>
-				<ContactButton
-					orientation="vertical"
-					label="Github"
-					href="https://github.com/Callumk7"
-				>
-					<Github class="width-icon" />
-				</ContactButton>
-			</VerticalList>
-		</div>
-		<div class="padding-4">
+		<div class="padding-4 border-grid">
 			<h4>Lets Talk 🤙</h4>
 			I am a self taught web developer who can help you with many different problems, so lets
 			talk! You can react me at <a class="link" href="mailto:callumkloos@gmail.com"
@@ -51,6 +19,36 @@ import Section from "../layout/Section.astro";
 			> or on any of the social platforms listed here. Together we can make the web a better
 			place.
 		</div>
+		<VerticalList>
+			<ContactButton
+				orientation="vertical"
+				label="Bluesky"
+				href="https://bsky.app/profile/callumkloos.dev"
+			>
+				<Bluesky class="width-icon" />
+			</ContactButton>
+			<ContactButton
+				orientation="vertical"
+				label="LinkedIn"
+				href="https://www.linkedin.com/in/callum-kloos/"
+			>
+				<LinkedIn class="width-icon" />
+			</ContactButton>
+			<ContactButton
+				orientation="vertical"
+				label="Email"
+				href="mailto:callumkloos@gmail.com"
+			>
+				<Email class="width-icon" />
+			</ContactButton>
+			<ContactButton
+				orientation="vertical"
+				label="Github"
+				href="https://github.com/Callumk7"
+			>
+				<Github class="width-icon" />
+			</ContactButton>
+		</VerticalList>
 	</GridSplit>
 </Section>
 
