@@ -2,17 +2,18 @@
   --black: #000;
   --white: #fff;
   --foreground: #DADBE4;
-  --light-accent: #CCCDDA;
-  --dark-accent: #A3A4B9;
+  --accent-light: #CCCDDA;
+  --accent-dark: #A3A4B9;
   --muted: #707784;
-  --dark-muted: #3F494C;
+  --muted-dark: #3F494C;
 
-  --border: var(--dark-muted);
+  --border: var(--muted-dark);
   --border-light: #898DA0;
 
   --background: var(--black);
-  --accent: var(--light-accent);
-  --accent-dark: var(--dark-accent);
+  --accent: var(--accent-light);
+
+  --hover: #08090a;
 
   --color-link: #f2a2b0;
   --color: #D64C65;
@@ -246,16 +247,4 @@ li {
 li:last-child {
   margin-bottom: 0;
   /* No margin on last item */
-}
-
-.link {
-  color: var(--color-link);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-
-  &:hover {
-    color: var(--color);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-  }
 }

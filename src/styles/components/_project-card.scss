@@ -5,7 +5,11 @@
   padding: 1.5rem;
 
   &:hover {
-    background-color: var(--scale-700);
+    background-color: var(--hover);
+
+    .preview-card__title {
+      color: var(--color);
+    }
   }
 }
 
