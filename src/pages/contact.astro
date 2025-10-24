@@ -1,50 +1,10 @@
 ---
-import GridSplit from "../components/home/GridSplit.astro";
 import FlexLayout from "../layouts/FlexLayout.astro";
-import Bluesky from "../components/icons/bluesky.svg";
-import LinkedIn from "../components/icons/linkedin.svg";
-import Email from "../components/icons/email.svg";
-import Github from "../components/icons/github.svg";
-import ContactLarge from "~/components/ContactLarge.astro";
-import { Section } from "~/components/layout/section";
+import ContactGrid from "../components/contact/ContactGrid.astro";
+import ContactForm from "../components/contact/ContactForm.astro";
 ---
 
 <FlexLayout>
-	<Section>
-		<GridSplit>
-			<div class="vertical-list divide-y">
-				<ContactLarge href="https://bsky.app/profile/callumkloos.dev">
-					<Bluesky slot="icon" class="width-icon" />
-					Bluesky
-				</ContactLarge>
-				<ContactLarge href="https://www.linkedin.com/in/callum-kloos/">
-					<LinkedIn slot="icon" class="width-icon" />
-					LinkedIn
-				</ContactLarge>
-				<ContactLarge href="mailto:callumkloos@gmail.com">
-					<Email slot="icon" class="width-icon" />
-					Email
-				</ContactLarge>
-				<ContactLarge href="https://github.com/Callumk7">
-					<Github slot="icon" class="width-icon" />
-					Github
-				</ContactLarge>
-			</div>
-			<div class="padding-4">
-				<h4>Lets Talk 🤙</h4>
-				I am a self taught web developer who can help you with many different problems, so
-				lets talk! You can react me at <a class="link" href="mailto:callumkloos@gmail.com"
-					>callumkloos@gmail.com</a
-				> or on any of the social platforms listed here. Together we can make the web a better
-				place.
-			</div>
-		</GridSplit>
-	</Section>
+	<ContactGrid />
+	<ContactForm />
 </FlexLayout>
-
-<style lang="scss">
-	.width-icon {
-		width: 24px;
-		min-width: 24px;
-	}
-</style>

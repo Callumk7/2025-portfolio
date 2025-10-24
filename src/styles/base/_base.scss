@@ -14,11 +14,14 @@
   --accent: var(--light-accent);
   --accent-dark: var(--dark-accent);
 
+  --color-link: #f2a2b0;
   --color: #D64C65;
+  --color-accent: #f4647e;
 
   --spacing: 1rem;
   --spacing-large: 1.5rem;
   --spacing-small: 0.5rem;
+  --spacing-xs: 0.25rem;
 
   --page-margin: 64px;
   --page-margin-mobile: 1px;
@@ -242,4 +245,16 @@ li {
 li:last-child {
   margin-bottom: 0;
   /* No margin on last item */
+}
+
+.link {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+
+  &:hover {
+    color: var(--color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
 }

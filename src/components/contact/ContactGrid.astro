@@ -1,0 +1,74 @@
+---
+import VerticalList from "../layout/VerticalList.astro";
+import GridSplit from "../home/GridSplit.astro";
+import Bluesky from "~/components/icons/bluesky.svg";
+import LinkedIn from "~/components/icons/linkedin.svg";
+import Email from "~/components/icons/email.svg";
+import Github from "~/components/icons/github.svg";
+import ContactButton from "../home/ContactButton.astro";
+import Section from "../layout/Section.astro";
+---
+
+<Section>
+	<GridSplit>
+		<div class="border-grid">
+			<VerticalList>
+				<ContactButton
+					orientation="vertical"
+					label="Bluesky"
+					href="https://bsky.app/profile/callumkloos.dev"
+				>
+					<Bluesky class="width-icon" />
+				</ContactButton>
+				<ContactButton
+					orientation="vertical"
+					label="LinkedIn"
+					href="https://www.linkedin.com/in/callum-kloos/"
+				>
+					<LinkedIn class="width-icon" />
+				</ContactButton>
+				<ContactButton
+					orientation="vertical"
+					label="Email"
+					href="mailto:callumkloos@gmail.com"
+				>
+					<Email class="width-icon" />
+				</ContactButton>
+				<ContactButton
+					orientation="vertical"
+					label="Github"
+					href="https://github.com/Callumk7"
+				>
+					<Github class="width-icon" />
+				</ContactButton>
+			</VerticalList>
+		</div>
+		<div class="padding-4">
+			<h4>Lets Talk 🤙</h4>
+			I am a self taught web developer who can help you with many different problems, so lets
+			talk! You can react me at <a class="link" href="mailto:callumkloos@gmail.com"
+				>callumkloos@gmail.com</a
+			> or on any of the social platforms listed here. Together we can make the web a better
+			place.
+		</div>
+	</GridSplit>
+</Section>
+
+<style lang="scss">
+	@use "~/styles/abstracts/variables" as *;
+	.width-icon {
+		width: 24px;
+		min-width: 24px;
+	}
+
+	.border-grid {
+		@media (max-width: 1024px) {
+			border-right: none;
+			border-bottom: $border;
+		}
+		@media (min-width: 1024px) {
+			border-right: $border;
+			border-bottom: none;
+		}
+	}
+</style>
