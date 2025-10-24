@@ -1,0 +1,28 @@
+---
+import Section from "~/components/layout/Section.astro";
+
+interface Props {
+	title: string;
+	subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<Section>
+	<div class="title">
+		<h1>{title}</h1>
+		<p>{subtitle}</p>
+	</div>
+</Section>
+
+<style lang="scss">
+	.title {
+		padding: var(--spacing-large);
+		p {
+			font-size: 1.2em;
+			font-weight: 500;
+			color: var(--accent-dark);
+		}
+	}
+</style>
