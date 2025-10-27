@@ -1,0 +1,34 @@
+@use "~/styles/abstracts/variables" as *;
+
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	pointer-events: none;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.orb {
+	position: absolute;
+	border-radius: 50%;
+	opacity: 0;
+	animation: pulse infinite ease-in-out;
+	filter: blur(60px);
+	transform: translate(-50%, -50%);
+	will-change: transform, opacity;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		transform: translate(-50%, -50%) scale(0.8);
+		opacity: 0.1;
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(1.2);
+		opacity: 0.4;
+	}
+}

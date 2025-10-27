@@ -1,0 +1,36 @@
+@use "~/styles/abstracts/variables" as *;
+
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	pointer-events: none;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.particle {
+	position: absolute;
+	border-radius: 50%;
+	background: var(--color-1);
+	opacity: 0;
+	animation: float infinite ease-in-out;
+	filter: blur(1px);
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translate(0, 0);
+		opacity: 0.2;
+	}
+	50% {
+		transform: translate(
+			calc(20px - 40px * var(--random, 0.5)),
+			calc(20px - 40px * var(--random, 0.5))
+		);
+		opacity: 0.6;
+	}
+}
