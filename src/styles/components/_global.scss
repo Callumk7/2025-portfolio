@@ -1,0 +1,52 @@
+@use "~/styles/abstracts/variables" as *;
+
+.link {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+
+  &:hover {
+    color: var(--color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+}
+
+.tag {
+  padding: 0.1rem 0.2rem;
+  margin: 0.5rem 0.5rem 0 0;
+  border-radius: 6px;
+  background-color: var(--color-tag);
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+input {
+  padding: var(--spacing-small);
+  border: $border;
+  font-size: 1rem;
+  color: var(--foreground);
+  background: var(--background);
+  outline: none;
+  transition: box-shadow 150ms ease-in-out;
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--color);
+  }
+}
+
+textarea {
+  padding: var(--spacing-small);
+  border: $border;
+  font-size: 1rem;
+  color: var(--foreground);
+  background: var(--background);
+  resize: none;
+  min-height: 128px;
+  outline: none;
+  transition: box-shadow 150ms ease-in-out;
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--color);
+  }
+}

@@ -2,15 +2,60 @@
 interface Props {
 	href: string;
 	label: string;
-	className?: string;
+	orientation?: "vertical" | "horizontal";
 }
 
-const { href, label, className } = Astro.props;
+const { href, label, orientation } = Astro.props;
 ---
 
-<a href={href} target="_blank" class:list={["block-button", className]}>
+<a
+	href={href}
+	target="_blank"
+	class={`block-button ${orientation === "vertical" ? "vertical" : "horizontal"}`}
+>
 	<div class="block-button__content">
 		<slot />
 		<span class="block-button__label">{label}</span>
 	</div>
 </a>
+
+<style lang="scss">
+	@use "~/styles/abstracts/variables" as *;
+	@use "~/styles/abstracts/mixins" as *;
+
+	.horizontal {
+		@media (min-width: 1024px) {
+			&:not(:last-child) {
+				border-right: $border;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			&:not(:last-child) {
+				border-bottom: $border;
+			}
+		}
+	}
+
+	.vertical {
+		&:not(:last-child) {
+			border-bottom: $border;
+		}
+	}
+
+	.block-button {
+		@include hover-swipe;
+		padding: 2rem;
+		flex-grow: 1;
+		font-size: clamp(1rem, 2vw, 1.8rem);
+		font-weight: 400;
+	}
+	.block-button__content {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.block-button__label {
+		margin-left: 0.5rem;
+	}
+</style>

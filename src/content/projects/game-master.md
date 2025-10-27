@@ -2,37 +2,34 @@
 name: Game Master - Tabletop RPG Notes
 description: Advanced notes app with deep linking capabilities, focussing on Tabletop RPG players.
 coverImageUrl: ../../images/001-screenshot.png
-projectUrl: https://gm.callumkloos.dev
-githubUrl: https://github.com/Callumk7/game-master
+projectUrl: https://gamemaster.callumkloos.dev
+githubUrl: https://github.com/Callumk7/game-master-web
 tags:
   - react
-  - remix
-  - hono
+  - elixir
   - typescript
-  - monorepo
   - postgres
+  - openAPI
 wip: false
 cvDescription: I built a complex note-taking application that encompasses a front-end client built on top of react and remix, as well as a dedicated back-end built with node and hono. These were tied together in a monorepo setup which facilitated a shared contract through an api package that managed all cross-boundary types and data-fetching functions consumed by the client.
 slug: game-master
 ---
 
-I built **playQ**, a complex CRUD application designed to manage video game collections and playlists. The application leverages modern web technologies to provide a seamless user experience for managing and exploring video games.
+Game Master is a server-centered note taking app, designed for DMs and TTRPG players.
 
-![Page showing character view in Game Master](/images/001-screenshot.png)
+![Page showing character view in Game Master](../../images/001-screenshot.png)
 
 ## Features
 
-- **User Authentication**: Secure user login and registration powered by Supabase.
-- **Database Search and Filtering**: Efficient search functionality to find games in the database.
-- **Personal Collections**: Save and organise games into personal collections.
-- **Playlists**: Create, edit, and manage playlists of games.
-- **Social Features**: Find and follow other users, track their playlists, and see their game progress.
-- **Activity Feed**: Highlights key activities of friends.
-- **Comment System**: Comment on games, playlists, and user profiles.
-- **Game Discovery**: Explore games based on popularity and user ratings.
-- **Media Integration**: Video game artwork and screenshots provided by IGDB.
+- **Rich text editing experience** with full markdown support, inline images, and deep links to other notes
+- **Opinionated note structure** designed to help developers plan games, and have quick access to their most important notes
+- **Multiple view options** including split view, floating note windows, and tabs
 
 ## Technology Used
+
+### back-end
+
+I used Elixir and Phoenix for the back end application, due to its strong concurrence capabilities, excellent database support, and a convention over configuration approach to common back-end problems.
 
 ### Supabase
 

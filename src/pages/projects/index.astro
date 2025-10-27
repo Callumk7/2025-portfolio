@@ -1,20 +1,16 @@
 ---
-import FlexLayout from "~/layouts/FlexLayout.astro";
+import FixedLayout from "~/layouts/FixedLayout.astro";
 import { getCollection } from "astro:content";
 import { ProjectPage } from "~/components/interactive/project-page";
-import { Section } from "~/components/layout/section";
+import Section from "~/components/layout/Section.astro";
+import HeadingBlock from "~/components/HeadingBlock.astro";
 
 const projects = await getCollection("projects");
 ---
 
-<FlexLayout>
-	<Section
-		header={{
-			title: "My Projects",
-			description:
-				"I specialise in full stack Typescript projects utilising Node.js, Hono, and Remix / React Router.",
-		}}
-	>
+<FixedLayout>
+	<HeadingBlock title="Some Projects" subtitle="I've worked on a few projects" />
+	<Section>
 		<ProjectPage client:load projects={projects.map((proj) => proj.data)} />
 	</Section>
-</FlexLayout>
+</FixedLayout>

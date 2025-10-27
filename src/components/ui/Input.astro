@@ -1,0 +1,35 @@
+---
+interface Props {
+	label: string;
+	name: string;
+	textarea?: boolean;
+}
+
+const { label, name, textarea } = Astro.props;
+---
+
+<div class="input-container">
+	<label for={name}>{label}</label>
+	{
+		textarea ? (
+			<textarea name={name} id={name} />
+		) : (
+			<input type="text" name={name} id={name} />
+		)
+	}
+</div>
+
+<style lang="scss">
+	@use "~/styles/abstracts/variables" as *;
+	.input-container {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-xs);
+	}
+
+	label {
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: var(--muted);
+	}
+</style>

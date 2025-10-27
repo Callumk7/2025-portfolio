@@ -1,0 +1,46 @@
+---
+import FlexLayout from "~/layouts/FlexLayout.astro";
+import AboutSection from "~/components/about/About.astro";
+import Section from "~/components/layout/Section.astro";
+---
+
+<FlexLayout>
+	<AboutSection />
+	<Section>
+		<div>
+			<p>
+				I am an experienced full stack developer with experience in modern web development
+				technologies. <a class="link" href="/contact">Contact me?</a>
+			</p>
+			<section>
+				<h3>My Journey</h3>
+				<ul>
+					<li>I grew up in Oxfordshire</li>
+					<li>
+						I started programming to expand my skillset, and fell in love with the craft
+					</li>
+					<li>Currently working freelance as a designer and developer</li>
+				</ul>
+			</section>
+			<section>
+				<h3>My Kind of Fun</h3>
+				<ul>
+					<li>I grew up in Oxfordshire</li>
+					<li>
+						I started programming to expand my skillset, and fell in love with the craft
+					</li>
+					<li>Currently working freelance as a designer and developer</li>
+				</ul>
+			</section>
+		</div>
+	</Section>
+</FlexLayout>
+
+<style lang="scss">
+	div {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-xlarge);
+		padding: var(--spacing-large);
+	}
+</style>
