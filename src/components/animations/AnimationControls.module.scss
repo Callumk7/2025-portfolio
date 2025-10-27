@@ -1,45 +1,39 @@
 @use "~/styles/abstracts/variables" as *;
 
-.controls {
-	display: flex;
-	gap: var(--spacing);
-	align-items: center;
-}
-
 .control {
-	display: flex;
-	align-items: center;
-	gap: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
 
-	label {
-		font-size: 0.875rem;
-		color: var(--foreground);
-		white-space: nowrap;
-	}
+  label {
+    font-size: 0.875rem;
+    color: var(--foreground);
+    white-space: nowrap;
+  }
 
-	select {
-		padding: var(--spacing-xs) var(--spacing-small);
-		border: $border;
-		background-color: var(--background);
-		color: var(--foreground);
-		border-radius: 2px;
-		font-size: 0.875rem;
+  select {
+    padding: var(--spacing-xs) var(--spacing-small);
+    border: $border;
+    background-color: var(--background);
+    color: var(--foreground);
+    border-radius: 2px;
+    font-size: 0.875rem;
 
-		&:hover {
-			border-color: var(--color);
-		}
+    &:hover {
+      border-color: var(--color);
+    }
 
-		&:focus {
-			outline: none;
-			border-color: var(--color);
-		}
-	}
+    &:focus {
+      outline: none;
+      border-color: var(--color);
+    }
+  }
 }
 
 @media (max-width: 768px) {
-	.controls {
-		flex-direction: column;
-		gap: var(--spacing-small);
-		align-items: flex-start;
-	}
+  .controls {
+    flex-direction: column;
+    gap: var(--spacing-small);
+    align-items: flex-start;
+  }
 }
