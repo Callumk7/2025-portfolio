@@ -28,6 +28,7 @@ export default defineConfig({
 	},
 
 	integrations: [mdx(), sitemap(), solidJs()],
-	adapter: cloudflare(),
+	adapter: cloudflare({
+		imageService: "compile",
+	}),
 });
-

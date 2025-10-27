@@ -26,6 +26,7 @@
 		"prettier": "^3.4.2",
 		"prettier-plugin-astro": "^0.14.1",
 		"sass": "^1.83.4",
-		"typescript": "^5.7.3"
+		"typescript": "^5.7.3",
+		"wrangler": "^4.45.0"
 	}
 }
