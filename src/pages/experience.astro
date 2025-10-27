@@ -168,6 +168,11 @@ const softSkills = [
 	</Section>
 
 	<style lang="scss">
+		h3 {
+			margin-top: 1rem;
+			margin-bottom: 0.5rem;
+		}
+
 		h5 {
 			margin-top: 0.9rem;
 		}
@@ -186,6 +191,31 @@ const softSkills = [
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
+		}
+
+		.grid-split-wide {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+
+			> :first-child {
+				grid-column: 1;
+			}
+
+			> :last-child {
+				grid-column: 2;
+			}
+
+			@media (max-width: 1024px) {
+				grid-template-columns: 1fr;
+
+				> :first-child {
+					grid-column: 1;
+				}
+
+				> :last-child {
+					grid-column: 1;
+				}
+			}
 		}
 	</style>
 </FlexLayout>
