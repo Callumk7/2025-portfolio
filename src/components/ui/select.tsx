@@ -1,5 +1,6 @@
 import { Select as KobalteSelect } from "@kobalte/core/select";
 import { For, type Setter } from "solid-js";
+import { CheckIcon } from "../icons/solid/check";
 
 interface SelectProps {
 	options: string[];
@@ -20,7 +21,7 @@ export function Select(props: SelectProps) {
 				<KobalteSelect.Item item={p.item} class="select__item">
 					<KobalteSelect.ItemLabel>{p.item.rawValue}</KobalteSelect.ItemLabel>
 					<KobalteSelect.ItemIndicator class="select__item-indicator">
-						Y
+						<CheckIcon />
 					</KobalteSelect.ItemIndicator>
 				</KobalteSelect.Item>
 			)}
@@ -34,12 +35,13 @@ export function Select(props: SelectProps) {
 									{(option) => (
 										<span
 											onPointerDown={(e) => e.stopPropagation()}
+											onClick={(e) => {
+												e.stopPropagation();
+												state.remove(option);
+											}}
 											class="select__selected-value"
 										>
 											{option}
-											<button type="button" onClick={() => state.remove(option)}>
-												x
-											</button>
 										</span>
 									)}
 								</For>

@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 1.5rem;
-  padding: 0 1rem;
+  height: 2rem;
+  padding: 0 1.5rem;
   position: relative;
   user-select: none;
   outline: none;
@@ -19,7 +19,8 @@
 
   &[data-highlighted] {
     outline: none;
-    background-color: var(--scale-500);
+    border-radius: 4px;
+    background-color: var(--hover);
     color: white;
   }
 }
@@ -43,15 +44,16 @@
   transition:
     border-color 250ms,
     color 250ms;
-  max-width: 360px;
+  width: 360px;
+  min-height: 7rem;
   cursor: pointer;
 
   &:hover {
-    background-color: var(--scale-700);
+    background-color: var(--hover);
   }
 
   &:focus-visible {
-    outline: 2px solid var(--scale-200);
+    outline: 2px solid var(--color);
     outline-offset: 2px;
   }
 
@@ -89,6 +91,11 @@
   padding: 0.5rem 0.75rem;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .select__icon {
