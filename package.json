@@ -1,7 +1,7 @@
 {
 	"name": "2025-portfolio",
 	"type": "module",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
@@ -9,6 +9,7 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/cloudflare": "^12.6.10",
 		"@astrojs/mdx": "^4.3.3",
 		"@astrojs/rss": "^4.0.12",
 		"@astrojs/sitemap": "^3.4.2",
@@ -22,9 +23,11 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^24.9.1",
 		"prettier": "^3.4.2",
 		"prettier-plugin-astro": "^0.14.1",
 		"sass": "^1.83.4",
-		"typescript": "^5.7.3"
+		"typescript": "^5.7.3",
+		"wrangler": "^4.45.0"
 	}
 }

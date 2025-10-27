@@ -1,0 +1,24 @@
+{
+	"main": "dist/_worker.js/index.js",
+	"name": "portfolio",
+	"compatibility_date": "2025-10-27",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./dist"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "portfolio_contact_form_db",
+			"database_name": "portfolio-contact-form-db",
+			"database_id": "29c9ed75-c3c1-453a-88a5-94901a602cb3",
+			"remote": true
+		}
+	]
+}

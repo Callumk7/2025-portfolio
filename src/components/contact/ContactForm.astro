@@ -8,12 +8,13 @@ import Input from "../ui/Input.astro";
 		<h2>Contact</h2>
 		<p>Lets talk about your next project.</p>
 	</div>
-	<div class="contact-form">
+	<form id="contact-form" class="contact-form">
 		<Input label="Name" name="name" />
 		<Input label="Email" name="email" />
 		<Input label="Message" name="message" textarea />
-		<button>Send</button>
-	</div>
+		<button type="submit">Send</button>
+		<p id="status"></p>
+	</form>
 </Section>
 
 <style lang="scss">
@@ -35,4 +36,34 @@ import Input from "../ui/Input.astro";
 		padding: var(--spacing-small) var(--spacing-large);
 		background-color: var(--color);
 	}
+
+	#status {
+		color: var(--color);
+		font-weight: 500;
+		font-size: 0.9rem;
+	}
 </style>
+
+<script is:inline>
+	document.getElementById("contact-form").addEventListener("submit", async (e) => {
+		e.preventDefault();
+
+		const form = e.target;
+		const formData = new FormData(form);
+		const statusEl = document.getElementById("status");
+
+		statusEl.textContent = "Sending...";
+
+		const response = await fetch("/api/form", {
+			method: "POST",
+			body: formData,
+		});
+
+		if (response.ok) {
+			statusEl.textContent = "Submission successful!";
+			form.reset();
+		} else {
+			statusEl.textContent = "Something went wrong!";
+		}
+	});
+</script>
