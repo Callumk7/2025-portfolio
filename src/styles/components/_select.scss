@@ -134,6 +134,10 @@
   animation: contentHide 100ms ease-in forwards;
   width: 200px;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   &[data-expanded] {
     animation: contentShow 100ms ease-out;
   }
