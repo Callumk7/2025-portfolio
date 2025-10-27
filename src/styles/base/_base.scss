@@ -1,26 +1,42 @@
 :root {
+  --scale-1: #d9dae3;
+  --scale-2: #c0bfc7;
+  --scale-3: #a6a4ab;
+  --scale-4: #8e8b90;
+  --scale-5: #757276;
+  --scale-6: #5d5a5d;
+  --scale-7: #464446;
+  --scale-8: #302e2f;
+  --scale-9: #1c1b1b;
+
   --black: #000;
   --white: #fff;
-  --foreground: #DADBE4;
-  --accent-light: #CCCDDA;
-  --accent-dark: #A3A4B9;
-  --muted: #707784;
-  --muted-dark: #3F494C;
-  --muted-very-dark: #08090a;
+
+  --foreground: var(--scale-1);
+  --accent-light: var(--scale-2);
+  --accent-dark: var(--scale-3);
+  --muted: var(--scale-7);
+  --muted-dark: var(--scale-8);
+  --muted-very-dark: var(--scale-9);
 
   --border: var(--muted-dark);
-  --border-light: #898DA0;
+  --border-light: var(--scale-5);
 
   --background: var(--black);
   --accent: var(--accent-light);
 
-  --hover: var(--muted-very-dark);
+  --hover: #1c0f13;
+
+  --color-1: #D64C65;
+  --color-2: #d96e9b;
+  --color-3: #d391c3;
+  --color-4: #ccb2da;
+  --color: var(--color-1);
 
   --color-link: #f2a2b0;
-  --color: #D64C65;
-  --color-accent: #f4647e;
+  --color-tag: #451f29;
+  --color-tag-foreground: var(--foreground);
 
-  --color-tag: #3a171d;
   --spacing-xlarge: 2rem;
   --spacing-large: 1.5rem;
   --spacing: 1rem;
