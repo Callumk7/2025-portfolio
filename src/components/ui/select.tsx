@@ -33,7 +33,8 @@ export function Select(props: SelectProps) {
 							<div class="select__selected-value-container">
 								<For each={state.selectedOptions()}>
 									{(option) => (
-										<span
+										<button
+											type="button"
 											onPointerDown={(e) => e.stopPropagation()}
 											onClick={(e) => {
 												e.stopPropagation();
@@ -42,7 +43,7 @@ export function Select(props: SelectProps) {
 											class="select__selected-value"
 										>
 											{option}
-										</span>
+										</button>
 									)}
 								</For>
 							</div>

@@ -1,0 +1,19 @@
+---
+interface Props {
+	title: string;
+	companyName: string;
+	startDate: Date;
+	endDate?: Date;
+}
+
+const { title, companyName, startDate, endDate } = Astro.props;
+---
+
+<div>
+	<h4>{title}</h4>
+	<p>
+		{startDate.toLocaleDateString("gmt")}
+		{endDate ? `- ${endDate.toLocaleDateString("gmt")}` : ""}
+	</p>
+	<slot />
+</div>

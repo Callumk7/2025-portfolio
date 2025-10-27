@@ -55,9 +55,7 @@ export function ResponsiveNav(props: ResponsiveNavProps) {
 			{/* Mobile Navigation Overlay - Rendered via Portal */}
 			<Portal>
 				<Show when={isOpen()}>
-					{/* biome-ignore lint/a11y/useKeyWithClickEvents: mobile navigation */}
 					<div class={styles.mobileOverlay} onClick={closeMenu}>
-						{/* biome-ignore lint/a11y/useKeyWithClickEvents: mobile navigation */}
 						<nav class={styles.mobileNav} onClick={(e) => e.stopPropagation()}>
 							<ul>
 								<For each={props.links}>
