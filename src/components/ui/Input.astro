@@ -21,7 +21,6 @@ const { label, name, textarea } = Astro.props;
 
 <style lang="scss">
 	@use "~/styles/abstracts/variables" as *;
-
 	.input-container {
 		display: flex;
 		flex-direction: column;
@@ -32,35 +31,5 @@ const { label, name, textarea } = Astro.props;
 		font-size: 0.9rem;
 		font-weight: 500;
 		color: var(--muted);
-	}
-
-	input {
-		padding: var(--spacing-small);
-		border: $border;
-		font-size: 1rem;
-		color: var(--foreground);
-		background: var(--background);
-		outline: none;
-		transition: box-shadow 150ms ease-in-out;
-
-		&:focus {
-			box-shadow: 0 0 0 2px var(--color);
-		}
-	}
-
-	textarea {
-		padding: var(--spacing-small);
-		border: $border;
-		font-size: 1rem;
-		color: var(--foreground);
-		background: var(--background);
-		resize: none;
-		min-height: 128px;
-		outline: none;
-		transition: box-shadow 150ms ease-in-out;
-
-		&:focus {
-			box-shadow: 0 0 0 2px var(--color);
-		}
 	}
 </style>
