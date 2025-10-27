@@ -5,9 +5,11 @@ import sitemap from "@astrojs/sitemap";
 
 import solidJs from "@astrojs/solid-js";
 
-// https://astro.build/config
+import cloudflare from "@astrojs/cloudflare";
+
 export default defineConfig({
 	site: "https://example.com",
+
 	experimental: {
 		fonts: [
 			{
@@ -24,5 +26,8 @@ export default defineConfig({
 			},
 		],
 	},
+
 	integrations: [mdx(), sitemap(), solidJs()],
+	adapter: cloudflare(),
 });
+
