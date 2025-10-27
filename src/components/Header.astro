@@ -1,5 +1,6 @@
 ---
 import { AnimationControls } from "~/components/animations";
+import { ResponsiveNav } from "~/components/navigation/ResponsiveNav";
 
 const pathname = Astro.url.pathname;
 const links = [
@@ -27,22 +28,11 @@ const links = [
 ---
 
 <nav>
-	<ul>
-		{
-			links.map((link) => (
-				<li>
-					<a href={link.href} class:list={{ active: pathname === link.href }}>
-						{link.label}
-					</a>
-				</li>
-			))
-		}
-	</ul>
+	<ResponsiveNav links={links} pathname={pathname} client:load />
 	<AnimationControls client:only="solid-js" />
 </nav>
 
 <style lang="scss">
-	@use "~/styles/abstracts/variables" as *;
 	nav {
 		display: flex;
 		justify-content: space-between;
@@ -51,34 +41,5 @@ const links = [
 		padding: 1rem;
 		gap: 1rem;
 		flex-wrap: wrap;
-	}
-
-	ul {
-		display: flex;
-		align-items: center;
-		flex-direction: row;
-		gap: 16px;
-
-		li {
-			margin: 0;
-			list-style-type: none;
-		}
-
-		a {
-			padding: var(--spacing-xs) var(--spacing-small);
-			border: $border;
-			border-color: transparent;
-
-			&:hover {
-				color: var(--color);
-			}
-
-			&.active {
-				border-color: var(--border);
-				&:hover {
-					border-color: var(--color);
-				}
-			}
-		}
 	}
 </style>

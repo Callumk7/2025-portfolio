@@ -13,6 +13,11 @@
   &::placeholder {
     color: var(--scale-500);
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0 0 12px 0;
+  }
 }
 
 .searchBar {
@@ -20,6 +25,10 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .previewCard {

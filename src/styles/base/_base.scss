@@ -54,6 +54,7 @@
 /* Sidebar styling for different browsers */
 html {
   overflow-y: scroll;
+  overflow-x: hidden;
   scrollbar-width: thin;
   /* for firefox */
   scrollbar-color: var(--color) var(--background);
