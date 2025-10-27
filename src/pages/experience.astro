@@ -1,6 +1,5 @@
 ---
 import FlexLayout from "~/layouts/FlexLayout.astro";
-import { Card } from "~/components/ui/card";
 import TextRow from "~/components/home/TextRow.astro";
 import Section from "~/components/layout/Section.astro";
 import ExperienceCard from "~/components/experience/ExperienceCard.astro";
@@ -74,7 +73,8 @@ const softSkills = [
 	</Section>
 	<Section>
 		<div class="grid-split-wide">
-			<Card title="Skills" className="border-right">
+			<div class="border-right padding-2">
+				<h4>Skills</h4>
 				<h5>Technical</h5>
 				<div class="tag-container">
 					{technicalSkills.map((skill) => <span class="tag">{skill}</span>)}
@@ -87,7 +87,7 @@ const softSkills = [
 				<div class="tag-container">
 					{softSkills.map((skill) => <span class="tag">{skill}</span>)}
 				</div>
-			</Card>
+			</div>
 			<div>
 				<TextRow>
 					<h3>Professional Experience</h3>
@@ -96,7 +96,7 @@ const softSkills = [
 				<ExperienceCard
 					title="Web Development Training & Projects | Self-directed Learning"
 					companyName="Freelance"
-					dateStart={new Date("2023-01-01")}
+					startDate={new Date("2023-01-01")}
 				>
 					<div>
 						<p>
@@ -128,9 +128,9 @@ const softSkills = [
 					</div>
 				</ExperienceCard>
 				<ExperienceCard
-					jobTitle="React Developer"
+					title="React Developer"
 					companyName="Freelance"
-					dateStart={new Date("2020-01-01")}
+					startDate={new Date("2020-01-01")}
 				>
 					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
 					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
@@ -139,9 +139,9 @@ const softSkills = [
 					cupidatat enim aliquip in minim voluptate enim.
 				</ExperienceCard>
 				<ExperienceCard
-					jobTitle="React Developer"
+					title="React Developer"
 					companyName="Freelance"
-					dateStart={new Date("2020-01-01")}
+					startDate={new Date("2020-01-01")}
 				>
 					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
 					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
@@ -155,20 +155,9 @@ const softSkills = [
 				</TextRow>
 				<hr />
 				<ExperienceCard
-					jobTitle="React Developer"
+					title="React Developer"
 					companyName="Freelance"
-					dateStart={new Date("2020-01-01")}
-				>
-					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
-					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
-					veniam. Ex cupidatat deserunt elit enim. Eu id culpa in dolor ex. Est irure nisi
-					mollit ut adipisicing deserunt velit esse fugiat velit. Qui esse laboris aute
-					cupidatat enim aliquip in minim voluptate enim.
-				</ExperienceCard>
-				<ExperienceCard
-					jobTitle="Product Manager"
-					companyName="Freelance"
-					dateStart={new Date("2020-01-01")}
+					startDate={new Date("2020-01-01")}
 				>
 					Pariatur ex ex est nisi nisi deserunt duis velit ex adipisicing incididunt.
 					Incididunt qui deserunt veniam amet laborum veniam in laborum. Ut dolor nulla
