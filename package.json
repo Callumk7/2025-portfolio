@@ -23,6 +23,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^24.9.1",
 		"prettier": "^3.4.2",
 		"prettier-plugin-astro": "^0.14.1",
 		"sass": "^1.83.4",
