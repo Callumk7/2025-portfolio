@@ -1,0 +1,26 @@
+@use "~/styles/abstracts/variables" as *;
+
+.debug {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	background: var(--background);
+	border: $border;
+	padding: var(--spacing);
+	border-radius: 4px;
+	z-index: 9999;
+	font-size: 0.875rem;
+	min-width: 200px;
+
+	h4 {
+		margin: 0 0 var(--spacing-small) 0;
+		color: var(--color);
+		font-size: 1rem;
+	}
+
+	p {
+		margin: var(--spacing-xs) 0;
+		color: var(--foreground);
+		font-family: monospace;
+	}
+}

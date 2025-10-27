@@ -1,4 +1,6 @@
 ---
+import { AnimationControls } from "~/components/animations";
+
 const pathname = Astro.url.pathname;
 const links = [
 	{
@@ -40,6 +42,7 @@ const links = [
 			))
 		}
 	</ul>
+	<AnimationControls client:only="solid-js" />
 </nav>
 
 <style lang="scss">
@@ -51,6 +54,7 @@ const links = [
 		width: 100%;
 		padding: 1rem;
 		gap: 1rem;
+		flex-wrap: wrap;
 	}
 
 	.links {
@@ -77,6 +81,13 @@ const links = [
 					border-color: var(--color);
 				}
 			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		nav {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 </style>
