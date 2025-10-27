@@ -44,7 +44,7 @@
   --spacing-xs: 0.25rem;
 
   --page-margin: 64px;
-  --page-margin-mobile: 1px;
+  --page-margin-mobile: var(--spacing);
 }
 
 * {
