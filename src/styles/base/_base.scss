@@ -64,6 +64,10 @@ html {
   background: var(--accent);
 }
 
+::selection {
+  background-color: var(--color);
+}
+
 body {
   font-family: var(--font-zalando-sans);
   margin: 0;

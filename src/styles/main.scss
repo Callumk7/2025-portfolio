@@ -2,15 +2,10 @@
 @use "abstracts/variables";
 @use "abstracts/mixins";
 
-// Global styles
 @use "base/base";
 @use "base/typography";
 @use "base/utilities";
 
-// Components and layouts
 @use "components/global";
 @use "components/header";
-@use "components/input";
-@use "components/search-bar";
 @use "components/select";
-@use "components/project-card";
