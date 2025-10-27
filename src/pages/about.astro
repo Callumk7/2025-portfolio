@@ -2,7 +2,10 @@
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import AboutSection from "~/components/about/About.astro";
 import Section from "~/components/layout/Section.astro";
+import { GradientOrbs } from "~/components/animations";
 ---
+
+<GradientOrbs count={12} client:load />
 
 <FlexLayout>
 	<AboutSection />

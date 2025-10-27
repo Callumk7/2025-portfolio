@@ -2,7 +2,10 @@
 import FlexLayout from "../layouts/FlexLayout.astro";
 import ContactGrid from "../components/contact/ContactGrid.astro";
 import ContactForm from "../components/contact/ContactForm.astro";
+import { GradientOrbs } from "~/components/animations";
 ---
+
+<GradientOrbs client:load />
 
 <FlexLayout>
 	<ContactGrid />
