@@ -1,5 +1,42 @@
-.dropdown {
-  padding: 0 2rem;
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
+.input {
+  position: relative;
+  background: transparent;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  margin: auto 12px;
+  padding: 0px 12px;
+  color: var(--scale-50);
+  width: 560px;
+  height: 3rem;
+  font-family: inherit;
+
+  &::placeholder {
+    color: var(--scale-500);
+  }
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.previewCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.5rem;
+
+  &:hover {
+    background-color: var(--hover);
+
+    .previewCard__title {
+      color: var(--color);
+    }
+  }
+}
+
+.previewCard__title {
+  font-size: 1.6em;
 }
