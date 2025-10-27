@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import FlexLayout from "~/layouts/FlexLayout.astro";
 import Section from "~/components/layout/Section.astro";
+import PostPreview from "~/components/blog/PostPreview.astro";
 
 const posts = (await getCollection("blog")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -11,7 +12,15 @@ const posts = (await getCollection("blog")).sort(
 <FlexLayout>
 	<Section>
 		<div class="divide-y">
-			{posts.map((post) => <PostPreview slug={post.id} post={post.data} />)}
+			{
+				posts.map((post) => (
+					<PostPreview
+						slug={post.id}
+						title={post.data.title}
+						description={post.data.description}
+					/>
+				))
+			}
 		</div>
 	</Section>
 </FlexLayout>
