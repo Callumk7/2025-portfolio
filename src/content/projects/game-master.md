@@ -1,7 +1,7 @@
 ---
 name: Game Master - Tabletop RPG Notes
 description: Advanced notes app with deep linking capabilities, focussing on Tabletop RPG players.
-coverImageUrl: ../../images/001-screenshot.png
+coverImageUrl: ../../images/game-master/dashboard.png
 projectUrl: https://gamemaster.callumkloos.dev
 githubUrl: https://github.com/Callumk7/game-master-web
 tags:
@@ -15,46 +15,50 @@ cvDescription: I built a complex note-taking application that encompasses a fron
 slug: game-master
 ---
 
-Game Master is a server-centered note taking app, designed for DMs and TTRPG players.
+> Game Master is a campaign management tool for tabletop RPG game masters. It provides an opinionated workflow for organising world-building, characters, and session planning—removing the organisational burden so users can focus on creative storytelling.
 
-![Page showing character view in Game Master](../../images/001-screenshot.png)
+## The Problem
 
-## Features
+Generic note-taking tools like Notion and Obsidian are powerful but not tailored to TTRPG campaign management. New users spend hours researching optimal workflows and structures rather than writing content. Every game master reinvents the same organisational wheel.
 
-- **Rich text editing experience** with full markdown support, inline images, and deep links to other notes
-- **Opinionated note structure** designed to help developers plan games, and have quick access to their most important notes
-- **Multiple view options** including split view, floating note windows, and tabs
+## The Solution
 
-## Technology Used
+Game Master codifies proven campaign organisation patterns into an opinionated structure (Notes, Characters, Factions, Locations, Quests). It combines the modern feel of Notion with purpose-built features for gameplay: command palette navigation, split views for active sessions, and full mobile support for in-person play.
 
-### back-end
+Built with Elixir/Phoenix and React, leveraging Elixir's batteries-included philosophy to focus on functionality rather than reinventing infrastructure. Currently in alpha testing with close friends.
 
-I used Elixir and Phoenix for the back end application, due to its strong concurrence capabilities, excellent database support, and a convention over configuration approach to common back-end problems.
+## Key Features
 
-### Supabase
+**Opinionated Workflow**: Pre-defined entity types (Notes, Characters, Factions, Locations, Quests) guide users towards proven organisation patterns without sacrificing flexibility.
 
-Supabase is utilised for authentication and database management. It offers real-time subscriptions and auto-generated APIs, providing the versatility of PostgreSQL while replicating some Firebase features.
+![A popout window](../../images/game-master/popout.png)
 
-### Remix and React
+**Built for Active Play**: Deeply linked notes, pinned references, command palette for keyboard navigation, popout windows, and tab-based browsing enable swift access to information during live sessions.
 
-The UI, routing, and data loading are built with Remix and React. Remix enhances user experience with server-side rendering on initial load and efficient data fetching for client-side navigation.
+![Command Palette](../../images/game-master/command-palette.png)
 
-### DrizzleORM
+**WYSIWYG Editing**: Tiptap-powered editor with custom node rendering and inline image uploads.
 
-DrizzleORM handles the app's Object-Relational Mapping (ORM). It simplifies data operations like inserting, updating, or querying data, and provides robust tools for managing database schema migrations.
+![Editor view](../../images/game-master/editor.png)
+![Split view](../../images/game-master/split-view.png)
 
-### Radix Components
+**Discovery & Organisation**: Tree structures, data tables with search and tag filtering, and pre-defined entity relationships.
 
-The app uses Radix-UI for low-level, accessible, and unstyled UI components, offering a developer-friendly declarative API. The UI design is influenced by Shadcn styled-components, promoting a modern and minimalist aesthetic.
+![Tree view](../../images/game-master/tree.png)
+![Table view](../../images/game-master/table.png)
 
-### TailwindCSS
+**Mobile Support**: Full mobile experience for in-person gameplay.
 
-Tailwind CSS is used for atomic styling with utility classes. It integrates well with Radix and can be combined with conditional class libraries like clsx and class-variance-authority to rapidly build expressive design systems.
+## Technical Implementation
 
-### [Fly.io](http://Fly.io)
+**Backend**: Elixir/Phoenix leveraging the BEAM's concurrency model, with OpenAPI specification for type-safe frontend integration. PostgreSQL database managed through Ecto.
 
-The application is deployed on [Fly.io](http://Fly.io), chosen for its easy deployment, scalability, and serverful runtime, which fully utilises Node.js's capabilities.
+**Frontend**: React SPA with selective SSR using TanStack Router/Start. TanStack Query (auto-generated from OpenAPI) handles data fetching and caching. Zustand manages global UI state for windows, tabs, and sheets.
 
-### Cloudflare Workers
+## Key Technical Challenge: Data Fetching & Caching
 
-Serverless functions are employed for asynchronous tasks. A custom API accessed via a Cloudflare Worker offloads large writes to the database, ensuring smooth user flow when saving game data.
+Initial implementation used a brute-force approach to data fetching, leading to performance issues. Through iterative optimisation, implemented strategic caching layers and query invalidation patterns using TanStack Query. Future plans include exploring local-first architecture for offline support and improved responsiveness.
+
+## What I Learnt
+
+**Complex State Management**: Managing UI state across popout windows, tabs, and deeply linked entities required careful separation of concerns. TanStack Query handles server state with caching and invalidation strategies, Zustand manages global UI state (windows, tabs, sheets), and local component state handles ephemeral interactions. Understanding when to use each approach—and avoiding mixing responsibilities—was critical for maintainability and performance.

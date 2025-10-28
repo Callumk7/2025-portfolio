@@ -146,10 +146,11 @@ pre>code {
 }
 
 blockquote {
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--color);
   padding: 0 0 0 20px;
-  margin: 0px;
+  margin: 1rem 0;
   font-size: 1.333em;
+  color: var(--accent-dark);
 }
 
 hr {

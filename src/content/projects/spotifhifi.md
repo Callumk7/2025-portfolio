@@ -3,7 +3,6 @@ name: SpotifHifi
 description: Bringing back the album experience.
 projectUrl: https://playq.xyz
 githubUrl: https://github.com/Callumk7/frontline-v2-remix
-coverImageUrl: ../../images/003-screenshot.png
 tags:
   - react
   - remix

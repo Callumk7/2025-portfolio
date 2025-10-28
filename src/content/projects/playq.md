@@ -1,7 +1,6 @@
 ---
 name: playQ Videogame Playlist Manager
 description: Create and share playlists to keep track of what you have been playing
-coverImageUrl: ../../images/002-screenshot.png
 projectUrl: https://app.playq.xyz
 githubUrl: https://github.com/Callumk7/playq-v2
 tags:
