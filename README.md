@@ -132,4 +132,7 @@ Global site information can be modified in `src/consts.ts`:
 
 ## License
 
-Private repository
+The code in this repository is licensed under the MIT License.
+
+The content (text, images, personal information, and portfolio projects)
+is © Callum Kloos 2025. All rights reserved.
