@@ -8,7 +8,7 @@ A modern, performant portfolio website built with Astro, featuring interactive c
 - **Interactive UI**: [Solid.js](https://www.solidjs.com) for client-side interactivity
 - **Styling**: Sass with custom design system
 - **State Management**: [Nanostores](https://github.com/nanostores/nanostores) for global state
-- **UI Components**: [Kobalte](https://kobalte.dev) accessible component primitives
+- **UI Components**: [Kobalte](https://kobalte.dev) accessible component primitives, used specifically for my select filter
 - **Search**: [Fuse.js](https://fusejs.io) for fuzzy search
 - **Deployment**: Cloudflare Worker, serving pre-rendered content and a single API endpoint for form submission
 - **Database**: Cloudflare D1 for contact form submissions
