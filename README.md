@@ -1,68 +1,135 @@
-# Astro Starter Kit: Blog
+# Personal Portfolio
 
-```sh
-npm create astro@latest -- --template blog
+A modern, performant portfolio website built with Astro, featuring interactive components, content management, and serverless deployment.
+
+## Tech Stack
+
+- **Framework**: [Astro](https://astro.build) v5 with MDX support
+- **Interactive UI**: [Solid.js](https://www.solidjs.com) for client-side interactivity
+- **Styling**: Sass with custom design system
+- **State Management**: [Nanostores](https://github.com/nanostores/nanostores) for global state
+- **UI Components**: [Kobalte](https://kobalte.dev) accessible component primitives
+- **Search**: [Fuse.js](https://fusejs.io) for fuzzy search
+- **Deployment**: Cloudflare Worker, serving pre-rendered content and a single API endpoint for form submission
+- **Database**: Cloudflare D1 for contact form submissions
+- **Code Quality**: Biome for linting and formatting
+
+## Features
+
+- **Content Collections**: Type-safe blog posts and project showcases using Astro's content collections
+- **Dynamic Pages**: About, Experience, Contact, Blog, and Projects sections
+- **Interactive Components**: Client-side interactivity with Solid.js components
+- **Search Functionality**: Fast, client-side search powered by Fuse.js
+- **Animation System**: Configurable background animations with localStorage persistence
+- **RSS Feed**: Auto-generated RSS feed for blog posts
+- **Sitemap**: Automatic sitemap generation
+- **Custom Fonts**: Google Fonts integration (Zalando Sans family)
+- **Contact Form**: Serverless API with D1 database integration
+
+## Project Structure
+
+```
+src/
+├── components/         # Astro & Solid.js components
+│   ├── about/         # About page components
+│   ├── animations/    # Background animation components
+│   ├── blog/          # Blog-related components
+│   ├── contact/       # Contact form components
+│   ├── experience/    # Experience page components
+│   ├── home/          # Homepage components
+│   ├── icons/         # SVG icon components
+│   ├── interactive/   # Interactive Solid.js components
+│   ├── layout/        # Layout utilities
+│   ├── navigation/    # Navigation components
+│   └── ui/            # Reusable UI components
+├── content/           # Markdown content
+│   ├── blog/          # Blog posts
+│   └── projects/      # Project showcases
+├── layouts/           # Page layouts
+├── pages/             # File-based routing
+│   ├── api/           # API endpoints
+│   ├── blog/          # Blog pages
+│   └── projects/      # Project pages
+├── stores/            # Nanostores state management
+└── styles/            # Global styles and Sass modules
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+## Getting Started
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Prerequisites
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+- Node.js 18+
+- pnpm (recommended)
 
-Features:
+### Installation
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+```bash
+pnpm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+pnpm dev
+```
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+Opens development server at `http://localhost:4321`
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Build
 
-## 🧞 Commands
+```bash
+pnpm build
+```
 
-All commands are run from the root of the project, from a terminal:
+Generates production build in `dist/` directory
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Preview
 
-## 👀 Want to learn more?
+```bash
+pnpm preview
+```
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Previews the production build locally
 
-## Credit
+## Deployment
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+The project is configured for deployment to Cloudflare with:
+
+- Prerendering on all routes enabled by default
+- Images pre-processed at build time with sharp
+- D1 database binding for contact form
+- Node.js compatibility flags
+
+### Wrangler Configuration
+
+The `wrangler.jsonc` file includes:
+
+- D1 database binding for contact form submissions
+- Asset serving configuration
+- Observability enabled
+
+## Configuration
+
+### Site Configuration
+
+Update `astro.config.mjs` to customize:
+
+- Site URL
+- Font configuration
+- Integrations
+- Adapter settings
+
+### Content Schema
+
+Content collections are defined in `src/content.config.ts` with Zod schemas for type safety.
+
+### Site Metadata
+
+Global site information can be modified in `src/consts.ts`:
+
+- `SITE_TITLE`
+- `SITE_DESCRIPTION`
+
+## License
+
+Private repository
