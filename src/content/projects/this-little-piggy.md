@@ -4,8 +4,7 @@ description: A custom application that uses Notion as a CRM to publish informati
 projectUrl: https://thislittlepiggyrichmond.co.uk
 tags:
   - react
-  - ssr
-  - nextjs
+  - astro
 githubUrl: https://github.com/Callumk7/my-little-piggy-homepage
 wip: false
 cvDescription: I built a client-facing website that utilises Notion as a backend to facilitate dynamic content updates without the need for a complex CMS solution. Data on the inventory can be changed by the client and seen instantly without a build step. Built with Next.js and deployed to Vercel.
@@ -28,11 +27,11 @@ For the web application to remain relevant and timely, it was crucial to facilit
 
 ## Technology Used
 
-| Requirement         | Selection | Justification                                                                                        |
-| ------------------- | --------- | ---------------------------------------------------------------------------------------------------- |
-| Front-end Framework | Next.js   | Flexible with rendering options, allows for future scalability                                       |
-| Database            | Notion    | User-friendly interface, enabling rapid development by bypassing the need for a separate admin panel |
-| Hosting             | Vercel    | Tightly integrated with Next.js, offering a free-tier that aligns with the client's expected usage   |
+| Requirement         | Selection | Justification                                                                                                   |
+| ------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
+| Front-end Framework | Astro     | Static site generation, with flexible 'islands' for reactivity where required                                   |
+| Database            | Notion    | User-friendly interface, enabling rapid development by bypassing the need for a separate admin panel            |
+| Hosting             | Vercel    | Simple and user friendly with out of the box observability. Free tier aligns well with clients expected traffic |
 
 ## Conclusion
 

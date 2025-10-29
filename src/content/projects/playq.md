@@ -8,7 +8,6 @@ tags:
   - react router 7
   - nodejs
   - typescript
-  - AWS
 wip: false
 cvDescription: I built a playlist management solution that supports server side rendering (SSR), user authentication, aggregated scores and ratings, and a user activity feed. The app uses React and Remix as the full stack framework, with some additional asyncronous tasks offloaded to a cloudflare application.
 slug: playq
