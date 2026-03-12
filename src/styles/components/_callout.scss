@@ -1,0 +1,11 @@
+.callout {
+  border-left: 3px solid var(--color);
+  padding: 1rem 1.25rem;
+  margin-block: 2.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: var(--hover);
+
+  p {
+    margin: 0.5rem;
+  }
+}
