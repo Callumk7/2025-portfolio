@@ -1,0 +1,34 @@
+---
+title: "New Time"
+description: "What do we do with the time that has been given to us?"
+pubDate: "Mar 12 2026"
+---
+import Callout from "../../components/ui/Callout.tsx";
+
+LLMs are speeding up parts of our delivery cycle. If we can ship faster now, that gives us time back. But I think an important question we should ask: **How should we use this time that we have just gained?**
+
+The obvious answer is ship more. But that's where it gets risky.
+
+When it's cheap to prompt a feature into existence, the bar for what gets shipped quietly drops. Features that wouldn't have survived a whiteboard conversation make it into production because they were easy to build. But ease of implementation was never the right filter — value is. The bar should stay high, or go higher.
+
+There's a related risk in how we iterate. When the original design is slightly off and forces a hacky workaround, our willingness to go back and fix the root cause drops — because the LLM are the ones who have to deal with the hackiness. A desire to refactor design falls, but we should fight this. We should still strive to leave the code better than when we found it.
+
+So instead of just shipping more, we also have two real opportunities with this reclaimed time.
+
+First: spend more time on product thinking. Deeper consideration of what to build and why. The cost of building has dropped, but the cost of building the wrong thing hasn't. We should be redirecting time from implementation into understanding.
+
+<Callout type="tip">
+  The cost of building has dropped, but the cost of building the **wrong thing** hasn't.
+</Callout>
+
+Second: fix what we have. As well as the opportunity to ship more new things, we also now have more capacity than a small team has traditionally had to address technical debt, improve existing features, and nurture the codebase. That's a huge unlock.
+
+This leads naturally into how we think about design and process.
+
+Front-loaded investments — complete and up-to-date design libraries, well-documented design guidelines, thorough code documentation, written and maintained coding standards — these are now significantly more valuable than they used to be. Traditionally, for a small empowered team like ours, these kinds of artefacts wouldn't justify the overhead. We'd rather remove ceremony and trust individuals to make good decisions in the moment. And that's served us well.
+
+But the framing shifts when you think of agentic AI not as a productivity tool, but as the equivalent of having **a large team of junior developers**. Junior devs are fast and capable, but they produce their best work when they have clear structure to work within — documentation, design systems, coding guidelines, review processes. Without that structure, you get speed but also inconsistency, tech debt, and rework.
+
+With that lens, investing in structure isn't adding unnecessary process. It's how we maximise the value this large team of juniors produces, while reducing the risk of low-quality output that costs us more down the line.
+
+And it gives us something else: the time and headspace to think deeply about how we work, how we design, and how we build.
