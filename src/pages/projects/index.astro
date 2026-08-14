@@ -5,7 +5,12 @@ import { ProjectPage } from "~/components/interactive/project-page";
 import Section from "~/components/layout/Section.astro";
 import HeadingBlock from "~/components/HeadingBlock.astro";
 
-const projects = await getCollection("projects");
+const projects = (await getCollection("projects")).sort((a, b) => {
+	const aDate = a.data.endDate ?? a.data.startDate;
+	const bDate = b.data.endDate ?? b.data.startDate;
+
+	return (bDate?.valueOf() ?? 0) - (aDate?.valueOf() ?? 0);
+});
 ---
 
 <FixedLayout>

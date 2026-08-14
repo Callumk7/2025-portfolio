@@ -6,15 +6,23 @@ interface Props {
 	endDate?: Date;
 }
 
+import { formatDate } from "~/utils/date";
+
 const { title, companyName, startDate, endDate } = Astro.props;
+
+const formatExperienceDate = (date: Date) =>
+	formatDate(date, {
+		year: "numeric",
+		month: "long",
+	});
 ---
 
 <div>
 	<h4>{title}</h4>
-	<pp class="bold">{companyName}</pp>
+	<p class="bold">{companyName}</p>
 	<p>
-		{startDate.toLocaleDateString("gmt")}
-		{endDate ? `- ${endDate.toLocaleDateString("gmt")}` : ""}
+		{formatExperienceDate(startDate)}
+		{endDate ? ` - ${formatExperienceDate(endDate)}` : " - Present"}
 	</p>
 	<slot />
 </div>

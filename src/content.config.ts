@@ -30,6 +30,9 @@ const projects = defineCollection({
 			githubUrl: z.string(),
 			tags: z.array(z.string()),
 			wip: z.boolean(),
+			startDate: z.coerce.date().optional(),
+			endDate: z.coerce.date().optional(),
+			cvDescription: z.string().optional(),
 			slug: z.string(),
 		}),
 });

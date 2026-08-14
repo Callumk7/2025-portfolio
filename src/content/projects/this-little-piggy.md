@@ -7,7 +7,9 @@ tags:
   - astro
 githubUrl: https://github.com/Callumk7/my-little-piggy-homepage
 wip: false
-cvDescription: I built a client-facing website that utilises Notion as a backend to facilitate dynamic content updates without the need for a complex CMS solution. Data on the inventory can be changed by the client and seen instantly without a build step. Built with Next.js and deployed to Vercel.
+startDate: 2025-04-01
+endDate: 2025-10-01
+cvDescription: I built a client-facing website that uses Notion as a backend to facilitate dynamic content updates without the need for a complex CMS solution. Inventory data can be changed by the client and seen instantly without a build step. Built with Astro and deployed to Vercel.
 slug: this-little-piggy
 ---
 
@@ -35,4 +37,4 @@ For the web application to remain relevant and timely, it was crucial to facilit
 
 ## Conclusion
 
-In conclusion, the successful implementation of this project not only provided a significant online presence for 'This Little Piggy Richmond' but also met the specific requirements of the client with precision. Leveraging the user-friendly interface of Notion and the flexibility of Next.js, we were able to create a dynamic, accessible, and easy-to-update platform. This accomplishment empowers the organisation to continue their noble cause of rescuing and rehoming guinea pigs seamlessly. Furthermore, the selection of technologies underpins the site’s sustainability, ensuring scalability to match the organisation's future growth.
+In conclusion, the successful implementation of this project not only provided a significant online presence for 'This Little Piggy Richmond' but also met the specific requirements of the client with precision. Leveraging the user-friendly interface of Notion and the flexibility of Astro, we were able to create a dynamic, accessible, and easy-to-update platform. This accomplishment empowers the organisation to continue their noble cause of rescuing and rehoming guinea pigs seamlessly. Furthermore, the selection of technologies underpins the site’s sustainability, ensuring scalability to match the organisation's future growth.

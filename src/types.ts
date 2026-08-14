@@ -22,6 +22,9 @@ interface Project {
 	tags: string[];
 	slug: string;
 	wip: boolean;
+	startDate?: Date;
+	endDate?: Date;
+	cvDescription?: string;
 }
 
 interface ProcessedProject extends Omit<Project, "coverImageUrl"> {
