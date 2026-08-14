@@ -9,7 +9,9 @@ tags:
   - nodejs
   - typescript
 wip: false
-cvDescription: I built a playlist management solution that supports server side rendering (SSR), user authentication, aggregated scores and ratings, and a user activity feed. The app uses React and Remix as the full stack framework, with some additional asyncronous tasks offloaded to a cloudflare application.
+startDate: 2024-06-01
+endDate: 2025-03-01
+cvDescription: I built a playlist management solution that supports server-side rendering, user authentication, aggregated scores and ratings, and a user activity feed. The app uses React Router 7 as the full-stack framework, with additional asynchronous tasks offloaded to a Cloudflare Worker.
 slug: playq
 ---
 
@@ -33,9 +35,9 @@ I built **playQ**, a complex CRUD application designed to manage video game coll
 
 Supabase is utilised for authentication and database management. It offers real-time subscriptions and auto-generated APIs, providing the versatility of PostgreSQL while replicating some Firebase features.
 
-### Remix and React
+### React Router and React
 
-The UI, routing, and data loading are built with Remix and React. Remix enhances user experience with server-side rendering on initial load and efficient data fetching for client-side navigation.
+The UI, routing, and data loading are built with React Router 7 and React. React Router provides server-side rendering on initial load and efficient data fetching for client-side navigation.
 
 ### DrizzleORM
 

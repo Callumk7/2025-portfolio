@@ -1,6 +1,6 @@
 ---
 name: Game Master - Tabletop RPG Notes
-description: Advanced notes app with deep linking capabilities, focussing on Tabletop RPG players.
+description: Advanced notes app with deep linking capabilities, focused on tabletop RPG players.
 coverImageUrl: ../../images/game-master/dashboard.png
 projectUrl: https://gamemaster.callumkloos.dev
 githubUrl: https://github.com/Callumk7/game-master-web
@@ -11,7 +11,8 @@ tags:
   - postgres
   - openAPI
 wip: false
-cvDescription: I built a complex note-taking application that encompasses a front-end client built on top of react and remix, as well as a dedicated back-end built with node and hono. These were tied together in a monorepo setup which facilitated a shared contract through an api package that managed all cross-boundary types and data-fetching functions consumed by the client.
+startDate: 2025-04-01
+cvDescription: I built a complex note-taking application with a React frontend and Elixir/Phoenix backend. The application uses PostgreSQL, OpenAPI-generated client types, TanStack Query, and Zustand to support deeply linked campaign notes and responsive in-session workflows.
 slug: game-master
 ---
 

@@ -6,15 +6,20 @@ import ExperienceCard from "~/components/experience/ExperienceCard.astro";
 
 const technicalSkills = [
 	"HTML5",
-	"CSS3",
-	"JavaScript (ES6+)",
+	"CSS",
+	"JavaScript",
 	"TypeScript",
 	"React",
+	"Astro",
+	"Elixir",
+	"Phoenix",
 	"Node.js",
-	"Express",
+	"Hono",
+	"Java",
+	"Spring Boot",
+	"PostgreSQL",
+	"SQLite",
 	"Git",
-	"Responsive Web Design",
-	"Database Management, (SQL)",
 ];
 
 const productSkills = [
@@ -40,10 +45,10 @@ const softSkills = [
 		<div class="profile">
 			<h2>Professional Profile</h2>
 			<p>
-				Detail-orientated Web Developer with a unique background in Product Management and
-				UX Design. I leverage my comprehensive understanding of the product development
-				lifecycle to create user-focussed web solutions. I strive to write clean,
-				efficient code and create intuitive user experiences.
+				Full-stack software engineer with a background in product management and UX
+				design. I focus on building thoughtful frontend experiences with React and
+				TypeScript, while working comfortably across the stack from UI implementation to
+				backend services and databases.
 			</p>
 			<table class="contact">
 				<tr>
@@ -93,16 +98,25 @@ const softSkills = [
 				</TextRow>
 				<hr />
 				<ExperienceCard
+					title="Software Engineer"
+					companyName="Beacon"
+					startDate={new Date("2025-12-01")}
+				>
+					Focused on frontend development and design implementation, building large
+					features from design through to production. Work spans React frontends and the
+					wider stack, including Java microservices backend systems.
+				</ExperienceCard>
+				<ExperienceCard
 					title="Freelance Web Development"
 					companyName="Freelance"
 					startDate={new Date("2025-04-01")}
 					endDate={new Date("2025-10-15")}
 				>
-					Worked in a two man design and developer team to modernise a legacy ColdFusion
-					application in the enterprise time-keeping space. Focus was on creating
-					composable components using pure HTML, Javascript, and a custom BEM-based CSS
-					style structure. Completed implementation of a full redesign of the
-					client-facing app.
+					Worked in a two-person design and development team to modernise a legacy
+					ColdFusion application in the enterprise time-keeping space. Focus was on
+					creating composable components using pure HTML, JavaScript, and a custom
+					BEM-based CSS style structure. Completed implementation of a full redesign of
+					the client-facing app.
 				</ExperienceCard>
 				<ExperienceCard
 					title="Freelance Web Development"
@@ -127,12 +141,12 @@ const softSkills = [
 					endDate={new Date("2023-06-15")}
 				>
 					<p>
-						Lead UX research and design at an early stage startup, which was building a
+						Led UX research and design at an early stage startup, which was building a
 						collaborative AI-driven game building platform.
 					</p>
 					<ul>
 						<li>
-							Conducted over 30 user interviews to develop the companies key user personas
+							Conducted over 30 user interviews to develop the company's key user personas
 						</li>
 						<li>
 							Designed and tested the MVP platform, which was used to create over 400
